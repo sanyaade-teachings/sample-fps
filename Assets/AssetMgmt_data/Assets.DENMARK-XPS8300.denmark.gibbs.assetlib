@@ -152,9 +152,9 @@
                 ]
             },
             "File": {
-                "Hash": 2048895114,
-                "TimeStamp": 1391545474531338400,
-                "LastEditTime": 1391545475795464800
+                "Hash": 1091517267,
+                "TimeStamp": 1391553334939388100,
+                "LastEditTime": 1391553335961388100
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -174,9 +174,9 @@
                 ]
             },
             "File": {
-                "Hash": 348403834,
-                "TimeStamp": 1391545474527338000,
-                "LastEditTime": 1391545476025487800
+                "Hash": 406513691,
+                "TimeStamp": 1391553334937388100,
+                "LastEditTime": 1391553335936388100
             },
             "Model": {
                 "LODSwitchDistances": [

@@ -2,12 +2,20 @@
 function OnAfterSceneLoaded(self)
 	--get the characterController
 	self.characterController = self:GetComponentOfType("vHavokCharacterController")
-	self.walkHeight = self.characterController:GetCapsuleHeight()
-	self.crouchHeight = self.walkHeight / 2
+	self.walkHeight = self.characterController:GetCapsuleTop()
+	self.crouchHeight = self.walkHeight.z / 2
 	
 	if self.characterController == nil then
 		self.AddComponentOfType("vHavokCharacterController")
 	end
+	
+	self.singleFire = false --if true, the gun will only fire once per click
+	self.jogSpeed = 5
+	self.runSpeed = 10
+	self.rotSpeed = 50
+	self.invertY = true
+	self.yMaxRot = 40
+	self.yMinRot = -75
 	
 	--create the input map
 	self.map = Input:CreateMap("PlayerInputMap")
@@ -24,20 +32,18 @@ function OnAfterSceneLoaded(self)
 	self.map:MapTrigger("BACK", "KEYBOARD", "CT_KB_S")
 	
 	--additional controls
-	self.map:MapTrigger("FIRE01", "MOUSE", "CT_MOUSE_LEFT_BUTTON", {onceperframe = true} )
+	if self.singleFire then
+		self.map:MapTrigger("FIRE01", "MOUSE", "CT_MOUSE_LEFT_BUTTON", {onceperframe = true} )
+	else
+		self.map:MapTrigger("FIRE01", "MOUSE", "CT_MOUSE_LEFT_BUTTON")
+	end
+	
 	self.map:MapTrigger("JUMP", "KEYBOARD", "CT_KB_SPACE", {onceperframe = true} )
 	self.map:MapTrigger("RELOAD", "KEYBOARD", "CT_KB_R", {onceperframe = true} )
 	self.map:MapTrigger("RUN", "KEYBOARD", "CT_KB_LSHIFT")
 	self.map:MapTrigger("CROUCH", "KEYBOARD", "CT_KB_C")
 	
 	self.map:MapTrigger("INVERT", "KEYBOARD", "CT_KB_I", {onceperframe = true} )
-	
-	self.jogSpeed = 5
-	self.runSpeed = 10
-	self.rotSpeed = 50
-	self.invertY = true
-	self.yMaxRot = 40
-	self.yMinRot = -75
 	
 	self.gun = GetWeapon(self)
 	if self.gun ~= nil then
@@ -49,6 +55,9 @@ end
 
 function OnThink(self)
 	ShowStats(self)
+	
+	-- Debug:PrintAt(0, 60, "Height: " .. self.characterController:GetCapsuleHeight(), Vision.V_RGBA_YELLOW)
+	-- Debug:PrintAt(0, 75, "Top: " .. self.characterController:GetCapsuleTop(), Vision.V_RGBA_YELLOW)
 	
 	local x = self.map:GetTrigger("X")
 	local y = self.map:GetTrigger("Y")
@@ -85,9 +94,9 @@ function OnThink(self)
 	if crouch then
 		Crouch(self)
 	else
-		local top = self.characterController:GetCapsuleHeight()
-		if top < self.walkHeight then
-			self.characterController:SetCapsuleHeight( self.walkHeight )
+		local top = self.characterController:GetCapsuleTop()
+		if top.z < self.walkHeight.z then
+			self.characterController:SetCapsuleTop( self.walkHeight )
 		end
 	end
 	
@@ -167,8 +176,10 @@ end
 
 function Crouch(self)
 	Debug:PrintLine("Crouching")
-	-- self.characterController:SetCapsuleTop(Vision.hkvVec3(0,0,self.crouchHeight) )
-	self.characterController:SetCapsuleHeight( self.crouchHeight )
+	self.characterController:SetCapsuleTop(Vision.hkvVec3(0, 0, 40) )
+	-- self.characterController:SetScaling( Vision.hkvVec3(1, 1, .25) )
+	-- self.characterController:SetProperty("Scaling", Vision.hkvVec3(1, 1, .25))
+	-- self.characterController:SetCapsuleHeight( self.crouchHeight )
 end
 
 function ShowStats(self)

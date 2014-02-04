@@ -94,6 +94,8 @@ textures/ui/slidernorm.dds	textures/ui/slidernorm.dds	sRGB=false
 textures/ui/slidernorm.png	textures/ui/slidernorm.png	sRGB=false
 textures/ui/white.dds	textures/ui/white.dds	sRGB=false
 textures/water/water_n_01.dds	textures/water/water_n_01.dds	sRGB=false
+meshes/fps_duckobject_mesh.vcolmesh	meshes/fps_duckobject_mesh.vcolmesh	
+meshes/fps_duckobject_mesh.vmesh	meshes/fps_duckobject_mesh.vmesh	LODSwitchDistances=
 meshes/fps_groundgrid_mesh.vcolmesh	meshes/fps_groundgrid_mesh.vcolmesh	
 meshes/fps_groundgrid_mesh.vmesh	meshes/fps_groundgrid_mesh.vmesh	LODSwitchDistances=
 models/fps_charstandin_mod.anim	models/fps_charstandin_mod.anim	
@@ -113,5 +115,3 @@ textures/fps_reticule_diffuse.tga	textures/fps_reticule_diffuse.tga	sRGB=false
 textures/fps_target_diffuse.tga	textures/fps_target_diffuse.tga	sRGB=false
 textures/gridtext_diffuse.tga	textures/gridtext_diffuse.tga	sRGB=false
 textures/particles/fps_bullet_diffuse.tga	textures/particles/fps_bullet_diffuse.tga	sRGB=false
-meshes/fps_duckobject_mesh.vmesh	meshes/fps_duckobject_mesh.vmesh	LODSwitchDistances=
-meshes/fps_duckobject_mesh.vcolmesh	meshes/fps_duckobject_mesh.vcolmesh	
