@@ -1,0 +1,1 @@
+vLux.exe "" -project "C:\Projects\sample-fps" -tempfolder "C:\Projects\sample-fps\Scenes\sample.scene.Layers" -out "Scenes\sample" -quiet -minimized -config "C:\Projects\sample-fps\Scenes\sample.scene.Layers\lighting.cfg"
