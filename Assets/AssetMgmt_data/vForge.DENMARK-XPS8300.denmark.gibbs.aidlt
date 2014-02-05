@@ -122,3 +122,7 @@ textures/fps_target_diffuse.tga	textures/fps_target_diffuse.tga	sRGB=false
 textures/fps_wallpanel_tex.tga	textures/fps_wallpanel_tex.tga	sRGB=false
 textures/gridtext_diffuse.tga	textures/gridtext_diffuse.tga	sRGB=false
 textures/particles/fps_bullet_diffuse.tga	textures/particles/fps_bullet_diffuse.tga	sRGB=false
+models/fps_ammobox_mod.model	models/fps_ammobox_mod.model	LODSwitchDistances=
+models/fps_ammobox_mod.anim	models/fps_ammobox_mod.anim	
+models/fps_ammobox_mod.vcolmesh	models/fps_ammobox_mod.vcolmesh	
+textures/fps_ammobox_tex.tga	textures/fps_ammobox_tex.tga	sRGB=false

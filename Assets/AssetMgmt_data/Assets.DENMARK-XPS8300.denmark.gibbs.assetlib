@@ -199,9 +199,9 @@
                 ]
             },
             "File": {
-                "Hash": 4177526387,
-                "TimeStamp": 1391561028757186700,
-                "LastEditTime": 1391561029757186700
+                "Hash": 2712835315,
+                "TimeStamp": 1391631870500075200,
+                "LastEditTime": 1391631871497075200
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -222,9 +222,9 @@
                 ]
             },
             "File": {
-                "Hash": 2351434399,
-                "TimeStamp": 1391561028754186700,
-                "LastEditTime": 1391561029787186700
+                "Hash": 537847423,
+                "TimeStamp": 1391631870498075200,
+                "LastEditTime": 1391631871528075200
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -294,9 +294,9 @@
                 ]
             },
             "File": {
-                "Hash": 4149088561,
-                "TimeStamp": 1391561141274186700,
-                "LastEditTime": 1391561142219186700
+                "Hash": 3526625706,
+                "TimeStamp": 1391631265341120000,
+                "LastEditTime": 1391631266239209800
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -316,14 +316,80 @@
                 ]
             },
             "File": {
-                "Hash": 799348627,
-                "TimeStamp": 1391561141272186700,
-                "LastEditTime": 1391561142248186700
+                "Hash": 3674713302,
+                "TimeStamp": 1391631265339119800,
+                "LastEditTime": 1391631266303216200
             },
             "Model": {
                 "LODSwitchDistances": [
 
                 ]
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Models/FPS_AmmoBox_MOD.anim": {
+            "AssetType": "Animation",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 592976672,
+                "TimeStamp": 1391633433458924200,
+                "LastEditTime": 1391633433660944400
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Models/FPS_AmmoBox_MOD.model": {
+            "AssetType": "Model",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+                    "Shaders/vMaterial.ShaderLib",
+                    "Textures/FPS_AmmoBox_TEX.tga"
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 1326349097,
+                "TimeStamp": 1391633433456924000,
+                "LastEditTime": 1391633433713949700
+            },
+            "Model": {
+                "LODSwitchDistances": [
+
+                ]
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Models/FPS_AmmoBox_MOD.vcolmesh": {
+            "AssetType": "CollisionMesh",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 1818289696,
+                "TimeStamp": 1391633433460924400,
+                "LastEditTime": 1391633433661944500
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -731,9 +797,9 @@
                 ]
             },
             "File": {
-                "Hash": 3290275584,
-                "TimeStamp": 1391561987641186700,
-                "LastEditTime": 1391561988626186700
+                "Hash": 1604286182,
+                "TimeStamp": 1391632376698075200,
+                "LastEditTime": 1391632377657075200
             },
             "Texture": {
                 "FileFormat": "DDS",
@@ -1961,6 +2027,33 @@
                 "TemplateName": "Default"
             }
         },
+        "Textures/FPS_AmmoBox_TEX.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 1961177807,
+                "TimeStamp": 1391633173322913200,
+                "LastEditTime": 1391633433690947400
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 512,
+                "Height": 512,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
         "Textures/FPS_Gun_DIFFUSE.tga": {
             "AssetType": "Texture",
             "Common": {
@@ -2029,7 +2122,7 @@
             "File": {
                 "Hash": 813587432,
                 "TimeStamp": 1391555610238086200,
-                "LastEditTime": 1391561029778186700
+                "LastEditTime": 1391631871519075200
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -2110,7 +2203,7 @@
             "File": {
                 "Hash": 415495962,
                 "TimeStamp": 1391557060072055100,
-                "LastEditTime": 1391561142240186700
+                "LastEditTime": 1391631266274213300
             },
             "Texture": {
                 "FileFormat": "TGA",

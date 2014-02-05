@@ -33,7 +33,8 @@ function OnThink(self)
 
 	if hit == true then
 		if result ~= nil and result["HitType"] == "Entity" then
-			if result["HitObject"]:GetKey() == "Target" then
+			local hitObj = result["HitObject"]
+			if hitObj:GetKey() == "Target" then
 				hitTarget = true
 			end
 		end
@@ -58,7 +59,7 @@ function Fire(gun)
 	if gun.timeToNextShot <= 0 then 
 		if gun.roundsLoaded > 0 then
 			local rayStart = gun.bulletSpawn:GetPosition()
-			local rayEnd = rayStart + (gun.bulletSpawn:GetObjDir() * gun.gunRange)
+			local rayEnd = (gun.bulletSpawn:GetObjDir() * gun.gunRange) + rayStart
 			local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
 			local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)
 			
@@ -67,8 +68,11 @@ function Fire(gun)
 			
 			if hit == true then
 				if result ~= nil and result["HitType"] == "Entity" then
-					if result["HitObject"]:GetKey() == "Target" then
+					local hitObj = result["HitObject"]
+					if hitObj:GetKey() == "Target" then
 						Debug:PrintLine("Hit target")
+						hitObj.Deactivate(hitObj)
+						table.insert(G.targetsHit, hitObj)
 					end
 				end
 			end

@@ -1,5 +1,10 @@
 ﻿-- new script file
 function OnAfterSceneLoaded(self)
+	if G.playerStartPos == nil or G.playerStartRot == nil then
+		G.playerStartPos = self:GetPosition()
+		G.playerStartRot = self:GetOrientation()
+	end
+
 	--get the characterController
 	self.characterController = self:GetComponentOfType("vHavokCharacterController")
 	self.walkHeight = self.characterController:GetCapsuleTop()
@@ -44,6 +49,7 @@ function OnAfterSceneLoaded(self)
 	self.map:MapTrigger("CROUCH", "KEYBOARD", "CT_KB_C")
 	
 	self.map:MapTrigger("INVERT", "KEYBOARD", "CT_KB_I", {onceperframe = true} )
+	self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_R", {onceperframe = true} )
 	
 	self.gun = GetWeapon(self)
 	if self.gun ~= nil then
@@ -74,6 +80,7 @@ function OnThink(self)
 	local crouch = self.map:GetTrigger("CROUCH") > 0
 	
 	local invert = self.map:GetTrigger("INVERT") > 0
+	local reset = self.map:GetTrigger("RESET") > 0 
 	
 	local forwardVec = self:GetObjDir()
 	local rightVec = self:GetObjDir_Right()
@@ -152,6 +159,10 @@ function OnThink(self)
 	if invert then
 		ToggleInvert(self)
 	end
+	
+	if reset then
+		G.Reset()
+	end
 end
 
 function OnBeforeSceneUnloaded(self)
@@ -176,6 +187,9 @@ end
 
 function Crouch(self)
 	Debug:PrintLine("Crouching")
+	--[[
+	this section does not work without a special download from github
+	--]]
 	self.characterController:SetCapsuleTop(Vision.hkvVec3(0, 0, 40) )
 	-- self.characterController:SetScaling( Vision.hkvVec3(1, 1, .25) )
 	-- self.characterController:SetProperty("Scaling", Vision.hkvVec3(1, 1, .25))
