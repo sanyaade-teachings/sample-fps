@@ -96,8 +96,12 @@ textures/ui/white.dds	textures/ui/white.dds	sRGB=false
 textures/water/water_n_01.dds	textures/water/water_n_01.dds	sRGB=false
 meshes/fps_duckobject_mesh.vcolmesh	meshes/fps_duckobject_mesh.vcolmesh	
 meshes/fps_duckobject_mesh.vmesh	meshes/fps_duckobject_mesh.vmesh	LODSwitchDistances=
+meshes/fps_floor_mesh.vcolmesh	meshes/fps_floor_mesh.vcolmesh	
+meshes/fps_floor_mesh.vmesh	meshes/fps_floor_mesh.vmesh	LODSwitchDistances=
 meshes/fps_groundgrid_mesh.vcolmesh	meshes/fps_groundgrid_mesh.vcolmesh	
 meshes/fps_groundgrid_mesh.vmesh	meshes/fps_groundgrid_mesh.vmesh	LODSwitchDistances=
+meshes/fps_walls_mesh.vcolmesh	meshes/fps_walls_mesh.vcolmesh	
+meshes/fps_walls_mesh.vmesh	meshes/fps_walls_mesh.vmesh	LODSwitchDistances=
 models/fps_charstandin_mod.anim	models/fps_charstandin_mod.anim	
 models/fps_charstandin_mod.model	models/fps_charstandin_mod.model	LODSwitchDistances=
 models/fps_charstandin_mod.vcolmesh	models/fps_charstandin_mod.vcolmesh	
@@ -108,10 +112,13 @@ models/fps_target_mod.anim	models/fps_target_mod.anim
 models/fps_target_mod.model	models/fps_target_mod.model	LODSwitchDistances=
 models/fps_target_mod.vcolmesh	models/fps_target_mod.vcolmesh	
 particles/plume_2.dds	particles/plume_2.dds	sRGB=false
+scenes/sample_p01.dds	scenes/sample_p01.dds	sRGB=false
 textures/blue_128.tga	textures/blue_128.tga	sRGB=false
 textures/fps_gun_diffuse.tga	textures/fps_gun_diffuse.tga	sRGB=false
 textures/fps_muzzleflash_diffuse.tga	textures/fps_muzzleflash_diffuse.tga	sRGB=false
+textures/fps_panel_tex.tga	textures/fps_panel_tex.tga	sRGB=false
 textures/fps_reticule_diffuse.tga	textures/fps_reticule_diffuse.tga	sRGB=false
 textures/fps_target_diffuse.tga	textures/fps_target_diffuse.tga	sRGB=false
+textures/fps_wallpanel_tex.tga	textures/fps_wallpanel_tex.tga	sRGB=false
 textures/gridtext_diffuse.tga	textures/gridtext_diffuse.tga	sRGB=false
 textures/particles/fps_bullet_diffuse.tga	textures/particles/fps_bullet_diffuse.tga	sRGB=false

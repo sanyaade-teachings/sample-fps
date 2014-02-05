@@ -17,6 +17,32 @@ function OnThink(self)
 		self.timeToNextShot = self.timeToNextShot - Timer:GetTimeDiff()
 	elseif self.timeToNextShot < 0 then
 		self.timeToNextShot = 0
+	end	
+	
+	local rayStart = self:GetPosition()
+	local rayEnd = (self:GetObjDir() * self.gunRange) + rayStart
+	-- local rayEnd = Screen:Project3D(G.w / 2, G.h / 2, self.gunRange)
+	
+	local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
+	local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)
+	
+	local color = Vision.V_RGBA_RED
+	Debug.Draw:Line(rayStart, rayEnd, color)
+	
+	local hitTarget = false
+
+	if hit == true then
+		if result ~= nil and result["HitType"] == "Entity" then
+			if result["HitObject"]:GetKey() == "Target" then
+				hitTarget = true
+			end
+		end
+	end
+	
+	if hitTarget == true then
+		G.screenMask:SetColor(Vision.V_RGBA_RED)
+	else
+		G.screenMask:SetColor(Vision.V_RGBA_WHITE)
 	end
 end
 
@@ -24,14 +50,15 @@ function OnExpose(self)
 	self.fireRate = .15
 	self.magazineSize = 10
 	self.totalRounds = 50
-	self.gunRange = 7000
+	self.gunRange = 700
+	self.infiniteAmmo = false
 end
 
 function Fire(gun)
 	if gun.timeToNextShot <= 0 then 
 		if gun.roundsLoaded > 0 then
 			local rayStart = gun.bulletSpawn:GetPosition()
-			local rayEnd = (gun.bulletSpawn:GetObjDir() * gun.gunRange) - rayStart
+			local rayEnd = rayStart + (gun.bulletSpawn:GetObjDir() * gun.gunRange)
 			local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
 			local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)
 			
@@ -46,14 +73,17 @@ function Fire(gun)
 				end
 			end
 			
-			gun.roundsLoaded = gun.roundsLoaded - 1
-			gun.totalRounds = gun.totalRounds - 1
+			if not gun.infiniteAmmo then
+				gun.roundsLoaded = gun.roundsLoaded - 1
+				gun.totalRounds = gun.totalRounds - 1
+			end
 			
 			--Game:CreateEffect(rayStart, "Particles\\FPS_Bullet_PAR.xml")
 			StartCoolDown(gun)
 		end
 	end
 end
+
 
 function StartCoolDown(gun)
 	gun.timeToNextShot = gun.fireRate
