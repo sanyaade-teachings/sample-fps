@@ -18,7 +18,10 @@ function OnAfterSceneLoaded(self)
 	G.playerStartRot = G.player:GetOrientation()
 	
 	G.Reset = ResetGame
-	Debug:PrintLine("Here")
+end
+
+function OnBeforeSceneUnloaded(self)
+	Game:DeleteAllUnrefScreenMasks()
 end
 
 function ResetGame()

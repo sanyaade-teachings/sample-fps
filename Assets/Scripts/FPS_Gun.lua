@@ -1,11 +1,22 @@
 function OnAfterSceneLoaded(self)
+	self.infiniteAmmo = false
+
 	self.FireWeapon = Fire
 	self.ReloadWeapon = Reload
+	self.AddAmmo = AddMoreAmmo
 	
 	self.timeToNextShot = 0
 	self.roundsLoaded = self.magazineSize
 	
 	self.bulletSpawn = Game:GetEntity("BulletSpawn")
+end
+
+function OnExpose(self)
+	self.fireRate = .15
+	self.magazineSize = 10
+	self.totalRounds = 50
+	self.gunRange = 700
+	self.roundsCapacity = 50
 end
 
 function OnThink(self)
@@ -47,14 +58,6 @@ function OnThink(self)
 	end
 end
 
-function OnExpose(self)
-	self.fireRate = .15
-	self.magazineSize = 10
-	self.totalRounds = 50
-	self.gunRange = 700
-	self.infiniteAmmo = false
-end
-
 function Fire(gun)
 	if gun.timeToNextShot <= 0 then 
 		if gun.roundsLoaded > 0 then
@@ -82,12 +85,11 @@ function Fire(gun)
 				gun.totalRounds = gun.totalRounds - 1
 			end
 			
-			--Game:CreateEffect(rayStart, "Particles\\FPS_Bullet_PAR.xml")
+			--local effect = Game:CreateEffect(rayStart, "Particles\\FPS_Bullet_PAR.xml")
 			StartCoolDown(gun)
 		end
 	end
 end
-
 
 function StartCoolDown(gun)
 	gun.timeToNextShot = gun.fireRate
@@ -98,5 +100,17 @@ function Reload(gun)
 		while (gun.roundsLoaded < gun.magazineSize) and (gun.roundsLoaded < gun.totalRounds) do
 			gun.roundsLoaded = gun.roundsLoaded + 1
 		end
+	end
+end
+
+function AddMoreAmmo(gun, amount)
+	if gun.totalRounds < gun.roundsCapacity then
+		while gun.totalRounds < gun.roundsCapacity and amount > 0 do
+			gun.totalRounds = gun.totalRounds + 1
+			amount = amount - 1
+		end
+		return true
+	else
+		return false
 	end
 end

@@ -197,8 +197,10 @@ function Crouch(self)
 end
 
 function ShowStats(self)
-	Debug:PrintAt(0, 25, "Ammo: " .. self.gun.roundsLoaded .. "/" .. self.gun.magazineSize, Vision.V_RGBA_YELLOW)
-	Debug:PrintAt(0, 40, "Rounds: " .. self.gun.totalRounds, Vision.V_RGBA_YELLOW)
+	if self.gun.roundsLoaded ~= nil and self.gun.magazineSize ~= nil and self.gun.totalRounds ~= nil then
+		Debug:PrintAt(0, 25, "Ammo: " .. self.gun.roundsLoaded .. "/" .. self.gun.magazineSize, Vision.V_RGBA_YELLOW)
+		Debug:PrintAt(0, 40, "Rounds: " .. self.gun.totalRounds, Vision.V_RGBA_YELLOW)
+	end
 end
 
 function ToggleInvert(self)
