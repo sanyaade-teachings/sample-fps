@@ -1757,6 +1757,59 @@
                 "TemplateName": "Default"
             }
         },
+        "Textures/Decals/FPS_BulletWallMark_TEX.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 2745548229,
+                "TimeStamp": 1392067313021909700,
+                "LastEditTime": 1392067314035011000
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 32,
+                "Height": 32,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "pcdx9": {
+                    "None": {
+
+                    }
+                },
+                "ios": {
+                    "TextureTransformationRule": {
+                        "Compression": "Quality",
+                        "Usage": "Undefined",
+                        "RemoveAlphaChannel": false,
+                        "CreateMipMaps": true,
+                        "DownscaleLevel": 0,
+                        "MinimumSize": 0,
+                        "MaximumSize": 0
+                    }
+                },
+                "android": {
+                    "TextureTransformationRule": {
+                        "Compression": "Quality",
+                        "Usage": "Undefined",
+                        "RemoveAlphaChannel": false,
+                        "CreateMipMaps": true,
+                        "DownscaleLevel": 0,
+                        "MinimumSize": 0,
+                        "MaximumSize": 0
+                    }
+                }
+            }
+        },
         "Textures/Decals/machinegun.dds": {
             "AssetType": "Texture",
             "Common": {
@@ -2264,6 +2317,87 @@
                 "Width": 32,
                 "Height": 32,
                 "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/Sky/SkyBox_Basic_Bottom.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 582022815,
+                "TimeStamp": 1392060544156771700,
+                "LastEditTime": 1392060597775133000
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 256,
+                "Height": 256,
+                "HasAlpha": false,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/Sky/SkyBox_Basic_Sides.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 510291554,
+                "TimeStamp": 1392060512868643200,
+                "LastEditTime": 1392060598837239200
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 256,
+                "Height": 256,
+                "HasAlpha": false,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/Sky/SkyBox_Basic_Top.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 1708340854,
+                "TimeStamp": 1392060500224378900,
+                "LastEditTime": 1392060500439400400
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 256,
+                "Height": 256,
+                "HasAlpha": false,
                 "sRGB": false
             },
             "Transformations": {

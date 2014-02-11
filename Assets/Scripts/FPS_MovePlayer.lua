@@ -49,7 +49,7 @@ function OnAfterSceneLoaded(self)
 	self.map:MapTrigger("CROUCH", "KEYBOARD", "CT_KB_C")
 	
 	self.map:MapTrigger("INVERT", "KEYBOARD", "CT_KB_I", {onceperframe = true} )
-	self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_R", {onceperframe = true} )
+	self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )
 	
 	self.gun = GetWeapon(self)
 	if self.gun ~= nil then

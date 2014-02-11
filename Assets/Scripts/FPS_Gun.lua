@@ -1,5 +1,8 @@
 function OnAfterSceneLoaded(self)
 	self.infiniteAmmo = false
+	self.bulletSpeed = 8
+	self.bulletParticle = Game:CreateEffect(rayStart, "Particles\\FPS_Bullet_PAR.xml")
+	self.ricochetChance = .3
 
 	self.FireWeapon = Fire
 	self.ReloadWeapon = Reload
@@ -61,31 +64,14 @@ end
 function Fire(gun)
 	if gun.timeToNextShot <= 0 then 
 		if gun.roundsLoaded > 0 then
-			local rayStart = gun.bulletSpawn:GetPosition()
-			local rayEnd = (gun.bulletSpawn:GetObjDir() * gun.gunRange) + rayStart
-			local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
-			local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)
 			
-			local color = Vision.V_RGBA_GREEN
-			Debug.Draw:Line(rayStart, rayEnd, color)
-			
-			if hit == true then
-				if result ~= nil and result["HitType"] == "Entity" then
-					local hitObj = result["HitObject"]
-					if hitObj:GetKey() == "Target" then
-						Debug:PrintLine("Hit target")
-						hitObj.Deactivate(hitObj)
-						table.insert(G.targetsHit, hitObj)
-					end
-				end
-			end
+			CreateBullet(gun.bulletSpeed, gun.bulletSpawn:GetPosition(), gun.bulletSpawn:GetObjDir(), gun.bulletParticle, gun.ricochetChance, gun.gunRange)
 			
 			if not gun.infiniteAmmo then
 				gun.roundsLoaded = gun.roundsLoaded - 1
 				gun.totalRounds = gun.totalRounds - 1
 			end
 			
-			--local effect = Game:CreateEffect(rayStart, "Particles\\FPS_Bullet_PAR.xml")
 			StartCoolDown(gun)
 		end
 	end
@@ -114,3 +100,4 @@ function AddMoreAmmo(gun, amount)
 		return false
 	end
 end
+

@@ -126,3 +126,7 @@ textures/fps_target_diffuse.tga	textures/fps_target_diffuse.tga	sRGB=false
 textures/fps_wallpanel_tex.tga	textures/fps_wallpanel_tex.tga	sRGB=false
 textures/gridtext_diffuse.tga	textures/gridtext_diffuse.tga	sRGB=false
 textures/particles/fps_bullet_diffuse.tga	textures/particles/fps_bullet_diffuse.tga	sRGB=false
+textures/sky/skybox_basic_bottom.tga	textures/sky/skybox_basic_bottom.tga	sRGB=false
+textures/sky/skybox_basic_sides.tga	textures/sky/skybox_basic_sides.tga	sRGB=false
+textures/sky/skybox_basic_top.tga	textures/sky/skybox_basic_top.tga	sRGB=false
+textures/decals/fps_bulletwallmark_tex.tga	textures/decals/fps_bulletwallmark_tex.tga	sRGB=false
