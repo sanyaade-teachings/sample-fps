@@ -16,6 +16,10 @@ function OnThink(self)
 			if currentBullet ~= nil then 
 				if UpdateBullet(currentBullet) then
 					table.remove(G.allBullets, i)
+					-- Debug:PrintLine("Removing...")
+					currentBullet.particle:Remove()
+					i = i - 1
+					Debug:PrintLine("Bullet deleted. " ..table.getn(G.allBullets) .. "bullets still in scene")
 				end
 			end	
 		end
@@ -47,10 +51,16 @@ end
 function UpdateBullet(bullet)
 	--find the bullet's next position
 	local nextPos = (bullet.dir * bullet.speed) + bullet.pos 
+	
+	
+	--[[without this line the game breaks, with it, it breaks--]]
+	local distance = bullet.startPos:getDistanceToSquared(nextPos)
+	local rangeSq = bullet.range * bullet.range 
+	if  distance > rangeSq then
+		return true
+	end
+	
 	local dist = bullet.pos:getDistanceToSquared(nextPos)
-	--if the distance is greater than x
-		--cast a ray and check for collision
-		--if no hit update position
 	
 	local color = Vision.V_RGBA_GREEN
 	Debug.Draw:Line(bullet.pos, nextPos, color)
@@ -72,7 +82,7 @@ function UpdateBullet(bullet)
 					end
 				end
 				
-				local size = 6
+				local size = 2
 				local distance = size / 2
 				local lifetime = 5 --seconds
 				local rotation = 0
@@ -90,6 +100,7 @@ function UpdateBullet(bullet)
 			end
 		else
 			bullet.pos = nextPos
+			bullet.particle:SetPosition(nextPos)
 			return false
 		end
 		
@@ -108,7 +119,7 @@ function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle,
 	newBullet.pos = newBullet.startPos --set start position to current position for init
 	
 	newBullet.HitCallback = function()
-		
+		--do special stuff here(?)
 	end
 	
 	table.insert(G.allBullets, newBullet)

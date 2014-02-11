@@ -1810,6 +1810,33 @@
                 }
             }
         },
+        "Textures/Decals/FPS_RedDot_TEX.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 2303360654,
+                "TimeStamp": 1392148426320552900,
+                "LastEditTime": 1392148491721092300
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 32,
+                "Height": 32,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
         "Textures/Decals/machinegun.dds": {
             "AssetType": "Texture",
             "Common": {

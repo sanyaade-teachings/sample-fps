@@ -1,10 +1,5 @@
 ﻿-- new script file
 function OnAfterSceneLoaded(self)
-	if G.playerStartPos == nil or G.playerStartRot == nil then
-		G.playerStartPos = self:GetPosition()
-		G.playerStartRot = self:GetOrientation()
-	end
-
 	--get the characterController
 	self.characterController = self:GetComponentOfType("vHavokCharacterController")
 	self.walkHeight = self.characterController:GetCapsuleTop()
@@ -12,6 +7,16 @@ function OnAfterSceneLoaded(self)
 	
 	if self.characterController == nil then
 		self.AddComponentOfType("vHavokCharacterController")
+	end
+	
+	self.camera = Game:GetEntity("Camera")
+	if G.playerStartPos ~= nil and G.playerStartRot ~= nil then
+		self.characterController:SetPosition(G.playerStartPos)
+		self:SetOrientation(G.playerStartRot)
+		
+		local cameraVect = Vision.hkvVec3(G.playerStartPos.x, G.playerStartPos.y, self.camera:GetPosition().z)
+		-- self.camera:SetPosition(cameraVect)
+		-- self.camera:SetOrientation(G.playerStartRot)
 	end
 	
 	self.singleFire = false --if true, the gun will only fire once per click
@@ -52,9 +57,6 @@ function OnAfterSceneLoaded(self)
 	self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )
 	
 	self.gun = GetWeapon(self)
-	if self.gun ~= nil then
-		SetInitialRotation(self)
-	end
 	
 	Debug:Enable(true)
 end
@@ -110,6 +112,7 @@ function OnThink(self)
 	--rotation control		
 	if math.abs(x) > 0 or math.abs(y) > 0 then
 		local step = self.rotSpeed --* Timer:GetTimeDiff()
+		-- local rotation = self.camera:GetOrientation()
 		local rotation = self:GetOrientation()
 		rotation.x = rotation.x - x * step
 		if self.invertY then
@@ -119,6 +122,7 @@ function OnThink(self)
 		end
 		rotation.y = ClampValue(rotation.y, self.yMinRot, self.yMaxRot)
 		--rotation.y = math.clamp(rotation.y, self.yMinRot, self.yMaxRot)
+		-- self.camera:SetOrientation(rotation)
 		self:SetOrientation(rotation)
 	end
 	
@@ -172,7 +176,9 @@ function OnBeforeSceneUnloaded(self)
 end
 
 function Fire(self)
-	self.gun.FireWeapon(self.gun)
+	if self.gun ~= nil then
+		self.gun.FireWeapon(self.gun)
+	end
 end
 
 function Reload(self)
@@ -219,16 +225,6 @@ function GetWeapon(self)
 				return entity
 			end
 		end
-	end
-end
-
-function SetInitialRotation(self)
-	local screenVect = Screen:Project3D(G.w / 2, G.h / 2, self.gun.gunRange)
-
-	if screenVect ~= nil then
-		local dir = screenVect - self.gun:GetPosition()
-		dir:normalize()
-		self.gun:SetDirection(dir)
 	end
 end
 

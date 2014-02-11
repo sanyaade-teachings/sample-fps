@@ -117,6 +117,8 @@ models/fps_target_mod.vcolmesh	models/fps_target_mod.vcolmesh
 particles/plume_2.dds	particles/plume_2.dds	sRGB=false
 scenes/sample_p01.dds	scenes/sample_p01.dds	sRGB=false
 textures/blue_128.tga	textures/blue_128.tga	sRGB=false
+textures/decals/fps_bulletwallmark_tex.tga	textures/decals/fps_bulletwallmark_tex.tga	sRGB=false
+textures/decals/fps_reddot_tex.tga	textures/decals/fps_reddot_tex.tga	sRGB=false
 textures/fps_ammobox_tex.tga	textures/fps_ammobox_tex.tga	sRGB=false
 textures/fps_gun_diffuse.tga	textures/fps_gun_diffuse.tga	sRGB=false
 textures/fps_muzzleflash_diffuse.tga	textures/fps_muzzleflash_diffuse.tga	sRGB=false
@@ -129,4 +131,3 @@ textures/particles/fps_bullet_diffuse.tga	textures/particles/fps_bullet_diffuse.
 textures/sky/skybox_basic_bottom.tga	textures/sky/skybox_basic_bottom.tga	sRGB=false
 textures/sky/skybox_basic_sides.tga	textures/sky/skybox_basic_sides.tga	sRGB=false
 textures/sky/skybox_basic_top.tga	textures/sky/skybox_basic_top.tga	sRGB=false
-textures/decals/fps_bulletwallmark_tex.tga	textures/decals/fps_bulletwallmark_tex.tga	sRGB=false

@@ -14,8 +14,9 @@ function OnAfterSceneLoaded(self)
 	
 	--find the player and get the starting position and rotation
 	G.player = Game:GetEntity("Player")
-	G.playerStartPos = G.player:GetPosition()
-	G.playerStartRot = G.player:GetOrientation()
+	G.playerSpawn = Game:GetEntity("PlayerSpawn")
+	G.playerStartPos = G.playerSpawn:GetPosition()
+	G.playerStartRot = G.playerSpawn:GetOrientation()
 end
 
 function OnBeforeSceneUnloaded(self)
