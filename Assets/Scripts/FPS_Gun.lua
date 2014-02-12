@@ -35,7 +35,7 @@ function OnThink(self)
 	end		
 	
 	UpdateLOS(self)
-	SetGunRotation(self)
+	UpdateGunTransform(self)
 end
 
 function Fire(gun)
@@ -67,7 +67,13 @@ function Reload(gun)
 	end
 end
 
-function SetGunRotation(self)	
+function UpdateGunTransform(self)
+	--local relativeGunPos = self:GetPosition() - G.player.desiredGunPos
+	--local newPos = G.zeroVector
+	--newPos:setInterpolate(self:GetPosition(), relativeGunPos, Timer:GetTimeDiff() )
+	--self:SetPosition(newPos)
+	
+		
 	local rayStart = Screen:Project3D(G.w / 2, G.h / 2, 0)
 	local rayEnd = Screen:Project3D(G.w / 2, G.h / 2, self.gunRange)
 	

@@ -58,6 +58,7 @@ function OnAfterSceneLoaded(self)
 	self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )
 	
 	self.gun = GetWeapon(self)
+	self.desiredGunPos = self:GetPosition() - self.gun:GetPosition()
 	
 	Debug:Enable(true)
 end
@@ -85,8 +86,8 @@ function OnThink(self)
 	local invert = self.map:GetTrigger("INVERT") > 0
 	local reset = self.map:GetTrigger("RESET") > 0 
 	
-	local forwardVec = self:GetObjDir()
-	local rightVec = self:GetObjDir_Right()
+	local forwardVec = G.camera:GetObjDir()
+	local rightVec = G.camera:GetObjDir_Right()
 	
 	--action control (jump, fire, shoot, reload)
 	if jump then
@@ -113,8 +114,8 @@ function OnThink(self)
 	--rotation control		
 	if math.abs(x) > 0 or math.abs(y) > 0 then
 		local step = self.rotSpeed --* Timer:GetTimeDiff()
-		-- local rotation = self.camera:GetOrientation()
-		local rotation = self:GetOrientation()
+		local rotation = G.camera:GetOrientation()
+		--local rotation = self:GetOrientation()
 		rotation.x = rotation.x - x * step
 		if self.invertY then
 			rotation.y = rotation.y - y * step
@@ -123,8 +124,8 @@ function OnThink(self)
 		end
 		rotation.y = ClampValue(rotation.y, self.yMinRot, self.yMaxRot)
 		--rotation.y = math.clamp(rotation.y, self.yMinRot, self.yMaxRot)
-		-- self.camera:SetOrientation(rotation)
-		self:SetOrientation(rotation)
+		G.camera:SetOrientation(rotation)
+		--self:SetOrientation(rotation)
 	end
 	
 	--locomotion control
@@ -223,6 +224,7 @@ function GetWeapon(self)
 		
 		if entity ~= nil then
 			if entity:GetKey() == "Gun" then 
+				entity:SetAlwaysInForeGround(true)
 				return entity
 			end
 		end

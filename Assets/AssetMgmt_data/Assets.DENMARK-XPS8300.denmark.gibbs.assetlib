@@ -294,9 +294,9 @@
                 ]
             },
             "File": {
-                "Hash": 3526625706,
-                "TimeStamp": 1391631265341120000,
-                "LastEditTime": 1391631266239209800
+                "Hash": 1256547912,
+                "TimeStamp": 1392236129761721200,
+                "LastEditTime": 1392236343147283800
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -309,16 +309,16 @@
                 "Dependencies": [
                     "Shaders/BaseShaders.ShaderLib",
                     "Shaders/vMaterial.ShaderLib",
-                    "Textures/FPS_WallPanel_TEX.tga"
+                    "Textures/textureGrid_Blue.tga"
                 ],
                 "Variants": [
 
                 ]
             },
             "File": {
-                "Hash": 3674713302,
-                "TimeStamp": 1391631265339119800,
-                "LastEditTime": 1391631266303216200
+                "Hash": 3182218101,
+                "TimeStamp": 1392236129758720900,
+                "LastEditTime": 1392236598199283800
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -797,9 +797,9 @@
                 ]
             },
             "File": {
-                "Hash": 1604286182,
-                "TimeStamp": 1391637352320212500,
-                "LastEditTime": 1391637353293309800
+                "Hash": 1036980844,
+                "TimeStamp": 1392236826783590800,
+                "LastEditTime": 1392236827444656900
             },
             "Texture": {
                 "FileFormat": "DDS",
@@ -2419,6 +2419,33 @@
                 "Hash": 1708340854,
                 "TimeStamp": 1392060500224378900,
                 "LastEditTime": 1392060500439400400
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 256,
+                "Height": 256,
+                "HasAlpha": false,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/textureGrid_Blue.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 1888533058,
+                "TimeStamp": 1391550537909489900,
+                "LastEditTime": 1392236343136283800
             },
             "Texture": {
                 "FileFormat": "TGA",
