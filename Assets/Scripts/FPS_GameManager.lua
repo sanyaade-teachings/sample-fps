@@ -1,4 +1,4 @@
-﻿-- new script file
+-- new script file
 function OnAfterSceneLoaded(self)
 	--a table of bullets (also tables)
 	G.allBullets = {}
@@ -15,11 +15,10 @@ function OnThink(self)
 			local currentBullet = G.allBullets[i]
 			if currentBullet ~= nil then 
 				if UpdateBullet(currentBullet) then
-					table.remove(G.allBullets, i)
-					-- Debug:PrintLine("Removing...")
 					currentBullet.particle:Remove()
+					table.remove(G.allBullets, i)
 					i = i - 1
-					Debug:PrintLine("Bullet deleted. " ..table.getn(G.allBullets) .. "bullets still in scene")
+					-- Debug:PrintLine("Bullet deleted. " ..table.getn(G.allBullets) .. "bullets still in scene")
 				end
 			end	
 		end
@@ -27,7 +26,7 @@ function OnThink(self)
 end
 
 function OnBeforeSceneUnloaded(self)
-
+	--
 end
 
 function ResetGame()
@@ -67,7 +66,7 @@ function UpdateBullet(bullet)
 	
 	if dist > .1 then
 		local rayStart = bullet.pos
-	
+		
 		local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
 		local hit, result = Physics.PerformRaycast(rayStart, nextPos, iCollisionFilterInfo)
 		
@@ -103,9 +102,8 @@ function UpdateBullet(bullet)
 			bullet.particle:SetPosition(nextPos)
 			return false
 		end
-		
 	end
-
+	return false
 end
 
 function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle, ricochetChance, bulletRange)

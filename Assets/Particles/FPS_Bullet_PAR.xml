@@ -13,9 +13,9 @@
             </countlookup>
             <direction coneangle="0,0" conemode="alldims" />
         </defaultemitter>
-        <group topology="StretchVelocity" trailoverlap="1" localspace="TRUE" localpos="0,0,0" localori="0,0,0" tcurvetime="1" tcurveradius="1" usetcurve="FALSE">
+        <group topology="StretchFixLength" trailoverlap="1" localspace="TRUE" localpos="0,0,0" localori="0,0,0" tcurvetime="1" tcurveradius="1" usetcurve="FALSE">
             <groupsorting sortkey="0" />
-            <lifetime average="1" variation="0" />
+            <lifetime average="-1" variation="0" />
             <timescale average="1" variation="0" />
             <delay average="0" variation="0" />
             <texture filename="..\Textures\Particles\FPS_Bullet_DIFFUSE.tga" normalmap="" transparency="3" sizeaspect="1" animationsubdiv="1,1" usedframes="1" center="0,0.5" />
@@ -28,8 +28,8 @@
             <lifetime average="1" variation="0" />
             <color />
             <distortion enabled="TRUE" planealigned="FALSE">
-                <fixlength average="-1" variation="0" />
-                <speedmultiplier average="200" variation="0" />
+                <fixlength average="200" variation="0" />
+                <speedmultiplier average="-1" variation="0" />
                 <sizemode enabled="FALSE" sizemultiplier="0,0,0,0" />
             </distortion>
             <normal enabled="FALSE" dir="0,0,1,0" />

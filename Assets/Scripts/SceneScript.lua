@@ -17,6 +17,8 @@ function OnAfterSceneLoaded(self)
 	G.playerSpawn = Game:GetEntity("PlayerSpawn")
 	G.playerStartPos = G.playerSpawn:GetPosition()
 	G.playerStartRot = G.playerSpawn:GetOrientation()
+	
+	G.camera = Game:GetEntity("Camera")
 end
 
 function OnBeforeSceneUnloaded(self)

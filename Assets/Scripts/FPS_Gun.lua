@@ -43,7 +43,7 @@ function Fire(gun)
 		if gun.roundsLoaded > 0 then
 			local bulletParticle = Game:CreateEffect(gun.bulletSpawn:GetPosition(), gun.particlePath)
 			bulletParticle:SetDirection(gun:GetObjDir() )
-			CreateBullet(gun.bulletSpeed, gun.bulletSpawn:GetPosition(), gun.bulletSpawn:GetObjDir(), bulletParticle, gun.ricochetChance, gun.gunRange)
+			G.CreateBullet(gun.bulletSpeed, gun.bulletSpawn:GetPosition(), gun.bulletSpawn:GetObjDir(), bulletParticle, gun.ricochetChance, gun.gunRange)
 			
 			if not gun.infiniteAmmo then
 				gun.roundsLoaded = gun.roundsLoaded - 1
@@ -67,40 +67,48 @@ function Reload(gun)
 	end
 end
 
-function SetGunRotation(self)
+function SetGunRotation(self)	
 	local rayStart = Screen:Project3D(G.w / 2, G.h / 2, 0)
 	local rayEnd = Screen:Project3D(G.w / 2, G.h / 2, self.gunRange)
-
+	
 	local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
 	local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)
 	
+	local hitPoint = rayEnd
+	
 	if hit == true then
-		local hitPoint = rayEnd
-		
 		if hit == true and result ~= nil then
 			local resultKey = result["HitObject"]:GetKey()
-			if resultKey ~= "Player" and resultKey ~= Gun then
-				hitPoint = result["ImpactPoint"]
+			local impact = result["ImpactPoint"]
+			if self:GetPosition():dot(impact) < 0 then
+				hit, result = Physics.PerformRaycast(impact, rayEnd, iCollisionFilterInfo)
+				if hit == true and result ~= nil then
+					impact = result["ImpactPoint"]
+				end
 			end
 			
-			Debug:PrintLine(resultKey)
+			if resultKey ~= "Player" and resultKey ~= "Gun" then
+				if hitPoint:dot(impact) > 0 then
+					Debug:PrintLine(resultKey)
+					hitPoint = impact
+				end
+			end
 		end
-		
-		local d = (hitPoint - self:GetPosition()):getNormalized()
-		self:SetDirection(d)
 	end
+	
+	local d = (hitPoint - self:GetPosition()):getNormalized()
+	self:SetDirection(d)
 end
 
 function UpdateLOS(self)
 	local rayStart = self:GetPosition()
 	rayEnd = (self:GetObjDir() * self.gunRange) + rayStart
-	-- local rayEnd = Screen:Project3D(G.w / 2, G.h / 2, self.gunRange)
 	
 	local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
 	local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)
 	
 	local color = Vision.V_RGBA_RED
-	--Debug.Draw:Line(rayStart, rayEnd, color)
+	Debug.Draw:Line(rayStart, rayEnd, color)
 	
 	local hitTarget = false
 

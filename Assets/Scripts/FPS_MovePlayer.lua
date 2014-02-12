@@ -1,4 +1,4 @@
-﻿-- new script file
+-- new script file
 function OnAfterSceneLoaded(self)
 	--get the characterController
 	self.characterController = self:GetComponentOfType("vHavokCharacterController")
@@ -8,15 +8,16 @@ function OnAfterSceneLoaded(self)
 	if self.characterController == nil then
 		self.AddComponentOfType("vHavokCharacterController")
 	end
-	
-	self.camera = Game:GetEntity("Camera")
+
 	if G.playerStartPos ~= nil and G.playerStartRot ~= nil then
 		self.characterController:SetPosition(G.playerStartPos)
 		self:SetOrientation(G.playerStartRot)
 		
-		local cameraVect = Vision.hkvVec3(G.playerStartPos.x, G.playerStartPos.y, self.camera:GetPosition().z)
-		-- self.camera:SetPosition(cameraVect)
-		-- self.camera:SetOrientation(G.playerStartRot)
+		--[[
+		local cameraVect = Vision.hkvVec3(G.playerStartPos.x, G.playerStartPos.y, G.camera:GetPosition().z)
+		G.camera:SetPosition(cameraVect)
+		G.camera:SetOrientation(G.playerStartRot)
+		--]]
 	end
 	
 	self.singleFire = false --if true, the gun will only fire once per click
