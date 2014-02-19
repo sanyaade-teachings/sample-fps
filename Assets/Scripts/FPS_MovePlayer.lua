@@ -1,4 +1,4 @@
--- new script file
+﻿-- new script file
 function OnAfterSceneLoaded(self)
 	--get the characterController
 	self.characterController = self:GetComponentOfType("vHavokCharacterController")
@@ -50,12 +50,13 @@ function OnAfterSceneLoaded(self)
 	end
 	
 	self.map:MapTrigger("JUMP", "KEYBOARD", "CT_KB_SPACE", {onceperframe = true} )
-	self.map:MapTrigger("RELOAD", "KEYBOARD", "CT_KB_R", {onceperframe = true} )
+	self.map:MapTrigger("RELOAD", "KEYBOARD", "CT_KB_R", {onceperframe = true} ) 
 	self.map:MapTrigger("RUN", "KEYBOARD", "CT_KB_LSHIFT")
 	self.map:MapTrigger("CROUCH", "KEYBOARD", "CT_KB_C")
 	
-	self.map:MapTrigger("INVERT", "KEYBOARD", "CT_KB_I", {onceperframe = true} )
-	self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )
+	self.map:MapTrigger("INVERT", "KEYBOARD", "CT_KB_I", {onceperframe = true} ) --invert Y
+	self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )	--reset targets
+	self.map:MapTrigger("DISPLAY", "KEYBOARD", "CT_KB_G") 
 	
 	self.gun = GetWeapon(self)
 	self.desiredGunPos = self:GetPosition() - self.gun:GetPosition()
@@ -85,9 +86,22 @@ function OnThink(self)
 	
 	local invert = self.map:GetTrigger("INVERT") > 0
 	local reset = self.map:GetTrigger("RESET") > 0 
+	local display = self.map:GetTrigger("DISPLAY") > 0
+	
+	--local forwardVec = GetProjectedVector(G.camera:GetObjDir() )
+	--local rightVec = GetProjectedVector(G.camera:GetObjDir_Right() )
 	
 	local forwardVec = G.camera:GetObjDir()
+	forwardVec.z = 0;
+	Debug:PrintLine("U"..forwardVec)
+	forwardVec:normalize()
 	local rightVec = G.camera:GetObjDir_Right()
+	rightVec.z = 0
+	rightVec:normalize()
+	
+	-- option a
+	-- local forwardVec = self.characterController:GetObjDir()
+	-- local rightVec = self.characterController:GetObjDir_Right()
 	
 	--action control (jump, fire, shoot, reload)
 	if jump then
@@ -152,10 +166,12 @@ function OnThink(self)
 			self.moveVector = self.moveVector - forwardVec
 		end
 		
+		--normalize the movement vector
 		if self.moveVector:getLength() > 1 then
 			self.moveVector:normalize()
 		end
 		
+		--multiply the move vector by the moveSpeed
 		self.moveVector = self.moveVector * moveSpeed
 		
 		--move the character
@@ -168,6 +184,10 @@ function OnThink(self)
 	
 	if reset then
 		G.Reset()
+	end
+	
+	if display then
+		ShowControls(self)
 	end
 end
 
@@ -239,4 +259,43 @@ function ClampValue(num, minVal, maxVal)
 		num = minVal
 	end
 	return num
+end
+
+function ShowControls(self)
+	--
+end
+
+function GetProjectedVector(objForwardDir)
+	--cast a ray from the object's current vector straight down.
+	local rayStart = objForwardDir
+	local rayEnd = objForwardDir - G.worldUp
+	if objForwardDir:dot(G.worldUp) < 0 then
+		rayEnd = objForwardDir + G.worldUp
+	end
+	
+	
+	local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
+	local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)
+	
+	local color = Vision.V_RGBA_RED
+	Debug.Draw:Line(rayStart, rayEnd, color)
+	
+	if hit ~= nil and result ~= nil then
+		local impact = result["ImpactPoint"]
+		local newVec = Project(objForwardDir, impact)
+		
+		--be sure not to return a nil vector
+		if newVec ~= nil then
+			return newVec:normalize()
+		end
+	end
+		
+	return objForwardDir
+end
+
+function Project(vecU, vecV)
+	if vectU ~= nil and vectU ~= nil then
+		local scalar = (vecU:dot(vecV) ) / (math.pow(vecU.x, 2) + math.pow(vecU.y, 2) + math.pow(vecU.z, 2) )
+		return vetV * scalar
+	end
 end

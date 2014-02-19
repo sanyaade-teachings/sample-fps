@@ -1,7 +1,6 @@
---the global variables and scene logic go here
+﻿--the global variables and scene logic go here
 function OnAfterSceneLoaded(self)
 	G.isWidows = (Application:GetPlatformName() == "WIN32DX9" or Application:GetPlatformName() == "WIN32DX11")
-	G.zeroVector = Vision.hkvVec3(0,0,0)
 	
 	-- set up the reticle
 	G.w, G.h = Screen:GetViewportSize()
@@ -23,6 +22,9 @@ function OnAfterSceneLoaded(self)
 	G.playerSpawn = Game:GetEntity("PlayerSpawn")
 	G.playerStartPos = G.playerSpawn:GetPosition()
 	G.playerStartRot = G.playerSpawn:GetOrientation()
+	
+	G.worldUp = G.playerSpawn:GetObjDir_Up()
+	G.zeroVector = Vision.hkvVec3(0,0,0)
 	
 	G.camera = Game:GetEntity("Camera")
 end

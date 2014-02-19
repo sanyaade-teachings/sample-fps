@@ -1,4 +1,4 @@
-function OnAfterSceneLoaded(self)
+﻿function OnAfterSceneLoaded(self)
 	self.Activate = ActivateBox
 	self.ammoCount = 25
 	self.respawnTime = 10

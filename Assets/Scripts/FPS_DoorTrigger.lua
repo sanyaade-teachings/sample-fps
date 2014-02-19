@@ -1,4 +1,4 @@
-
+﻿
 function OnAfterSceneLoaded(self)
 	self.door = Game:GetEntity(self.targetName)
 	if self.door ~= nil then

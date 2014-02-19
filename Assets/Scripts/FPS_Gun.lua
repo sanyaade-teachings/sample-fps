@@ -1,4 +1,4 @@
-function OnCreate(self)
+﻿function OnCreate(self)
 	self.hudArray = {}
 	self.SetUp = SetUpHUD
 	-- SetUpHud(self)
@@ -113,7 +113,7 @@ end
 
 function UpdateLOS(self)
 	local rayStart = self:GetPosition()
-	rayEnd = (self:GetObjDir() * self.gunRange) + rayStart
+	local rayEnd = (self:GetObjDir() * self.gunRange) + rayStart
 	
 	local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
 	local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)

@@ -1,4 +1,4 @@
--- new script file
+﻿-- new script file
 function OnAfterSceneLoaded(self)
 	--a table of bullets (also tables)
 	G.allBullets = {}
