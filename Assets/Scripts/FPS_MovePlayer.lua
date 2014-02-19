@@ -225,6 +225,7 @@ function GetWeapon(self)
 		if entity ~= nil then
 			if entity:GetKey() == "Gun" then 
 				entity:SetAlwaysInForeGround(true)
+				entity.SetUp(entity)
 				return entity
 			end
 		end

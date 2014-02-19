@@ -10,6 +10,12 @@ function OnAfterSceneLoaded(self)
 	G.screenMask:SetTargetSize(width, width)
 	G.screenMask:SetBlending(Vision.BLEND_ADDITIVE)
 	
+	G.gunMask = Game:CreateScreenMask( (G.w * 3 / 4), (G.h * 0.1), "FPS_AmmoDisplay_Inactive_TEX.tga")
+	-- local x, y = G.gunMask:GetTextureSize()
+	-- G.texSizeX = x / 4
+	-- G.texSizeY = y / 4
+	G.gunMask:SetTargetSize(128, 64)
+	
 	G.targetsHit = {}
 	
 	--find the player and get the starting position and rotation
@@ -24,5 +30,7 @@ end
 function OnBeforeSceneUnloaded(self)
 	Game:DeleteAllUnrefScreenMasks()
 end
+
+
 
 

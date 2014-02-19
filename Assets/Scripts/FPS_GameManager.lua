@@ -75,7 +75,7 @@ function UpdateBullet(bullet)
 				if result["HitType"] == "Entity" then
 					local hitObj = result["HitObject"]
 					if hitObj:GetKey() == "Target" then
-						Debug:PrintLine("Hit target")
+						-- Debug:PrintLine("Hit target")
 						hitObj.Deactivate(hitObj)
 						table.insert(G.targetsHit, hitObj)
 					end

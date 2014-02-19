@@ -1,3 +1,9 @@
+function OnCreate(self)
+	self.hudArray = {}
+	self.SetUp = SetUpHUD
+	-- SetUpHud(self)
+end
+
 function OnAfterSceneLoaded(self)
 	self.infiniteAmmo = false
 	self.bulletSpeed = 64
@@ -50,6 +56,7 @@ function Fire(gun)
 				gun.totalRounds = gun.totalRounds - 1
 			end
 			
+			UpdateHUD(gun, gun.roundsLoaded)
 			StartCoolDown(gun)
 		end
 	end
@@ -63,17 +70,12 @@ function Reload(gun)
 	if gun.totalRounds > 0 then
 		while (gun.roundsLoaded < gun.magazineSize) and (gun.roundsLoaded < gun.totalRounds) do
 			gun.roundsLoaded = gun.roundsLoaded + 1
+			UpdateHUD(gun, gun.roundsLoaded)
 		end
 	end
 end
 
-function UpdateGunTransform(self)
-	--local relativeGunPos = self:GetPosition() - G.player.desiredGunPos
-	--local newPos = G.zeroVector
-	--newPos:setInterpolate(self:GetPosition(), relativeGunPos, Timer:GetTimeDiff() )
-	--self:SetPosition(newPos)
-	
-		
+function UpdateGunTransform(self)		
 	local rayStart = Screen:Project3D(G.w / 2, G.h / 2, 0)
 	local rayEnd = Screen:Project3D(G.w / 2, G.h / 2, self.gunRange)
 	
@@ -86,6 +88,8 @@ function UpdateGunTransform(self)
 		if hit == true and result ~= nil then
 			local resultKey = result["HitObject"]:GetKey()
 			local impact = result["ImpactPoint"]
+			
+			--if the impact location is behind the player, cast a new ray from that hit point
 			if self:GetPosition():dot(impact) < 0 then
 				hit, result = Physics.PerformRaycast(impact, rayEnd, iCollisionFilterInfo)
 				if hit == true and result ~= nil then
@@ -93,16 +97,17 @@ function UpdateGunTransform(self)
 				end
 			end
 			
+			--if the ray does not hit the player or the gun, look at the impact point
 			if resultKey ~= "Player" and resultKey ~= "Gun" then
 				if hitPoint:dot(impact) > 0 then
-					Debug:PrintLine(resultKey)
+					-- Debug:PrintLine(resultKey)
 					hitPoint = impact
 				end
 			end
 		end
 	end
 	
-	local d = (hitPoint - self:GetPosition()):getNormalized()
+	local d = (hitPoint - self:GetPosition() ):getNormalized()
 	self:SetDirection(d)
 end
 
@@ -145,8 +150,6 @@ function UpdateLOS(self)
 	else
 		G.screenMask:SetColor(Vision.V_RGBA_WHITE)
 	end
-	
-	
 end
 
 function AddMoreAmmo(gun, amount)
@@ -159,5 +162,21 @@ function AddMoreAmmo(gun, amount)
 	else
 		return false
 	end
+end
+
+function SetUpHUD(self)	
+	for i = 0, self.magazineSize, 1 do
+		self.hudArray[i] = Game:CreateTexture("Textures/FPS_GunHUD/FPS_AmmoDisplay_"..i.."_TEX.tga")
+	end
+	
+	G.gunMask:SetTextureObject(self.hudArray[10] )
+	G.gunMask:SetBlending(Vision.BLEND_ALPHA)
+	G.gunMask:SetTargetSize(256, 128)
+end
+
+function UpdateHUD(self)
+	G.gunMask:SetTextureObject(self.hudArray[self.roundsLoaded] )
+	G.gunMask:SetBlending(Vision.BLEND_ALPHA)
+	G.gunMask:SetTargetSize(256, 128)
 end
 

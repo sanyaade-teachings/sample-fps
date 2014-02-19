@@ -41,7 +41,7 @@ function OnObjectEnter(self, object)
 
 	if object:GetKey() == "Player" then
 		if(object.gun.AddAmmo(object.gun, self.ammoCount) ) then
-			Debug:PrintLine("Ammo Added!")
+			-- Debug:PrintLine("Ammo Added!")
 			SetBoxState(self, false)
 			StartCoolDown(self)
 		end

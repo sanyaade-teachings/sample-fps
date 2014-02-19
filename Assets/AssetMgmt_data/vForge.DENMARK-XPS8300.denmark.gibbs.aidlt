@@ -108,6 +108,9 @@ models/fps_ammobox_mod.vcolmesh	models/fps_ammobox_mod.vcolmesh
 models/fps_charstandin_mod.anim	models/fps_charstandin_mod.anim	
 models/fps_charstandin_mod.model	models/fps_charstandin_mod.model	LODSwitchDistances=
 models/fps_charstandin_mod.vcolmesh	models/fps_charstandin_mod.vcolmesh	
+models/fps_door_mod.anim	models/fps_door_mod.anim	
+models/fps_door_mod.model	models/fps_door_mod.model	LODSwitchDistances=
+models/fps_door_mod.vcolmesh	models/fps_door_mod.vcolmesh	
 models/fps_gun_mod.anim	models/fps_gun_mod.anim	
 models/fps_gun_mod.model	models/fps_gun_mod.model	LODSwitchDistances=
 models/fps_gun_mod.vcolmesh	models/fps_gun_mod.vcolmesh	
@@ -121,6 +124,18 @@ textures/decals/fps_bulletwallmark_tex.tga	textures/decals/fps_bulletwallmark_te
 textures/decals/fps_reddot_tex.tga	textures/decals/fps_reddot_tex.tga	sRGB=false
 textures/fps_ammobox_tex.tga	textures/fps_ammobox_tex.tga	sRGB=false
 textures/fps_gun_diffuse.tga	textures/fps_gun_diffuse.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_0_tex.tga	textures/fps_gunhud/fps_ammodisplay_0_tex.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_10_tex.tga	textures/fps_gunhud/fps_ammodisplay_10_tex.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_1_tex.tga	textures/fps_gunhud/fps_ammodisplay_1_tex.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_2_tex.tga	textures/fps_gunhud/fps_ammodisplay_2_tex.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_3_tex.tga	textures/fps_gunhud/fps_ammodisplay_3_tex.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_4_tex.tga	textures/fps_gunhud/fps_ammodisplay_4_tex.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_5_tex.tga	textures/fps_gunhud/fps_ammodisplay_5_tex.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_6_tex.tga	textures/fps_gunhud/fps_ammodisplay_6_tex.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_7_tex.tga	textures/fps_gunhud/fps_ammodisplay_7_tex.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_8_tex.tga	textures/fps_gunhud/fps_ammodisplay_8_tex.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_9_tex.tga	textures/fps_gunhud/fps_ammodisplay_9_tex.tga	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_inactive_tex.tga	textures/fps_gunhud/fps_ammodisplay_inactive_tex.tga	sRGB=false
 textures/fps_muzzleflash_diffuse.tga	textures/fps_muzzleflash_diffuse.tga	sRGB=false
 textures/fps_panel_tex.tga	textures/fps_panel_tex.tga	sRGB=false
 textures/fps_reticule_diffuse.tga	textures/fps_reticule_diffuse.tga	sRGB=false
