@@ -1,7 +1,6 @@
 ﻿function OnCreate(self)
 	self.hudArray = {}
 	self.SetUp = SetUpHUD
-	-- SetUpHud(self)
 end
 
 function OnAfterSceneLoaded(self)
@@ -19,6 +18,10 @@ function OnAfterSceneLoaded(self)
 	self.roundsLoaded = self.magazineSize
 	
 	self.bulletSpawn = Game:GetEntity("BulletSpawn")
+	-- self.shotSound = Fmod:GetSound("ShotSound")
+	-- if self.shotSound == nil then
+		--self.shotSound = Fmod:CreateSound(self.bulletSpawn:GetPosition(), "Sounds/Shot_Sound.wav", false)
+	-- end
 end
 
 function OnExpose(self)
@@ -54,6 +57,28 @@ function Fire(gun)
 			if not gun.infiniteAmmo then
 				gun.roundsLoaded = gun.roundsLoaded - 1
 				gun.totalRounds = gun.totalRounds - 1
+			end
+			
+			-- if gun.shotSound ~= nil then
+				-- if gun.shotSound:IsPlaying() then
+					-- gun.ShotSound:Stop()
+				-- end
+				-- gun.shotSound:Play()
+			-- end
+			
+			
+			--remove an existing sound before creating a new one
+			if gun.shotSound ~= nil then
+				if gun.shotSound:IsPlaying() then
+					gun.shotSound:Stop()
+				end
+				gun.shotSound:Remove()
+			end
+			
+			gun.shotSound = Fmod:CreateSound(gun.bulletSpawn:GetPosition(), "Sounds/Shot_Sound.wav", false)
+			if gun.shotSound ~= nil then
+				gun.shotSound = Fmod:CreateSound(gun.bulletSpawn:GetPosition(), "Sounds/Shot_Sound.wav", false)
+				gun.shotSound:Play()
 			end
 			
 			UpdateHUD(gun, gun.roundsLoaded)

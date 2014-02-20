@@ -95,7 +95,8 @@ function UpdateBullet(bullet)
 					Vision.BLEND_ALPHA,
 					size, rotation, lifetime)
 					
-					return true
+				bullet.HitCallback(pos)	
+				return true
 			end
 		else
 			bullet.pos = nextPos
@@ -116,8 +117,10 @@ function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle,
 	newBullet.range = bulletRange
 	newBullet.pos = newBullet.startPos --set start position to current position for init
 	
-	newBullet.HitCallback = function()
-		--do special stuff here(?)
+	newBullet.HitCallback = function(position)
+		local hitSound = Fmod:CreateSound(position, "Sounds/Hit_Sound.wav", false)
+		hitSound:SetVolume(0.5)
+		hitSound:Play()
 	end
 	
 	table.insert(G.allBullets, newBullet)

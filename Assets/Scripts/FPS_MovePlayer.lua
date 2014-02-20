@@ -93,7 +93,6 @@ function OnThink(self)
 	
 	local forwardVec = G.camera:GetObjDir()
 	forwardVec.z = 0;
-	Debug:PrintLine("U"..forwardVec)
 	forwardVec:normalize()
 	local rightVec = G.camera:GetObjDir_Right()
 	rightVec.z = 0
@@ -127,9 +126,8 @@ function OnThink(self)
 	
 	--rotation control		
 	if math.abs(x) > 0 or math.abs(y) > 0 then
-		local step = self.rotSpeed --* Timer:GetTimeDiff()
+		local step = self.rotSpeed
 		local rotation = G.camera:GetOrientation()
-		--local rotation = self:GetOrientation()
 		rotation.x = rotation.x - x * step
 		if self.invertY then
 			rotation.y = rotation.y - y * step
@@ -137,9 +135,12 @@ function OnThink(self)
 			rotation.y = rotation.y + y * step
 		end
 		rotation.y = ClampValue(rotation.y, self.yMinRot, self.yMaxRot)
-		--rotation.y = math.clamp(rotation.y, self.yMinRot, self.yMaxRot)
 		G.camera:SetOrientation(rotation)
-		--self:SetOrientation(rotation)
+		local ddd = self:GetOrientation()
+		ddd.x = ddd.x - x * step
+		--self:SetRotationDelta(ddd)
+		self:SetRotationDelta( Vision.hkvVec3(-x * step, 0, 0) )
+		--self:IncRotationDelta(Vision.hkvVec3(-x * step, 0, 0) )
 	end
 	
 	--locomotion control
