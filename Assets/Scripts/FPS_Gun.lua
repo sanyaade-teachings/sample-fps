@@ -6,7 +6,7 @@ function OnAfterSceneLoaded(self)
 	self.infiniteAmmo = false
 	self.bulletSpeed = 64
 	self.particlePath = "Particles\\FPS_Bullet_PAR.xml"
-	self.ricochetChance = 25
+	self.ricochetChance = 30
 	self.roundsCapacity = self.magazineSize * 3 
 	self.totalRounds = self.roundsCapacity
 	
@@ -47,6 +47,8 @@ function OnThink(self)
 	
 	UpdateLOS(self)
 	UpdateGunTransform(self)
+	
+	ShowStats(self)
 end
 
 function OnBeforeSceneUnloaded(self)
@@ -225,7 +227,7 @@ function SetUpHUD(self)
 	for i = 0, self.bulletRows - 1 , 1 do
 		for j = 0, self.bulletColumns - 1, 1 do
 			index = (i * self.bulletColumns) + j
-			self.bullets[index] = Game:CreateScreenMask(x + (size_X * j), (y / 2) + (size_Y / 2 * i), "Textures/FPS_GunHUD/FPS_Bullet_White_TEX.tga")
+			self.bullets[index] = Game:CreateScreenMask(G.w - ( (size_X * self.bulletColumns) - (size_X * j) ), (y / 2) + (size_Y / 2 * i), "Textures/FPS_GunHUD/FPS_Bullet_White_TEX.tga")
 			self.bullets[index]:SetBlending(Vision.BLEND_ALPHA)
 			-- self.bullets[index]:SetTargetSize(size_X / 2, size_Y)
 		end
@@ -238,3 +240,9 @@ function UpdateHUD(self, roundsLoaded) --change the position index instead
 	G.gunMask:SetTargetSize(256, 128)
 end
 
+function ShowStats(self)
+	if self.roundsLoaded ~= nil and self.magazineSize ~= nil and self.totalRounds ~= nil then
+		local x,y = G.gunMask:GetTextureSize()
+		Debug:PrintAt(G.w - x / 10, y * 2 / 5, "" .. self.totalRounds, Vision.V_RGBA_WHITE, G.fontPath)
+	end
+end

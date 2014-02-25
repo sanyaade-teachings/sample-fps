@@ -1,5 +1,6 @@
 ﻿--the global variables and scene logic go here
 function OnAfterSceneLoaded(self)
+	--check the platform
 	G.isWidows = (Application:GetPlatformName() == "WIN32DX9" or Application:GetPlatformName() == "WIN32DX11")
 	
 	-- set up the reticle
@@ -25,7 +26,6 @@ function OnAfterSceneLoaded(self)
 		end
 	end
 	
-	
 	--find the player and get the starting position and rotation
 	G.player = Game:GetEntity("Player")
 	G.playerSpawn = Game:GetEntity("PlayerSpawn")
@@ -36,6 +36,9 @@ function OnAfterSceneLoaded(self)
 	G.zeroVector = Vision.hkvVec3(0,0,0)
 	
 	G.camera = Game:GetEntity("Camera")
+	
+	--set the font path
+	G.fontPath = "Fonts/Stencil.fnt"
 end
 
 function OnBeforeSceneUnloaded(self)

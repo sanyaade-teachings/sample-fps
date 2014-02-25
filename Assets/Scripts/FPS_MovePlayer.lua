@@ -56,19 +56,23 @@ function OnAfterSceneLoaded(self)
 	
 	self.map:MapTrigger("INVERT", "KEYBOARD", "CT_KB_I", {onceperframe = true} ) --invert Y
 	self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )	--reset targets
-	self.map:MapTrigger("DISPLAY", "KEYBOARD", "CT_KB_G") 
+	self.map:MapTrigger("DISPLAY", "KEYBOARD", "CT_KB_H") --will show the display whilst holding
 	
-	self.gun = GetWeapon(self)
-	self.desiredGunPos = self:GetPosition() - self.gun:GetPosition()
+	--get the gun object, it is a child of the camera
+	self.gun = GetWeapon(G.camera)
 	
 	--set the model to nil
 	-- self:SetMesh("")
 	
 	Debug:Enable(true)
+	
+	--tell the player how to access help
+	Debug:PrintLine("**************************************************", Vision.V_RGBA_YELLOW)
+	Debug:PrintLine("************** For Help, Hold \"H\" **************", Vision.V_RGBA_YELLOW)
+	Debug:PrintLine("**************************************************", Vision.V_RGBA_YELLOW)
 end
 
 function OnThink(self)
-	ShowStats(self)
 	
 	-- Debug:PrintAt(0, 60, "Height: " .. self.characterController:GetCapsuleHeight(), Vision.V_RGBA_YELLOW)
 	-- Debug:PrintAt(0, 75, "Top: " .. self.characterController:GetCapsuleTop(), Vision.V_RGBA_YELLOW)
@@ -131,23 +135,30 @@ function OnThink(self)
 	if math.abs(x) > 0 or math.abs(y) > 0 then
 		local step = self.rotSpeed
 		local rotation = G.camera:GetOrientation()
+		--get the left/right rotation
 		rotation.x = rotation.x - x * step
+		
+		--get the up/down rotation, accounting for invert state
 		if self.invertY then
 			rotation.y = rotation.y - y * step
 		else
 			rotation.y = rotation.y + y * step
 		end
 		rotation.y = ClampValue(rotation.y, self.yMinRot, self.yMaxRot)
+		
+		--update the camera roation
 		G.camera:SetOrientation(rotation)
-		local ddd = self:GetOrientation()
-		ddd.x = ddd.x - x * step
-		--self:SetRotationDelta(ddd)
+		
+		local orienation = self:GetOrientation()
+		orienation.x = orienation.x - x * step
+		--self:SetRotationDelta(orienation)
 		self:SetRotationDelta( Vision.hkvVec3(-x * step, 0, 0) )
 		--self:IncRotationDelta(Vision.hkvVec3(-x * step, 0, 0) )
 	end
 	
 	--locomotion control
-	if (left or right or forward or back or run) and self.characterController:IsStanding() then
+	-- and self.characterController:IsStanding()
+	if (left or right or forward or back or run) then
 		--reset the moveVector to avoid steadily increasing velocity
 		self.moveVector = G.zeroVector
 		local moveSpeed = 0
@@ -228,23 +239,16 @@ function Crouch(self)
 	-- self.characterController:SetCapsuleHeight( self.crouchHeight )
 end
 
-function ShowStats(self)
-	if self.gun.roundsLoaded ~= nil and self.gun.magazineSize ~= nil and self.gun.totalRounds ~= nil then
-		Debug:PrintAt(0, 25, "Ammo: " .. self.gun.roundsLoaded .. "/" .. self.gun.magazineSize, Vision.V_RGBA_YELLOW)
-		Debug:PrintAt(0, 40, "Rounds: " .. self.gun.totalRounds, Vision.V_RGBA_YELLOW)
-	end
-end
-
 function ToggleInvert(self)
 	self.invertY = not self.invertY
-	Debug:PrintLine("Toggled")
+	--Debug:PrintLine("Toggled")
 end
 
-function GetWeapon(self)
-	local numChildren = self:GetNumChildren()
+function GetWeapon(camea)
+	local numChildren = camera:GetNumChildren()
 	
 	for i = 0, numChildren - 1, 1 do
-		local entity = self:GetChild(i)
+		local entity = camera:GetChild(i)
 		
 		if entity ~= nil then
 			if entity:GetKey() == "Gun" then 
@@ -266,9 +270,20 @@ function ClampValue(num, minVal, maxVal)
 end
 
 function ShowControls(self)
-	--
+	Debug:PrintAt(10, 0, "Move: WASD", Vision.V_RGBA_WHITE, G.fontPath)
+	Debug:PrintAt(10, 32, "Look: MOUSE", Vision.V_RGBA_WHITE, G.fontPath)
+	Debug:PrintAt(10, 64, "Run: LEFT SHIFT", Vision.V_RGBA_WHITE, G.fontPath)
+	Debug:PrintAt(10, 96, "Fire: LEFT MOUSE BUTTON", Vision.V_RGBA_WHITE, G.fontPath)
+	Debug:PrintAt(10, 128, "Reload: R", Vision.V_RGBA_WHITE, G.fontPath)
+	Debug:PrintAt(10, 160, "Jump: SPACEBAR", Vision.V_RGBA_WHITE, G.fontPath)
+	Debug:PrintAt(10, 192, "Invert Y: I", Vision.V_RGBA_WHITE, G.fontPath)
+	local inverted = self.invertY and "yes" or "No"
+	Debug:PrintAt(10, 224, "Invered?: " .. inverted , Vision.V_RGBA_WHITE, G.fontPath)
+	Debug:PrintAt(10, 258, "Reset Level: 1", Vision.V_RGBA_WHITE, G.fontPath)
 end
 
+--this section not currently in use but can be used to project a vector onto the floor
+--[[
 function GetProjectedVector(objForwardDir)
 	--cast a ray from the object's current vector straight down.
 	local rayStart = objForwardDir
@@ -302,3 +317,4 @@ function Project(vecU, vecV)
 		return vetV * scalar
 	end
 end
+--]]

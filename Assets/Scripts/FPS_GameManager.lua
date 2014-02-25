@@ -8,7 +8,7 @@ function OnAfterSceneLoaded(self)
 end
 
 function OnThink(self)
-	local numHit = table.getn(targetsHit)
+	local numHit = table.getn(G.targetsHit)
 	if numHit == G.numTargets then
 		Win()
 	end
@@ -147,7 +147,7 @@ function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle,
 		if ricochet < ricochetChance then
 			-- Debug:PrintLine("Ricohet")
 			bullet.dir:reflect(result["ImpactNormal"] )
-			bullet.speed = bullet.speed / 2
+			bullet.range = bullet.range / 4
 			bullet.particle:SetDirection(bullet.dir)
 			return true
 		end

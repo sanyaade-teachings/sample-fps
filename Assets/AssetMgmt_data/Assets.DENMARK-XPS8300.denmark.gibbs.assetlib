@@ -5,7 +5,7 @@
         "LastEditTime": 1391028636286493300
     },
     "Assets": {
-        "Fonts/Arial32_00.dds": {
+        "Fonts/FineCollege_32_00.dds": {
             "AssetType": "Texture",
             "Common": {
                 "Tags": "__NEW_ASSET__",
@@ -17,9 +17,9 @@
                 ]
             },
             "File": {
-                "Hash": 3915487704,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952951493300
+                "Hash": 1120791954,
+                "TimeStamp": 1390332964841154400,
+                "LastEditTime": 1393356738883935500
             },
             "Texture": {
                 "FileFormat": "DDS",
@@ -32,7 +32,7 @@
                 "TemplateName": "Default"
             }
         },
-        "Fonts/Arial_18_00.dds": {
+        "Fonts/Stencil_00.dds": {
             "AssetType": "Texture",
             "Common": {
                 "Tags": "__NEW_ASSET__",
@@ -44,144 +44,16 @@
                 ]
             },
             "File": {
-                "Hash": 1201484646,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952978493300
+                "Hash": 1367698859,
+                "TimeStamp": 1393359432794470000,
+                "LastEditTime": 1393359433799570500
             },
             "Texture": {
                 "FileFormat": "DDS",
                 "Width": 256,
-                "Height": 128,
+                "Height": 256,
                 "HasAlpha": false,
                 "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Fonts/Arial_22_00.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1037186940,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027953003493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 256,
-                "Height": 128,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Fonts/CourierNew_18_00.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1705425836,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027953028493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 128,
-                "Height": 128,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Fonts/DebugFont_00.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 345883119,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027953054493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 256,
-                "Height": 64,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Meshes/FPS_DuckObject_MESH.vcolmesh": {
-            "AssetType": "CollisionMesh",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1091517267,
-                "TimeStamp": 1391553334939388100,
-                "LastEditTime": 1391553335961388100
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Meshes/FPS_DuckObject_MESH.vmesh": {
-            "AssetType": "StaticMesh",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-                    "plainwhite.dds",
-                    "Shaders/BaseShaders.ShaderLib",
-                    "Shaders/vMaterial.ShaderLib"
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 406513691,
-                "TimeStamp": 1391553334937388100,
-                "LastEditTime": 1391553335936388100
-            },
-            "Model": {
-                "LODSwitchDistances": [
-
-                ]
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -663,195 +535,6 @@
                 "TemplateName": "Default"
             }
         },
-        "Particles/explosion_page.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2321946612,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952635493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 1024,
-                "Height": 1024,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Particles/GroundFog.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2469079876,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952666493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 256,
-                "Height": 128,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Particles/Plume_2.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1889936403,
-                "TimeStamp": 1387325260000000000,
-                "LastEditTime": 1391027952690493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 128,
-                "Height": 128,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Particles/smoke.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3492478385,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952716493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 128,
-                "Height": 128,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Particles/Sparkle.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2827367384,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952740493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 64,
-                "Height": 64,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Particles/star.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 488704078,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952766493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 128,
-                "Height": 128,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Particles/steam.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3870076004,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952793493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 128,
-                "Height": 128,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
         "Scenes/sample_P01.dds": {
             "AssetType": "Texture",
             "Common": {
@@ -865,149 +548,14 @@
             },
             "File": {
                 "Hash": 389739677,
-                "TimeStamp": 1393275509404819300,
-                "LastEditTime": 1393275509496828500
+                "TimeStamp": 1393355966978638500,
+                "LastEditTime": 1393355967504638500
             },
             "Texture": {
                 "FileFormat": "DDS",
                 "Width": 1024,
                 "Height": 1024,
                 "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "shaders/Misc_00/MultAssigned.bmp": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2165401693,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952596493300
-            },
-            "Texture": {
-                "FileFormat": "BMP",
-                "Width": 128,
-                "Height": 128,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/Billboards/BillboardAtlas_Diffuse.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2392805357,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952439493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 1024,
-                "Height": 1024,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/Billboards/BillboardAtlas_Normal.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1997719687,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952505493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 1024,
-                "Height": 1024,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/Billboards/FGrass01.DDS": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3798401387,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952534493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 256,
-                "Height": 256,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/Billboards/grass_alpha_01.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3193604671,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952570493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 512,
-                "Height": 512,
-                "HasAlpha": true,
                 "sRGB": false
             },
             "Transformations": {
@@ -1034,735 +582,6 @@
                 "FileFormat": "TGA",
                 "Width": 128,
                 "Height": 128,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Black.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2693784306,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951810493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Blue.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 387886918,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951831493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/BlueDark.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1123576971,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951851493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/BlueLight.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3654125431,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951872493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Color_Orange.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 152472663,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951894493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Cyan.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3912344418,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951915493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/CyanDark.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 489799713,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951936493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/CyanLight.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2779904304,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951957493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Gray33.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 898840705,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951978493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Gray50.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 4036269692,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951999493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Gray66.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3069971710,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952020493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Green.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 4200225716,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952041493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/GreenDark.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 567606843,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952063493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/GreenLight.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3230106881,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952085493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Magenta.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 718301464,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952107493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/MagentaDark.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 544781701,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952129493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/MagentaLight.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1457724882,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952152493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Orange.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1010970629,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952175493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/OrangeDark.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1533376781,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952199493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/OrangeLight.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 4250395552,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952221493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Red.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1604665640,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952243493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/RedDark.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3662613963,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952265493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/RedLight.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2301827101,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952288493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/White.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1589270689,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952310493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/Yellow.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1874368593,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952332493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/YellowDark.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 48825491,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952355493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/colors/YellowLight.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3151282179,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027952378493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 16,
-                "Height": 16,
                 "HasAlpha": false,
                 "sRGB": false
             },
@@ -2606,1111 +1425,76 @@
                 "TemplateName": "Default"
             }
         },
-        "Textures/UI/Button.dds": {
-            "AssetType": "Texture",
+        "Fonts/Arial32_00.dds": {
+            "AssetType": "__deleted__",
             "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
+                "DeleteTime": 1393356329583638500
             },
             "File": {
-                "Hash": 953118428,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950718493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
+                "LastEditTime": 1393356329583638500
             }
         },
-        "Textures/UI/ButtonQuit_MouseOver.TGA": {
-            "AssetType": "Texture",
+        "Fonts/Arial_18_00.dds": {
+            "AssetType": "__deleted__",
             "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
+                "DeleteTime": 1393356329583638500
             },
             "File": {
-                "Hash": 3501536564,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950735493300
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
+                "LastEditTime": 1393356329583638500
             }
         },
-        "Textures/UI/ButtonQuit_Normal.TGA": {
-            "AssetType": "Texture",
+        "Fonts/Arial_22_00.dds": {
+            "AssetType": "__deleted__",
             "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
+                "DeleteTime": 1393356329583638500
             },
             "File": {
-                "Hash": 4190648672,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950753493300
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
+                "LastEditTime": 1393356329583638500
             }
         },
-        "Textures/UI/Checkmark_Off.TGA": {
-            "AssetType": "Texture",
+        "Fonts/CourierNew_18_00.dds": {
+            "AssetType": "__deleted__",
             "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
+                "DeleteTime": 1393356329583638500
             },
             "File": {
-                "Hash": 1084572453,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950770493300
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
+                "LastEditTime": 1393356329583638500
             }
         },
-        "Textures/UI/Checkmark_On.TGA": {
-            "AssetType": "Texture",
+        "Fonts/DebugFont_00.dds": {
+            "AssetType": "__deleted__",
             "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
+                "DeleteTime": 1393356329583638500
             },
             "File": {
-                "Hash": 2336713793,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950787493300
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 16,
-                "Height": 16,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
+                "LastEditTime": 1393356329583638500
             }
         },
-        "Textures/UI/CloseButton.bmp": {
-            "AssetType": "Texture",
+        "Fonts/Fonts/FineCollege_32_00.dds": {
+            "AssetType": "__deleted__",
             "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
+                "DeleteTime": 1393356737836830800
             },
             "File": {
-                "Hash": 715195384,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950803493300
-            },
-            "Texture": {
-                "FileFormat": "BMP",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
+                "LastEditTime": 1393356737836830800
             }
         },
-        "Textures/UI/CloseButtonGray.bmp": {
-            "AssetType": "Texture",
+        "Meshes/FPS_DuckObject_MESH.vcolmesh": {
+            "AssetType": "__deleted__",
             "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
+                "DeleteTime": 1393356737836830800
             },
             "File": {
-                "Hash": 932084437,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950819493300
-            },
-            "Texture": {
-                "FileFormat": "BMP",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
+                "LastEditTime": 1393356737836830800
             }
         },
-        "Textures/UI/CloseButtonHigh.bmp": {
-            "AssetType": "Texture",
+        "Meshes/FPS_DuckObject_MESH.vmesh": {
+            "AssetType": "__deleted__",
             "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
+                "DeleteTime": 1393356737836830800
             },
             "File": {
-                "Hash": 3191185991,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950835493300
-            },
-            "Texture": {
-                "FileFormat": "BMP",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/CloseButtonSel.bmp": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2590564751,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950851493300
-            },
-            "Texture": {
-                "FileFormat": "BMP",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/MouseArrow_E.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3276389663,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951202493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/MouseArrow_N.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2149971418,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951222493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/MouseArrow_NE.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2331492807,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951241493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/MouseArrow_NW.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2508838961,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951269493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/MouseArrow_S.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2384535164,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951333493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/MouseArrow_SE.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 478964782,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951354493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/MouseArrow_SW.DDS": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 843566397,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951374493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/MouseArrow_W.DDS": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3670501257,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951395493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/MouseCross.DDS": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2715151806,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951416493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/MouseCrossAdd.DDS": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 183683613,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951437493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/MouseMove.DDS": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 674290189,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951458493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/mousepointer-off.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3889161198,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951479493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/cursor2D/mousepointer-on.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 659494762,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951499493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/DialogFrame_blue.tga": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 65762880,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950870493300
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 64,
-                "Height": 64,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/Edit.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1355220591,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950889493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/Frame.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2270025003,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950907493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 64,
-                "Height": 64,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/Media_stop.TGA": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 379136593,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950925493300
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/Mouse.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 4294560100,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950944493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/mouseHigh.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2438627137,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950963493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/mouseHigh.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3579689310,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950980493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/mouseHigh.TGA": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 987150866,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950999493300
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/mouseNorm.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 4294560100,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951017493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/mouseNorm.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 848328670,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951033493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/mouseNorm.TGA": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2445229178,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951053493300
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/sliderFrame.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 675265548,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951071493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 64,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/sliderFrame.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3785064924,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951089493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 64,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/sliderHigh.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1170192762,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951109493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/sliderHigh.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3307883261,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951126493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/sliderNorm.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3706357273,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951145493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/sliderNorm.png": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3235561399,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951162493300
-            },
-            "Texture": {
-                "FileFormat": "PNG",
-                "Width": 32,
-                "Height": 32,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/UI/White.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2620166608,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027951182493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 8,
-                "Height": 8,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/Water/Water_N_01.DDS": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1405187284,
-                "TimeStamp": 1387325288000000000,
-                "LastEditTime": 1391027950698493300
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 512,
-                "Height": 512,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
+                "LastEditTime": 1393356737836830800
             }
         },
         "Meshes/Plane.vcolmesh": {
@@ -3785,6 +1569,357 @@
                 "LastEditTime": 1390937229258056400
             }
         },
+        "Particles/explosion_page.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737827829900
+            },
+            "File": {
+                "LastEditTime": 1393356737827829900
+            }
+        },
+        "Particles/GroundFog.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737827829900
+            },
+            "File": {
+                "LastEditTime": 1393356737827829900
+            }
+        },
+        "Particles/Plume_2.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737838831000
+            },
+            "File": {
+                "LastEditTime": 1393356737838831000
+            }
+        },
+        "Particles/smoke.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "Particles/Sparkle.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "Particles/star.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "Particles/steam.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "shaders/Misc_00/MultAssigned.bmp": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "Textures/Billboards/BillboardAtlas_Diffuse.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "Textures/Billboards/BillboardAtlas_Normal.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "Textures/Billboards/FGrass01.DDS": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "Textures/Billboards/grass_alpha_01.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "Textures/colors/Black.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "Textures/colors/Blue.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "Textures/colors/BlueDark.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737828830000
+            },
+            "File": {
+                "LastEditTime": 1393356737828830000
+            }
+        },
+        "Textures/colors/BlueLight.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/Color_Orange.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/Cyan.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/CyanDark.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/CyanLight.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/Gray33.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/Gray50.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/Gray66.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/Green.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/GreenDark.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/GreenLight.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/Magenta.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/MagentaDark.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/MagentaLight.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737829830100
+            },
+            "File": {
+                "LastEditTime": 1393356737829830100
+            }
+        },
+        "Textures/colors/Orange.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737830830200
+            },
+            "File": {
+                "LastEditTime": 1393356737830830200
+            }
+        },
+        "Textures/colors/OrangeDark.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737830830200
+            },
+            "File": {
+                "LastEditTime": 1393356737830830200
+            }
+        },
+        "Textures/colors/OrangeLight.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737830830200
+            },
+            "File": {
+                "LastEditTime": 1393356737830830200
+            }
+        },
+        "Textures/colors/Red.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737830830200
+            },
+            "File": {
+                "LastEditTime": 1393356737830830200
+            }
+        },
+        "Textures/colors/RedDark.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737830830200
+            },
+            "File": {
+                "LastEditTime": 1393356737830830200
+            }
+        },
+        "Textures/colors/RedLight.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737830830200
+            },
+            "File": {
+                "LastEditTime": 1393356737830830200
+            }
+        },
+        "Textures/colors/White.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737830830200
+            },
+            "File": {
+                "LastEditTime": 1393356737830830200
+            }
+        },
+        "Textures/colors/Yellow.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737830830200
+            },
+            "File": {
+                "LastEditTime": 1393356737830830200
+            }
+        },
+        "Textures/colors/YellowDark.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737830830200
+            },
+            "File": {
+                "LastEditTime": 1393356737830830200
+            }
+        },
+        "Textures/colors/YellowLight.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737830830200
+            },
+            "File": {
+                "LastEditTime": 1393356737830830200
+            }
+        },
         "Textures/grid01.jpg": {
             "AssetType": "__deleted__",
             "Common": {
@@ -3792,6 +1927,375 @@
             },
             "File": {
                 "LastEditTime": 1391037557833027100
+            }
+        },
+        "Textures/UI/Button.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737831830300
+            },
+            "File": {
+                "LastEditTime": 1393356737831830300
+            }
+        },
+        "Textures/UI/ButtonQuit_MouseOver.TGA": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737831830300
+            },
+            "File": {
+                "LastEditTime": 1393356737831830300
+            }
+        },
+        "Textures/UI/ButtonQuit_Normal.TGA": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737831830300
+            },
+            "File": {
+                "LastEditTime": 1393356737831830300
+            }
+        },
+        "Textures/UI/Checkmark_Off.TGA": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737831830300
+            },
+            "File": {
+                "LastEditTime": 1393356737831830300
+            }
+        },
+        "Textures/UI/Checkmark_On.TGA": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737831830300
+            },
+            "File": {
+                "LastEditTime": 1393356737831830300
+            }
+        },
+        "Textures/UI/CloseButton.bmp": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737831830300
+            },
+            "File": {
+                "LastEditTime": 1393356737831830300
+            }
+        },
+        "Textures/UI/CloseButtonGray.bmp": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/CloseButtonHigh.bmp": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/CloseButtonSel.bmp": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/cursor2D/MouseArrow_E.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/cursor2D/MouseArrow_N.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/cursor2D/MouseArrow_NE.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/cursor2D/MouseArrow_NW.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/cursor2D/MouseArrow_S.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/cursor2D/MouseArrow_SE.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/cursor2D/MouseArrow_SW.DDS": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/cursor2D/MouseArrow_W.DDS": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/cursor2D/MouseCross.DDS": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737832830400
+            },
+            "File": {
+                "LastEditTime": 1393356737832830400
+            }
+        },
+        "Textures/UI/cursor2D/MouseCrossAdd.DDS": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737833830500
+            },
+            "File": {
+                "LastEditTime": 1393356737833830500
+            }
+        },
+        "Textures/UI/cursor2D/MouseMove.DDS": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737833830500
+            },
+            "File": {
+                "LastEditTime": 1393356737833830500
+            }
+        },
+        "Textures/UI/cursor2D/mousepointer-off.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737833830500
+            },
+            "File": {
+                "LastEditTime": 1393356737833830500
+            }
+        },
+        "Textures/UI/cursor2D/mousepointer-on.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737833830500
+            },
+            "File": {
+                "LastEditTime": 1393356737833830500
+            }
+        },
+        "Textures/UI/DialogFrame_blue.tga": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737833830500
+            },
+            "File": {
+                "LastEditTime": 1393356737833830500
+            }
+        },
+        "Textures/UI/Edit.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737833830500
+            },
+            "File": {
+                "LastEditTime": 1393356737833830500
+            }
+        },
+        "Textures/UI/Frame.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737833830500
+            },
+            "File": {
+                "LastEditTime": 1393356737833830500
+            }
+        },
+        "Textures/UI/Media_stop.TGA": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737833830500
+            },
+            "File": {
+                "LastEditTime": 1393356737833830500
+            }
+        },
+        "Textures/UI/Mouse.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737834830600
+            },
+            "File": {
+                "LastEditTime": 1393356737834830600
+            }
+        },
+        "Textures/UI/mouseHigh.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737834830600
+            },
+            "File": {
+                "LastEditTime": 1393356737834830600
+            }
+        },
+        "Textures/UI/mouseHigh.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737834830600
+            },
+            "File": {
+                "LastEditTime": 1393356737834830600
+            }
+        },
+        "Textures/UI/mouseHigh.TGA": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737834830600
+            },
+            "File": {
+                "LastEditTime": 1393356737834830600
+            }
+        },
+        "Textures/UI/mouseNorm.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737834830600
+            },
+            "File": {
+                "LastEditTime": 1393356737834830600
+            }
+        },
+        "Textures/UI/mouseNorm.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737834830600
+            },
+            "File": {
+                "LastEditTime": 1393356737834830600
+            }
+        },
+        "Textures/UI/mouseNorm.TGA": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737834830600
+            },
+            "File": {
+                "LastEditTime": 1393356737834830600
+            }
+        },
+        "Textures/UI/sliderFrame.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737834830600
+            },
+            "File": {
+                "LastEditTime": 1393356737834830600
+            }
+        },
+        "Textures/UI/sliderFrame.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737835830700
+            },
+            "File": {
+                "LastEditTime": 1393356737835830700
+            }
+        },
+        "Textures/UI/sliderHigh.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737835830700
+            },
+            "File": {
+                "LastEditTime": 1393356737835830700
+            }
+        },
+        "Textures/UI/sliderHigh.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737835830700
+            },
+            "File": {
+                "LastEditTime": 1393356737835830700
+            }
+        },
+        "Textures/UI/sliderNorm.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737835830700
+            },
+            "File": {
+                "LastEditTime": 1393356737835830700
+            }
+        },
+        "Textures/UI/sliderNorm.png": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737835830700
+            },
+            "File": {
+                "LastEditTime": 1393356737835830700
+            }
+        },
+        "Textures/UI/White.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737836830800
+            },
+            "File": {
+                "LastEditTime": 1393356737836830800
+            }
+        },
+        "Textures/Water/Water_N_01.DDS": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393356737836830800
+            },
+            "File": {
+                "LastEditTime": 1393356737836830800
             }
         }
     },
