@@ -16,6 +16,15 @@ function OnAfterSceneLoaded(self)
 	G.gunMask:SetTargetSize(128, 64)
 	
 	G.targetsHit = {}
+	G.numTargets = 0
+	local targetParent = Game:GetEntity("TargetParent")
+	for i = 0, targetParent:GetNumChildren(), 1 do
+		local entity = targetParent:GetChild(i)
+		if entity ~= nil and entity:GetKey() == "Target" then
+			G.numTargets = G.numTargets + 1
+		end
+	end
+	
 	
 	--find the player and get the starting position and rotation
 	G.player = Game:GetEntity("Player")

@@ -61,6 +61,9 @@ function OnAfterSceneLoaded(self)
 	self.gun = GetWeapon(self)
 	self.desiredGunPos = self:GetPosition() - self.gun:GetPosition()
 	
+	--set the model to nil
+	-- self:SetMesh("")
+	
 	Debug:Enable(true)
 end
 
@@ -273,7 +276,6 @@ function GetProjectedVector(objForwardDir)
 	if objForwardDir:dot(G.worldUp) < 0 then
 		rayEnd = objForwardDir + G.worldUp
 	end
-	
 	
 	local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
 	local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)

@@ -1,6 +1,6 @@
-﻿function OnAfterSceneLoaded(self)
+function OnAfterSceneLoaded(self)
 	self.Activate = ActivateBox
-	self.ammoCount = 25
+	self.ammoCount = 50
 	self.respawnTime = 10
 	self.timeToNextSpawn = 0
 	self.lastCollision = 0
@@ -11,8 +11,6 @@ function OnExpose(self)
 	-- self.respawnTime = 20
 end
 
---[[???]]
---What's more expensive: coroutines, or multiple OnThink calls? 
 function OnThink(self)
 	if self.timeToNextSpawn > 0 then
 		self.timeToNextSpawn = self.timeToNextSpawn - Timer:GetTimeDiff()

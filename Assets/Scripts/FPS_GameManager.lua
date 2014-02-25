@@ -8,6 +8,11 @@ function OnAfterSceneLoaded(self)
 end
 
 function OnThink(self)
+	local numHit = table.getn(targetsHit)
+	if numHit == G.numTargets then
+		Win()
+	end
+
 	local numBullets = table.getn(G.allBullets)
 	
 	if numBullets > 0 then
@@ -27,6 +32,10 @@ end
 
 function OnBeforeSceneUnloaded(self)
 	--
+end
+
+function Win()
+	Debug:PrintLine("You Win!")
 end
 
 function ResetGame()
@@ -50,14 +59,6 @@ end
 function UpdateBullet(bullet)
 	--find the bullet's next position
 	local nextPos = (bullet.dir * bullet.speed) + bullet.pos 
-	
-	
-	--[[without this line the game breaks, with it, it breaks--]]
-	local distance = bullet.startPos:getDistanceToSquared(nextPos)
-	local rangeSq = bullet.range * bullet.range 
-	if  distance > rangeSq then
-		return true
-	end
 	
 	local dist = bullet.pos:getDistanceToSquared(nextPos)
 	
@@ -95,10 +96,20 @@ function UpdateBullet(bullet)
 					Vision.BLEND_ALPHA,
 					size, rotation, lifetime)
 					
-				bullet.HitCallback(pos)	
-				return true
+				--if the ricochet fails, destroy the bullet	
+				if not bullet.HitCallback(bullet, pos, result) then	
+					return true
+				end
 			end
 		else
+			bullet.distance = bullet.startPos:getDistanceToSquared(nextPos)
+			--bullet.distance = bullet.distance + dist
+			local rangeSq = bullet.range * bullet.range 
+			if  bullet.distance >  rangeSq then
+				-- Debug:PrintLine("Destroyed")
+				return true
+			end
+			
 			bullet.pos = nextPos
 			bullet.particle:SetPosition(nextPos)
 			return false
@@ -116,11 +127,32 @@ function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle,
 	newBullet.ricochet = ricochetChance
 	newBullet.range = bulletRange
 	newBullet.pos = newBullet.startPos --set start position to current position for init
+	newBullet.distance = 0
 	
-	newBullet.HitCallback = function(position)
-		local hitSound = Fmod:CreateSound(position, "Sounds/Hit_Sound.wav", false)
-		hitSound:SetVolume(0.5)
-		hitSound:Play()
+	newBullet.HitCallback = function(bullet, soundPosition, result)
+		local hitObj = result["HitObject"]
+		
+		if hitObj ~= nil then
+			if hitObj:GetKey() == "Player" and hitObj:GetKey() == "Gun" then
+				return
+			end
+			
+			--Play the impact sound
+			local hitSound = Fmod:CreateSound(soundPosition, "Sounds/Hit_Sound.wav", false)
+			hitSound:SetVolume(0.5)
+			hitSound:Play()
+		end
+		
+		local ricochet = Util:GetRandInt(100)
+		if ricochet < ricochetChance then
+			-- Debug:PrintLine("Ricohet")
+			bullet.dir:reflect(result["ImpactNormal"] )
+			bullet.speed = bullet.speed / 2
+			bullet.particle:SetDirection(bullet.dir)
+			return true
+		end
+		
+		return false
 	end
 	
 	table.insert(G.allBullets, newBullet)

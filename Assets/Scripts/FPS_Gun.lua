@@ -1,5 +1,4 @@
 ﻿function OnCreate(self)
-	self.hudArray = {}
 	self.SetUp = SetUpHUD
 end
 
@@ -7,8 +6,10 @@ function OnAfterSceneLoaded(self)
 	self.infiniteAmmo = false
 	self.bulletSpeed = 64
 	self.particlePath = "Particles\\FPS_Bullet_PAR.xml"
-	self.ricochetChance = .3
-
+	self.ricochetChance = 25
+	self.roundsCapacity = self.magazineSize * 3 
+	self.totalRounds = self.roundsCapacity
+	
 	self.FireWeapon = Fire
 	self.ReloadWeapon = Reload
 	self.AddAmmo = AddMoreAmmo
@@ -26,10 +27,11 @@ end
 
 function OnExpose(self)
 	self.fireRate = .15
-	self.magazineSize = 10
-	self.totalRounds = 50
-	self.gunRange = 50
-	self.roundsCapacity = 50
+	self.magazineSize = 30
+	self.gunRange = 600
+	
+	self.bulletRows = 3
+	self.bulletColumns = 10
 end
 
 function OnThink(self)
@@ -47,6 +49,10 @@ function OnThink(self)
 	UpdateGunTransform(self)
 end
 
+function OnBeforeSceneUnloaded(self)
+	Game:DeleteAllUnrefScreenMasks()
+end
+
 function Fire(gun)
 	if gun.timeToNextShot <= 0 then 
 		if gun.roundsLoaded > 0 then
@@ -57,6 +63,8 @@ function Fire(gun)
 			if not gun.infiniteAmmo then
 				gun.roundsLoaded = gun.roundsLoaded - 1
 				gun.totalRounds = gun.totalRounds - 1
+				gun.bullets[gun.roundsLoaded]:SetTextureObject(gun.inactiveBulletTexture)
+				
 			end
 			
 			-- if gun.shotSound ~= nil then
@@ -81,7 +89,7 @@ function Fire(gun)
 				gun.shotSound:Play()
 			end
 			
-			UpdateHUD(gun, gun.roundsLoaded)
+			-- UpdateHUD(gun, gun.roundsLoaded)
 			StartCoolDown(gun)
 		end
 	end
@@ -94,8 +102,9 @@ end
 function Reload(gun)
 	if gun.totalRounds > 0 then
 		while (gun.roundsLoaded < gun.magazineSize) and (gun.roundsLoaded < gun.totalRounds) do
+			gun.bullets[gun.roundsLoaded]:SetTextureObject(gun.activeBulletTexture)
 			gun.roundsLoaded = gun.roundsLoaded + 1
-			UpdateHUD(gun, gun.roundsLoaded)
+			-- UpdateHUD(gun, gun.roundsLoaded)
 		end
 	end
 end
@@ -190,17 +199,41 @@ function AddMoreAmmo(gun, amount)
 end
 
 function SetUpHUD(self)	
-	for i = 0, self.magazineSize, 1 do
-		self.hudArray[i] = Game:CreateTexture("Textures/FPS_GunHUD/FPS_AmmoDisplay_"..i.."_TEX.tga")
-	end
+	--get the gun texture
+	self.gunTexture = Game:CreateTexture("Textures/FPS_GunHUD/FPS_AmmoDisplay_TEX.tga")
 	
-	G.gunMask:SetTextureObject(self.hudArray[10] )
+	--assign it to the Global screen mask
+	G.gunMask:SetTextureObject(self.gunTexture)
+	
+	--set it's position and blending
+	local x,y = G.gunMask:GetTextureSize()
+	G.gunMask:SetPos(G.w - (self.gunTexture:GetWidth() / 2) - 10 , 0)
 	G.gunMask:SetBlending(Vision.BLEND_ALPHA)
 	G.gunMask:SetTargetSize(256, 128)
+	
+	--get the bullet texutures
+	self.activeBulletTexture = Game:CreateTexture("Textures/FPS_GunHUD/FPS_Bullet_White_TEX.tga")
+	self.inactiveBulletTexture = Game:CreateTexture("Textures/FPS_GunHUD/FPS_Bullet_Gray_TEX.tga")
+	
+	local size_X = self.activeBulletTexture:GetWidth()
+	local size_Y = self.activeBulletTexture:GetHeight() / 2
+	
+	--create the bullet array
+	self.bullets = {}
+	local index = 0
+	--fill the bullet array and show it
+	for i = 0, self.bulletRows - 1 , 1 do
+		for j = 0, self.bulletColumns - 1, 1 do
+			index = (i * self.bulletColumns) + j
+			self.bullets[index] = Game:CreateScreenMask(x + (size_X * j), (y / 2) + (size_Y / 2 * i), "Textures/FPS_GunHUD/FPS_Bullet_White_TEX.tga")
+			self.bullets[index]:SetBlending(Vision.BLEND_ALPHA)
+			-- self.bullets[index]:SetTargetSize(size_X / 2, size_Y)
+		end
+	end
 end
 
-function UpdateHUD(self)
-	G.gunMask:SetTextureObject(self.hudArray[self.roundsLoaded] )
+function UpdateHUD(self, roundsLoaded) --change the position index instead
+	--G.gunMask:SetTextureObject(self.hudArray[self.roundsLoaded] )
 	G.gunMask:SetBlending(Vision.BLEND_ALPHA)
 	G.gunMask:SetTargetSize(256, 128)
 end

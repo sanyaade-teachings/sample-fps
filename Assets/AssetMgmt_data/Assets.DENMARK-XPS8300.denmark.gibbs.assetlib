@@ -294,9 +294,9 @@
                 ]
             },
             "File": {
-                "Hash": 1256547912,
-                "TimeStamp": 1392236129761721200,
-                "LastEditTime": 1392236343147283800
+                "Hash": 97756570,
+                "TimeStamp": 1393275589563834400,
+                "LastEditTime": 1393275590657943800
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -316,9 +316,9 @@
                 ]
             },
             "File": {
-                "Hash": 3182218101,
-                "TimeStamp": 1392236129758720900,
-                "LastEditTime": 1392774257167995200
+                "Hash": 1234720249,
+                "TimeStamp": 1393275589561834200,
+                "LastEditTime": 1393275590607938800
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -498,7 +498,7 @@
             "File": {
                 "Hash": 2725809570,
                 "TimeStamp": 1392774256110889500,
-                "LastEditTime": 1392774257129991400
+                "LastEditTime": 1393275590631941200
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -864,14 +864,14 @@
                 ]
             },
             "File": {
-                "Hash": 1036980844,
-                "TimeStamp": 1392858572513530400,
-                "LastEditTime": 1392858573167530400
+                "Hash": 389739677,
+                "TimeStamp": 1393275509404819300,
+                "LastEditTime": 1393275509496828500
             },
             "Texture": {
                 "FileFormat": "DDS",
-                "Width": 512,
-                "Height": 512,
+                "Width": 1024,
+                "Height": 1024,
                 "HasAlpha": false,
                 "sRGB": false
             },
@@ -2228,7 +2228,7 @@
                 "TemplateName": "Default"
             }
         },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_0_TEX.tga": {
+        "Textures/FPS_GunHUD/FPS_AmmoDisplay_TEX.tga": {
             "AssetType": "Texture",
             "Common": {
                 "Tags": "__NEW_ASSET__",
@@ -2240,9 +2240,9 @@
                 ]
             },
             "File": {
-                "Hash": 2023923539,
-                "TimeStamp": 1392753444031303300,
-                "LastEditTime": 1392759044596909400
+                "Hash": 3653443998,
+                "TimeStamp": 1393267012365945900,
+                "LastEditTime": 1393267074239945900
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -2255,7 +2255,7 @@
                 "TemplateName": "Default"
             }
         },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_10_TEX.tga": {
+        "Textures/FPS_GunHUD/FPS_Bullet_Gray_TEX.tga": {
             "AssetType": "Texture",
             "Common": {
                 "Tags": "__NEW_ASSET__",
@@ -2267,14 +2267,14 @@
                 ]
             },
             "File": {
-                "Hash": 3429673160,
-                "TimeStamp": 1392753606698303300,
-                "LastEditTime": 1392759045477085400
+                "Hash": 3040364856,
+                "TimeStamp": 1393266417128220000,
+                "LastEditTime": 1393267081994945900
             },
             "Texture": {
                 "FileFormat": "TGA",
-                "Width": 512,
-                "Height": 256,
+                "Width": 32,
+                "Height": 32,
                 "HasAlpha": true,
                 "sRGB": false
             },
@@ -2282,7 +2282,7 @@
                 "TemplateName": "Default"
             }
         },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_1_TEX.tga": {
+        "Textures/FPS_GunHUD/FPS_Bullet_White_TEX.tga": {
             "AssetType": "Texture",
             "Common": {
                 "Tags": "__NEW_ASSET__",
@@ -2294,257 +2294,14 @@
                 ]
             },
             "File": {
-                "Hash": 3181444970,
-                "TimeStamp": 1392753478229303300,
-                "LastEditTime": 1392759045508091600
+                "Hash": 1994783291,
+                "TimeStamp": 1393266394016531400,
+                "LastEditTime": 1393267082002945900
             },
             "Texture": {
                 "FileFormat": "TGA",
-                "Width": 512,
-                "Height": 256,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_2_TEX.tga": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 199053019,
-                "TimeStamp": 1392753495717303300,
-                "LastEditTime": 1392759045540098000
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 512,
-                "Height": 256,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_3_TEX.tga": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3365886946,
-                "TimeStamp": 1392753510483303300,
-                "LastEditTime": 1392759045573104600
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 512,
-                "Height": 256,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_4_TEX.tga": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2514250618,
-                "TimeStamp": 1392753521441303300,
-                "LastEditTime": 1392759045603110600
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 512,
-                "Height": 256,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_5_TEX.tga": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3783142007,
-                "TimeStamp": 1392753535681303300,
-                "LastEditTime": 1392759045635117000
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 512,
-                "Height": 256,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_6_TEX.tga": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 1945853103,
-                "TimeStamp": 1392753549018303300,
-                "LastEditTime": 1392759045666123200
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 512,
-                "Height": 256,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_7_TEX.tga": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2738185844,
-                "TimeStamp": 1392753560637303300,
-                "LastEditTime": 1392759045696129200
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 512,
-                "Height": 256,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_8_TEX.tga": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3145506939,
-                "TimeStamp": 1392753572666303300,
-                "LastEditTime": 1392759045727135400
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 512,
-                "Height": 256,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_9_TEX.tga": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 3089555059,
-                "TimeStamp": 1392753585933303300,
-                "LastEditTime": 1392759045758141600
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 512,
-                "Height": 256,
-                "HasAlpha": true,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Textures/FPS_GunHUD/FPS_AmmoDisplay_Inactive_TEX.tga": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 2112091987,
-                "TimeStamp": 1392758672367053800,
-                "LastEditTime": 1392759045789147800
-            },
-            "Texture": {
-                "FileFormat": "TGA",
-                "Width": 512,
-                "Height": 256,
+                "Width": 32,
+                "Height": 32,
                 "HasAlpha": true,
                 "sRGB": false
             },
@@ -2836,7 +2593,7 @@
             "File": {
                 "Hash": 1888533058,
                 "TimeStamp": 1391550537909489900,
-                "LastEditTime": 1392774257118990300
+                "LastEditTime": 1393275590584936500
             },
             "Texture": {
                 "FileFormat": "TGA",
