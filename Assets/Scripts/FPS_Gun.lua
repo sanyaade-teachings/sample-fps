@@ -25,10 +25,12 @@ function OnAfterSceneLoaded(self)
 	
 	--find the bullet spawn entity that all bullets will start from
 	self.bulletSpawn = Game:GetEntity("BulletSpawn")
+	
 	--find the muzzle light and turn it off
 	self.muzzleLight = Game:GetLight("MuzzleLight")
-	--self.muzzleLight:SetIntensity(10)
-	--self.lightTime = 3
+	self.muzzleLight:SetVisible(false)
+	self.timeTimeToLightOff = 0
+	self.lightTime = 0.1
 end
 
 function OnExpose(self)
@@ -53,16 +55,13 @@ function OnThink(self)
 		self.timeToNextShot = 0
 	end	
 	
-	-- if self.lightTime >  0 then
-		-- self.lightTime = self.lightTime - Timer:GetTimeDiff()
-	-- elseif self.lightTime <= 0 then
-		-- self.lightTime = 0
-		-- -- self.muzzleLight:SetIntensity (0)
-	-- end
-	
-	--Update the laser and the roation of the gun
-	--UpdateLOS(self)
-	--UpdateGunTransform(self)
+	--turn the light back off after a certain amount of time
+	if self.timeTimeToLightOff >  0 then
+		self.timeTimeToLightOff = self.timeTimeToLightOff - Timer:GetTimeDiff()
+	elseif self.timeTimeToLightOff < 0 then
+		self.timeTimeToLightOff = 0
+		self.muzzleLight:SetVisible(false)
+	end
 	
 	--Show the HUD
 	ShowStats(self)
@@ -77,6 +76,9 @@ function Fire(gun)
 	if gun.timeToNextShot <= 0 then 
 		--make sure there are rounds left to fire
 		if gun.roundsLoaded > 0 then
+			--flash the light
+			gun.muzzleLight:SetVisible(true)
+			
 			-- gun.muzzleLight:SetIntensity (10)
 			--create the bullet particle and set it's direction to the direction of the gun
 			local bulletParticle = Game:CreateEffect(gun.bulletSpawn:GetPosition(), gun.particlePath)
@@ -118,6 +120,7 @@ end
 --Starts the 'timer' that will keep the gun firing at the correct rate
 function StartCoolDown(gun)
 	gun.timeToNextShot = gun.fireRate
+	gun.timeTimeToLightOff = gun.lightTime
 end
 
 --A reload function to be used internally and externally
