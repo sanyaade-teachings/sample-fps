@@ -51,7 +51,7 @@ function OnAfterSceneLoaded(self)
 	end
 	
 	--additional controls
-	self.map:MapTrigger("JUMP", "KEYBOARD", "CT_KB_SPACE", {onceperframe = true} )
+	self.map:MapTrigger("JUMP", "KEYBOARD", "CT_KB_SPACE")
 	self.map:MapTrigger("RELOAD", "KEYBOARD", "CT_KB_R", {onceperframe = true} ) 
 	self.map:MapTrigger("RUN", "KEYBOARD", "CT_KB_LSHIFT")
 	self.map:MapTrigger("CROUCH", "KEYBOARD", "CT_KB_C")

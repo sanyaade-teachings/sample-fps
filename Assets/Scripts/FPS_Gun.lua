@@ -8,7 +8,7 @@ function OnAfterSceneLoaded(self)
 	self.infiniteAmmo = false
 	self.bulletSpeed = 64
 	self.particlePath = "Particles\\FPS_Bullet_PAR.xml"
-	self.ricochetChance = 35
+	self.ricochetChance = 50
 	self.roundsCapacity = self.magazineSize * 3 
 	self.totalRounds = self.roundsCapacity
 	self.timeToNextShot = 0
@@ -53,12 +53,12 @@ function OnThink(self)
 		self.timeToNextShot = 0
 	end	
 	
-	if self.lightTime >  0 then
-		self.lightTime = self.lightTime - Timer:GetTimeDiff()
-	elseif self.lightTime <= 0 then
-		self.lightTime = 0
-		-- self.muzzleLight:SetIntensity (0)
-	end
+	-- if self.lightTime >  0 then
+		-- self.lightTime = self.lightTime - Timer:GetTimeDiff()
+	-- elseif self.lightTime <= 0 then
+		-- self.lightTime = 0
+		-- -- self.muzzleLight:SetIntensity (0)
+	-- end
 	
 	--Update the laser and the roation of the gun
 	--UpdateLOS(self)
