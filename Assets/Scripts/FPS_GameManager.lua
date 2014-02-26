@@ -6,30 +6,47 @@ function OnAfterSceneLoaded(self)
 	--global functions to create a bullet, and 
 	G.Reset = ResetGame
 	G.CreateBullet = CreateNewBullet
+	
+	G.gameOver = false
 end
 
 function OnThink(self)
-	--check to see if all targets have been hit
-	local numHit = table.getn(G.targetsHit)
-	if numHit == G.numTargets then
-		Win()
-	end
-	
-	--get the number of bullets in the scence
-	local numBullets = table.getn(G.allBullets)
-	
-	--for each bullet, update it's position and delete if necessary
-	if numBullets > 0 then
-		for i = 1, numBullets, 1 do
-			local currentBullet = G.allBullets[i]
-			if currentBullet ~= nil then 
-				--if the udate bullet function returns true, delete the bullet ***won't be true if bullet ricochets
-				if UpdateBullet(currentBullet) then
-					currentBullet.particle:Remove()
-					table.remove(G.allBullets, i)
-					i = i - 1
-				end
-			end	
+	if not G.gameOver then
+		--check to see if all targets have been hit
+		local numHit = table.getn(G.targetsHit)
+		
+		--show the number of targets remaining
+		Debug:PrintAt(G.w * 0.1, G.h - G.h * 0.1, "Targets Remaining: " .. (G.numTargets - numHit) , Vision.V_RGBA_WHITE, G.fontPath)
+		
+		--if numHit > numTargets, win!
+		if numHit == G.numTargets then
+			Win()
+		end
+		
+		--get the number of bullets in the scence
+		local numBullets = table.getn(G.allBullets)
+		
+		--for each bullet, update it's position and delete if necessary
+		if numBullets > 0 then
+			for i = 1, numBullets, 1 do
+				local currentBullet = G.allBullets[i]
+				if currentBullet ~= nil then 
+					--if the udate bullet function returns true, delete the bullet ***won't be true if bullet ricochets
+					if UpdateBullet(currentBullet) then
+						currentBullet.particle:Remove()
+						table.remove(G.allBullets, i)
+						i = i - 1
+					end
+				end	
+			end
+		end
+	else
+		local winText1 = "You Win!"
+		local winText2 = "Press Any Key To Continue"
+		Debug:PrintAt( (G.w / 2.0) - (winText1:len() * 8), G.h / 2.0, "" .. winText1, Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt( (G.w / 2.0) - (winText2:len() * 8), G.h / 2.0 + 32, "" .. winText2, Vision.V_RGBA_WHITE, G.fontPath)
+		if G.player.map:GetTrigger("ANY") > 0 then
+			ResetGame()
 		end
 	end
 end
@@ -37,6 +54,10 @@ end
 --Inform the user if s/he has hit all targets
 function Win()
 	Debug:PrintLine("You Win!")
+	G.gameOver = true
+	G.winMask = Game:CreateScreenMask(0, 0, "Textures/FPS_WinScreenMask_DIFFUSE.tga")
+	G.winMask:SetTargetSize(G.w, G.h)
+	G.winMask:SetBlending(Vision.BLEND_MULTIPLY)
 end
 
 --for all targets that have been hit, show them again
@@ -47,8 +68,14 @@ function ResetGame()
 		G.targetsHit[i].Activate(G.targetsHit[i])
 	end
 	
+	--unfreeze the player
+	G.gameOver = false
+	
 	--reset the targetsHit to nil
 	G.targetsHit = {}
+	
+	--clear the screen mask
+	G.winMask:SetTextureObject(nil)
 end
 
 --Moves each bullet based on speed, if it hits anything along the path, return true

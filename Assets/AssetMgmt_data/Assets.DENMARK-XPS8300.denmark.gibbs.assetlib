@@ -547,14 +547,14 @@
                 ]
             },
             "File": {
-                "Hash": 389739677,
-                "TimeStamp": 1393355966978638500,
-                "LastEditTime": 1393355967504638500
+                "Hash": 2658020266,
+                "TimeStamp": 1393445407396121500,
+                "LastEditTime": 1393445408108192700
             },
             "Texture": {
                 "FileFormat": "DDS",
-                "Width": 1024,
-                "Height": 1024,
+                "Width": 2048,
+                "Height": 2048,
                 "HasAlpha": false,
                 "sRGB": false
             },
@@ -1257,6 +1257,33 @@
                 "Width": 514,
                 "Height": 514,
                 "HasAlpha": false,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/FPS_WinScreenMask_DIFFUSE.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 4013844629,
+                "TimeStamp": 1393443650632643900,
+                "LastEditTime": 1393443651646643900
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 32,
+                "Height": 32,
+                "HasAlpha": true,
                 "sRGB": false
             },
             "Transformations": {

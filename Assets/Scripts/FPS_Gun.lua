@@ -8,7 +8,7 @@ function OnAfterSceneLoaded(self)
 	self.infiniteAmmo = false
 	self.bulletSpeed = 64
 	self.particlePath = "Particles\\FPS_Bullet_PAR.xml"
-	self.ricochetChance = 0
+	self.ricochetChance = 35
 	self.roundsCapacity = self.magazineSize * 3 
 	self.totalRounds = self.roundsCapacity
 	self.timeToNextShot = 0
@@ -18,12 +18,17 @@ function OnAfterSceneLoaded(self)
 	self.ReloadWeapon = Reload
 	self.AddAmmo = AddMoreAmmo
 	self.UpdateSight = UpdateLOS
+	self.UpdateTransform = UpdateGunTransform
 	
 	--fill the magazine
 	self.roundsLoaded = self.magazineSize
 	
 	--find the bullet spawn entity that all bullets will start from
 	self.bulletSpawn = Game:GetEntity("BulletSpawn")
+	--find the muzzle light and turn it off
+	self.muzzleLight = Game:GetLight("MuzzleLight")
+	--self.muzzleLight:SetIntensity(10)
+	--self.lightTime = 3
 end
 
 function OnExpose(self)
@@ -44,13 +49,20 @@ function OnThink(self)
 	--make sure the gun fires at the correct rate
 	if self.timeToNextShot > 0 then
 		self.timeToNextShot = self.timeToNextShot - Timer:GetTimeDiff()
-	elseif self.timeToNextShot < 0 then
+	elseif self.timeToNextShot <= 0 then
 		self.timeToNextShot = 0
-	end		
+	end	
+	
+	if self.lightTime >  0 then
+		self.lightTime = self.lightTime - Timer:GetTimeDiff()
+	elseif self.lightTime <= 0 then
+		self.lightTime = 0
+		-- self.muzzleLight:SetIntensity (0)
+	end
 	
 	--Update the laser and the roation of the gun
-	UpdateLOS(self)
-	UpdateGunTransform(self)
+	--UpdateLOS(self)
+	--UpdateGunTransform(self)
 	
 	--Show the HUD
 	ShowStats(self)
@@ -65,6 +77,7 @@ function Fire(gun)
 	if gun.timeToNextShot <= 0 then 
 		--make sure there are rounds left to fire
 		if gun.roundsLoaded > 0 then
+			-- gun.muzzleLight:SetIntensity (10)
 			--create the bullet particle and set it's direction to the direction of the gun
 			local bulletParticle = Game:CreateEffect(gun.bulletSpawn:GetPosition(), gun.particlePath)
 			bulletParticle:SetDirection(gun:GetObjDir() )
@@ -119,11 +132,11 @@ function Reload(gun)
 	end
 end
 
---This function makes sure that the gun will always point to the center of the reticle
+--This function tries makes sure that the gun will always point to the center of the reticle
 function UpdateGunTransform(self)
 	--cast a ray at through the center of the screen into the world
-	local rayStart = Screen:Project3D(G.w / 2, G.h / 2, 0)
-	local rayEnd = Screen:Project3D(G.w / 2, G.h / 2, self.gunRange)
+	local rayStart = Screen:Project3D(G.w / 2., G.h / 2.0, 0)
+	local rayEnd = Screen:Project3D(G.w / 2.0, G.h / 2.0, self.gunRange)
 	
 	--get the collision info for the ray
 	local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
@@ -135,24 +148,13 @@ function UpdateGunTransform(self)
 	if hit == true then
 		--if an object was hit get the hit info
 		if hit == true and result ~= nil then
+			--get the info of the hit object
 			local resultKey = result["HitObject"]:GetKey()
 			local impact = result["ImpactPoint"]
 			
-			--if the impact location is behind the player, cast a new ray from that hit point
-			if self:GetPosition():dot(impact) < 0 then
-				hit, result = Physics.PerformRaycast(impact, rayEnd, iCollisionFilterInfo)
-				
-				--check the new impact point
-				if hit == true and result ~= nil then
-					impact = result["ImpactPoint"]
-				end
-			end
-			
 			--if the ray does not hit the player or the gun, look at the impact point
 			if resultKey ~= "Player" and resultKey ~= "Gun" then
-				if hitPoint:dot(impact) > 0 then
-					hitPoint = impact
-				end
+				hitPoint = impact
 			end
 		end
 	end
@@ -162,6 +164,7 @@ function UpdateGunTransform(self)
 	self:SetDirection(dir)
 end
 
+--This function checks to see if the paleyr is aiming at a target
 function UpdateLOS(self)
 	--cast a ray from the point of the gun in the direction that it's pointing
 	local rayStart = self:GetPosition()
