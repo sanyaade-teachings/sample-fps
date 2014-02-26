@@ -1470,33 +1470,6 @@
                 "LastEditTime": 1393356329583638500
             }
         },
-        "Fonts/Fonts/FineCollege_32_00.dds": {
-            "AssetType": "__deleted__",
-            "Common": {
-                "DeleteTime": 1393356737836830800
-            },
-            "File": {
-                "LastEditTime": 1393356737836830800
-            }
-        },
-        "Meshes/FPS_DuckObject_MESH.vcolmesh": {
-            "AssetType": "__deleted__",
-            "Common": {
-                "DeleteTime": 1393356737836830800
-            },
-            "File": {
-                "LastEditTime": 1393356737836830800
-            }
-        },
-        "Meshes/FPS_DuckObject_MESH.vmesh": {
-            "AssetType": "__deleted__",
-            "Common": {
-                "DeleteTime": 1393356737836830800
-            },
-            "File": {
-                "LastEditTime": 1393356737836830800
-            }
-        },
         "Meshes/Plane.vcolmesh": {
             "AssetType": "__deleted__",
             "Common": {
@@ -1585,15 +1558,6 @@
             },
             "File": {
                 "LastEditTime": 1393356737827829900
-            }
-        },
-        "Particles/Plume_2.dds": {
-            "AssetType": "__deleted__",
-            "Common": {
-                "DeleteTime": 1393356737838831000
-            },
-            "File": {
-                "LastEditTime": 1393356737838831000
             }
         },
         "Particles/smoke.dds": {

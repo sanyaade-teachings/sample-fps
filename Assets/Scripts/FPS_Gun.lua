@@ -1,53 +1,58 @@
 ﻿function OnCreate(self)
+	--set's up the SetUp method upon creation of the object
 	self.SetUp = SetUpHUD
 end
 
 function OnAfterSceneLoaded(self)
+	--these variables can be moved to the OnExpose function for easier access
 	self.infiniteAmmo = false
 	self.bulletSpeed = 64
 	self.particlePath = "Particles\\FPS_Bullet_PAR.xml"
-	self.ricochetChance = 30
+	self.ricochetChance = 0
 	self.roundsCapacity = self.magazineSize * 3 
 	self.totalRounds = self.roundsCapacity
+	self.timeToNextShot = 0
 	
+	--assigning functions to variables for external use
 	self.FireWeapon = Fire
 	self.ReloadWeapon = Reload
 	self.AddAmmo = AddMoreAmmo
 	self.UpdateSight = UpdateLOS
 	
-	self.timeToNextShot = 0
+	--fill the magazine
 	self.roundsLoaded = self.magazineSize
 	
+	--find the bullet spawn entity that all bullets will start from
 	self.bulletSpawn = Game:GetEntity("BulletSpawn")
-	-- self.shotSound = Fmod:GetSound("ShotSound")
-	-- if self.shotSound == nil then
-		--self.shotSound = Fmod:CreateSound(self.bulletSpawn:GetPosition(), "Sounds/Shot_Sound.wav", false)
-	-- end
 end
 
 function OnExpose(self)
 	self.fireRate = .15
 	self.magazineSize = 30
-	self.gunRange = 600
+	self.gunRange = 800
 	
 	self.bulletRows = 3
 	self.bulletColumns = 10
 end
 
 function OnThink(self)
+	--if the magazine is empty, reload
 	if self.roundsLoaded == 0 and self.totalRounds > 0 then
 		Reload(self)
 	end
 	
+	--make sure the gun fires at the correct rate
 	if self.timeToNextShot > 0 then
 		self.timeToNextShot = self.timeToNextShot - Timer:GetTimeDiff()
 	elseif self.timeToNextShot < 0 then
 		self.timeToNextShot = 0
 	end		
 	
+	--Update the laser and the roation of the gun
 	UpdateLOS(self)
 	UpdateGunTransform(self)
 	
+	--Show the HUD
 	ShowStats(self)
 end
 
@@ -56,28 +61,27 @@ function OnBeforeSceneUnloaded(self)
 end
 
 function Fire(gun)
+	--make sure the player can fire
 	if gun.timeToNextShot <= 0 then 
+		--make sure there are rounds left to fire
 		if gun.roundsLoaded > 0 then
+			--create the bullet particle and set it's direction to the direction of the gun
 			local bulletParticle = Game:CreateEffect(gun.bulletSpawn:GetPosition(), gun.particlePath)
 			bulletParticle:SetDirection(gun:GetObjDir() )
+			
+			--create the 'bullet' object and set's it values
 			G.CreateBullet(gun.bulletSpeed, gun.bulletSpawn:GetPosition(), gun.bulletSpawn:GetObjDir(), bulletParticle, gun.ricochetChance, gun.gunRange)
 			
+			--if the player does not have infinite ammo (debugging purposes) subtract from the loaded rounds
 			if not gun.infiniteAmmo then
 				gun.roundsLoaded = gun.roundsLoaded - 1
 				gun.totalRounds = gun.totalRounds - 1
-				gun.bullets[gun.roundsLoaded]:SetTextureObject(gun.inactiveBulletTexture)
 				
+				--update the HUD
+				gun.bullets[gun.roundsLoaded]:SetTextureObject(gun.inactiveBulletTexture)
 			end
 			
-			-- if gun.shotSound ~= nil then
-				-- if gun.shotSound:IsPlaying() then
-					-- gun.ShotSound:Stop()
-				-- end
-				-- gun.shotSound:Play()
-			-- end
-			
-			
-			--remove an existing sound before creating a new one
+			--remove an existing sound before creating a new one (eliminate multiple instances)
 			if gun.shotSound ~= nil then
 				if gun.shotSound:IsPlaying() then
 					gun.shotSound:Stop()
@@ -85,42 +89,51 @@ function Fire(gun)
 				gun.shotSound:Remove()
 			end
 			
+			--play the shot sound
 			gun.shotSound = Fmod:CreateSound(gun.bulletSpawn:GetPosition(), "Sounds/Shot_Sound.wav", false)
 			if gun.shotSound ~= nil then
 				gun.shotSound = Fmod:CreateSound(gun.bulletSpawn:GetPosition(), "Sounds/Shot_Sound.wav", false)
 				gun.shotSound:Play()
 			end
 			
-			-- UpdateHUD(gun, gun.roundsLoaded)
+			--start the cool down
 			StartCoolDown(gun)
 		end
 	end
 end
 
+--Starts the 'timer' that will keep the gun firing at the correct rate
 function StartCoolDown(gun)
 	gun.timeToNextShot = gun.fireRate
 end
 
+--A reload function to be used internally and externally
 function Reload(gun)
+	--only reload if there are extra round remaining
 	if gun.totalRounds > 0 then
+		--fill the magazine with rounds until out of ammo, or mag is full
 		while (gun.roundsLoaded < gun.magazineSize) and (gun.roundsLoaded < gun.totalRounds) do
 			gun.bullets[gun.roundsLoaded]:SetTextureObject(gun.activeBulletTexture)
 			gun.roundsLoaded = gun.roundsLoaded + 1
-			-- UpdateHUD(gun, gun.roundsLoaded)
 		end
 	end
 end
 
-function UpdateGunTransform(self)		
+--This function makes sure that the gun will always point to the center of the reticle
+function UpdateGunTransform(self)
+	--cast a ray at through the center of the screen into the world
 	local rayStart = Screen:Project3D(G.w / 2, G.h / 2, 0)
 	local rayEnd = Screen:Project3D(G.w / 2, G.h / 2, self.gunRange)
 	
+	--get the collision info for the ray
 	local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
 	local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)
 	
+	--the gun will point to the hitPoint, so set it to the ray end in case the ray does not hit anything
 	local hitPoint = rayEnd
 	
 	if hit == true then
+		--if an object was hit get the hit info
 		if hit == true and result ~= nil then
 			local resultKey = result["HitObject"]:GetKey()
 			local impact = result["ImpactPoint"]
@@ -128,6 +141,8 @@ function UpdateGunTransform(self)
 			--if the impact location is behind the player, cast a new ray from that hit point
 			if self:GetPosition():dot(impact) < 0 then
 				hit, result = Physics.PerformRaycast(impact, rayEnd, iCollisionFilterInfo)
+				
+				--check the new impact point
 				if hit == true and result ~= nil then
 					impact = result["ImpactPoint"]
 				end
@@ -136,51 +151,62 @@ function UpdateGunTransform(self)
 			--if the ray does not hit the player or the gun, look at the impact point
 			if resultKey ~= "Player" and resultKey ~= "Gun" then
 				if hitPoint:dot(impact) > 0 then
-					-- Debug:PrintLine(resultKey)
 					hitPoint = impact
 				end
 			end
 		end
 	end
 	
-	local d = (hitPoint - self:GetPosition() ):getNormalized()
-	self:SetDirection(d)
+	--create the new direction, and normalize it
+	local dir = (hitPoint - self:GetPosition() ):getNormalized()
+	self:SetDirection(dir)
 end
 
 function UpdateLOS(self)
+	--cast a ray from the point of the gun in the direction that it's pointing
 	local rayStart = self:GetPosition()
 	local rayEnd = (self:GetObjDir() * self.gunRange) + rayStart
 	
+	--get the collision info
 	local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
 	local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)
 	
+	--set the color of the line for debugging
 	local color = Vision.V_RGBA_RED
 	Debug.Draw:Line(rayStart, rayEnd, color)
 	
+	--this will be true if the player is aiming at a target
 	local hitTarget = false
 
+	--check for the ray hit
 	if hit == true then
+		
+		--check to see if a target was hit
 		if result ~= nil and result["HitType"] == "Entity" then
 			local hitObj = result["HitObject"]
 			if hitObj:GetKey() == "Target" then
 				hitTarget = true
 			end
 		end
-			local size = 2
-			local distance = size / 2
-			local lifetime = .05	--seconds
-			local rotation = 0
-			
-			local dir = -result["ImpactNormal"]
-			local pos = result["ImpactPoint"] - (dir * distance)
-			Debug.Draw:Wallmark(
-				pos,
-				dir,
-				"Textures/Decals/FPS_RedDot_TEX.tga",
-				Vision.BLEND_ALPHA,
-				size, rotation, lifetime)
+		
+		--set the variables for the wallmark
+		local size = 2
+		local distance = size / 2
+		local lifetime = .05	--seconds
+		local rotation = 0
+		
+		--Project the wallmark
+		local dir = -result["ImpactNormal"]
+		local pos = result["ImpactPoint"] - (dir * distance)
+		Debug.Draw:Wallmark(
+			pos,
+			dir,
+			"Textures/Decals/FPS_RedDot_TEX.tga",
+			Vision.BLEND_ALPHA,
+			size, rotation, lifetime)
 	end
 	
+	--if the target was hit, change the reticle color to red; white if not
 	if hitTarget == true then
 		G.screenMask:SetColor(Vision.V_RGBA_RED)
 	else
@@ -188,7 +214,9 @@ function UpdateLOS(self)
 	end
 end
 
+--A function to increase the player's total ammo, *does not reload the gun*
 function AddMoreAmmo(gun, amount)
+	--check the capacity and add ammo if lower
 	if gun.totalRounds < gun.roundsCapacity then
 		while gun.totalRounds < gun.roundsCapacity and amount > 0 do
 			gun.totalRounds = gun.totalRounds + 1
@@ -196,10 +224,12 @@ function AddMoreAmmo(gun, amount)
 		end
 		return true
 	else
+		--return false if no ammo was added
 		return false
 	end
 end
 
+--Initialization of the HUD
 function SetUpHUD(self)	
 	--get the gun texture
 	self.gunTexture = Game:CreateTexture("Textures/FPS_GunHUD/FPS_AmmoDisplay_TEX.tga")
@@ -217,6 +247,7 @@ function SetUpHUD(self)
 	self.activeBulletTexture = Game:CreateTexture("Textures/FPS_GunHUD/FPS_Bullet_White_TEX.tga")
 	self.inactiveBulletTexture = Game:CreateTexture("Textures/FPS_GunHUD/FPS_Bullet_Gray_TEX.tga")
 	
+	--get the size of the bullet texture
 	local size_X = self.activeBulletTexture:GetWidth()
 	local size_Y = self.activeBulletTexture:GetHeight() / 2
 	
@@ -229,17 +260,11 @@ function SetUpHUD(self)
 			index = (i * self.bulletColumns) + j
 			self.bullets[index] = Game:CreateScreenMask(G.w - ( (size_X * self.bulletColumns) - (size_X * j) ), (y / 2) + (size_Y / 2 * i), "Textures/FPS_GunHUD/FPS_Bullet_White_TEX.tga")
 			self.bullets[index]:SetBlending(Vision.BLEND_ALPHA)
-			-- self.bullets[index]:SetTargetSize(size_X / 2, size_Y)
 		end
 	end
 end
 
-function UpdateHUD(self, roundsLoaded) --change the position index instead
-	--G.gunMask:SetTextureObject(self.hudArray[self.roundsLoaded] )
-	G.gunMask:SetBlending(Vision.BLEND_ALPHA)
-	G.gunMask:SetTargetSize(256, 128)
-end
-
+--This will show the number of rounds remaining for the player
 function ShowStats(self)
 	if self.roundsLoaded ~= nil and self.magazineSize ~= nil and self.totalRounds ~= nil then
 		local x,y = G.gunMask:GetTextureSize()

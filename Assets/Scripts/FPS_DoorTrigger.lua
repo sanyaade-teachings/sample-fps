@@ -16,18 +16,7 @@ function OnExpose(self)
 end
 
 function OnObjectEnter(self, object)
-	-- local time = Timer:GetTime()
-	-- local otherObj = object.ColliderObject
-
-	-- check for the double hit
-	-- if self.lastCollider == otherObj and time - self.lastCollision < 0.1 then
-		-- return
-	-- end
-	
-	--remember the collision time
-	self.lastCollider = otherObj
-	self.lastCollision = time
-
+	--if the other object is the player, play the door animation oncce
 	if object:GetKey() == "Player" and not self.played then
 		self.doorRB:SetActive(false)
 		-- Debug:PrintLine("Playing")
@@ -35,11 +24,3 @@ function OnObjectEnter(self, object)
 		self.played = true;
 	end
 end
-
--- function OnObjectLeave(self, object)
-	-- if object:GetKey() == "Player" then
-		-- self.door.Animation:Play("Open", false)
-		-- self.door.Animation:SetSpeed(-.25)
-		-- self.doorRB:SetActive(true)
-	-- end
--- end

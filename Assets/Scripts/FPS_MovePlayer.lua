@@ -12,19 +12,20 @@ function OnAfterSceneLoaded(self)
 	if G.playerStartPos ~= nil and G.playerStartRot ~= nil then
 		self.characterController:SetPosition(G.playerStartPos)
 		self:SetOrientation(G.playerStartRot)
-		
-		--[[
-		local cameraVect = Vision.hkvVec3(G.playerStartPos.x, G.playerStartPos.y, G.camera:GetPosition().z)
-		G.camera:SetPosition(cameraVect)
-		G.camera:SetOrientation(G.playerStartRot)
-		--]]
 	end
 	
+	--These variables can be moved to OnExpose for easy access
 	self.singleFire = false --if true, the gun will only fire once per click
+	
+	--movement variables
 	self.jogSpeed = 5
 	self.runSpeed = 10
 	self.rotSpeed = 50
+	
+	--Invert Y
 	self.invertY = true
+	
+	--Y values to clamp to
 	self.yMaxRot = 40
 	self.yMinRot = -75
 	
@@ -42,13 +43,14 @@ function OnAfterSceneLoaded(self)
 	self.map:MapTrigger("FORWARD", "KEYBOARD", "CT_KB_W")
 	self.map:MapTrigger("BACK", "KEYBOARD", "CT_KB_S")
 	
-	--additional controls
+	--the firing style
 	if self.singleFire then
 		self.map:MapTrigger("FIRE01", "MOUSE", "CT_MOUSE_LEFT_BUTTON", {onceperframe = true} )
 	else
 		self.map:MapTrigger("FIRE01", "MOUSE", "CT_MOUSE_LEFT_BUTTON")
 	end
 	
+	--additional controls
 	self.map:MapTrigger("JUMP", "KEYBOARD", "CT_KB_SPACE", {onceperframe = true} )
 	self.map:MapTrigger("RELOAD", "KEYBOARD", "CT_KB_R", {onceperframe = true} ) 
 	self.map:MapTrigger("RUN", "KEYBOARD", "CT_KB_LSHIFT")
@@ -67,16 +69,13 @@ function OnAfterSceneLoaded(self)
 	Debug:Enable(true)
 	
 	--tell the player how to access help
-	Debug:PrintLine("**************************************************", Vision.V_RGBA_YELLOW)
-	Debug:PrintLine("************** For Help, Hold \"H\" **************", Vision.V_RGBA_YELLOW)
-	Debug:PrintLine("**************************************************", Vision.V_RGBA_YELLOW)
+	-- Debug:PrintLine("**************************************************", Vision.V_RGBA_YELLOW)
+	-- Debug:PrintLine("************** For Help, Hold \"H\" **************", Vision.V_RGBA_YELLOW)
+	-- Debug:PrintLine("**************************************************", Vision.V_RGBA_YELLOW)
 end
 
 function OnThink(self)
-	
-	-- Debug:PrintAt(0, 60, "Height: " .. self.characterController:GetCapsuleHeight(), Vision.V_RGBA_YELLOW)
-	-- Debug:PrintAt(0, 75, "Top: " .. self.characterController:GetCapsuleTop(), Vision.V_RGBA_YELLOW)
-	
+	--get all the current player inputs
 	local x = self.map:GetTrigger("X")
 	local y = self.map:GetTrigger("Y")
 	
@@ -95,20 +94,14 @@ function OnThink(self)
 	local reset = self.map:GetTrigger("RESET") > 0 
 	local display = self.map:GetTrigger("DISPLAY") > 0
 	
-	--local forwardVec = GetProjectedVector(G.camera:GetObjDir() )
-	--local rightVec = GetProjectedVector(G.camera:GetObjDir_Right() )
-	
+	--determine the forward vector and right vector based on orientation of the camera
 	local forwardVec = G.camera:GetObjDir()
 	forwardVec.z = 0;
 	forwardVec:normalize()
 	local rightVec = G.camera:GetObjDir_Right()
 	rightVec.z = 0
 	rightVec:normalize()
-	
-	-- option a
-	-- local forwardVec = self.characterController:GetObjDir()
-	-- local rightVec = self.characterController:GetObjDir_Right()
-	
+
 	--action control (jump, fire, shoot, reload)
 	if jump then
 		Jump(self)
@@ -133,9 +126,9 @@ function OnThink(self)
 	
 	--rotation control		
 	if math.abs(x) > 0 or math.abs(y) > 0 then
+		--set the amount to move by each frame
 		local step = self.rotSpeed
 		local rotation = G.camera:GetOrientation()
-		--get the left/right rotation
 		rotation.x = rotation.x - x * step
 		
 		--get the up/down rotation, accounting for invert state
@@ -148,33 +141,32 @@ function OnThink(self)
 		
 		--update the camera roation
 		G.camera:SetOrientation(rotation)
-		
 		local orienation = self:GetOrientation()
-		orienation.x = orienation.x - x * step
-		--self:SetRotationDelta(orienation)
+		orienation.x = rotation.x
 		self:SetRotationDelta( Vision.hkvVec3(-x * step, 0, 0) )
-		--self:IncRotationDelta(Vision.hkvVec3(-x * step, 0, 0) )
 	end
 	
 	--locomotion control
-	-- and self.characterController:IsStanding()
 	if (left or right or forward or back or run) then
 		--reset the moveVector to avoid steadily increasing velocity
 		self.moveVector = G.zeroVector
 		local moveSpeed = 0
 		
+		--set the proper speed
 		if run then 
 			moveSpeed = self.runSpeed
 		else
 			moveSpeed = self.jogSpeed
 		end
-	
+		
+		--move the character left/right
 		if left then
 			self.moveVector = self.moveVector + rightVec
 		elseif right then
 			self.moveVector = self.moveVector - rightVec
 		end
 		
+		--move the character forward/back
 		if forward then
 			self.moveVector = self.moveVector + forwardVec
 		elseif back then
@@ -193,14 +185,17 @@ function OnThink(self)
 		self:SetMotionDeltaWorldSpace(self.moveVector)
 	end
 	
+	--inversion control
 	if invert then
 		ToggleInvert(self)
 	end
 	
+	--reset the game
 	if reset then
 		G.Reset()
 	end
 	
+	--show 'Help'
 	if display then
 		ShowControls(self)
 	end
@@ -212,31 +207,32 @@ function OnBeforeSceneUnloaded(self)
 	Game:DeleteAllUnrefScreenMasks()
 end
 
+--calls the fire function on the attached weapon
 function Fire(self)
 	if self.gun ~= nil then
 		self.gun.FireWeapon(self.gun)
 	end
 end
 
+--calls the reload function on the attached gun
 function Reload(self)
 	self.gun.ReloadWeapon(self.gun)
 end
 
+--A basic function to make the character jump if already on the ground
 function Jump(self)
 	if self.characterController:IsStanding() then
 		self.characterController:SetWantJump(true)
 	end
 end
 
+--[[
+the method to change the character controller's height to allow 'crouching'
+this section does not work without a special download from github
+--]]
 function Crouch(self)
-	Debug:PrintLine("Crouching")
-	--[[
-	this section does not work without a special download from github
-	--]]
-	self.characterController:SetCapsuleTop(Vision.hkvVec3(0, 0, 40) )
-	-- self.characterController:SetScaling( Vision.hkvVec3(1, 1, .25) )
-	-- self.characterController:SetProperty("Scaling", Vision.hkvVec3(1, 1, .25))
-	-- self.characterController:SetCapsuleHeight( self.crouchHeight )
+	--Debug:PrintLine("Crouching")
+	--self.characterController:SetCapsuleTop(Vision.hkvVec3(0, 0, 40) )
 end
 
 function ToggleInvert(self)
@@ -244,6 +240,7 @@ function ToggleInvert(self)
 	--Debug:PrintLine("Toggled")
 end
 
+--finds the weapon as a child of the camera. 
 function GetWeapon(camea)
 	local numChildren = camera:GetNumChildren()
 	
@@ -260,6 +257,7 @@ function GetWeapon(camea)
 	end
 end
 
+--Clamps a num between a min and max, then returns that number
 function ClampValue(num, minVal, maxVal)
 	if num > maxVal then
 		num = maxVal
@@ -269,6 +267,7 @@ function ClampValue(num, minVal, maxVal)
 	return num
 end
 
+--This will show all the controls available to the user
 function ShowControls(self)
 	Debug:PrintAt(10, 0, "Move: WASD", Vision.V_RGBA_WHITE, G.fontPath)
 	Debug:PrintAt(10, 32, "Look: MOUSE", Vision.V_RGBA_WHITE, G.fontPath)
@@ -281,40 +280,3 @@ function ShowControls(self)
 	Debug:PrintAt(10, 224, "Invered?: " .. inverted , Vision.V_RGBA_WHITE, G.fontPath)
 	Debug:PrintAt(10, 258, "Reset Level: 1", Vision.V_RGBA_WHITE, G.fontPath)
 end
-
---this section not currently in use but can be used to project a vector onto the floor
---[[
-function GetProjectedVector(objForwardDir)
-	--cast a ray from the object's current vector straight down.
-	local rayStart = objForwardDir
-	local rayEnd = objForwardDir - G.worldUp
-	if objForwardDir:dot(G.worldUp) < 0 then
-		rayEnd = objForwardDir + G.worldUp
-	end
-	
-	local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
-	local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)
-	
-	local color = Vision.V_RGBA_RED
-	Debug.Draw:Line(rayStart, rayEnd, color)
-	
-	if hit ~= nil and result ~= nil then
-		local impact = result["ImpactPoint"]
-		local newVec = Project(objForwardDir, impact)
-		
-		--be sure not to return a nil vector
-		if newVec ~= nil then
-			return newVec:normalize()
-		end
-	end
-		
-	return objForwardDir
-end
-
-function Project(vecU, vecV)
-	if vectU ~= nil and vectU ~= nil then
-		local scalar = (vecU:dot(vecV) ) / (math.pow(vecU.x, 2) + math.pow(vecU.y, 2) + math.pow(vecU.z, 2) )
-		return vetV * scalar
-	end
-end
---]]

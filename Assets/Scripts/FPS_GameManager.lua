@@ -1,117 +1,123 @@
 ﻿-- new script file
 function OnAfterSceneLoaded(self)
-	--a table of bullets (also tables)
+	--a table of bullets (each bullet is also a table)
 	G.allBullets = {}
 	
+	--global functions to create a bullet, and 
 	G.Reset = ResetGame
 	G.CreateBullet = CreateNewBullet
 end
 
 function OnThink(self)
+	--check to see if all targets have been hit
 	local numHit = table.getn(G.targetsHit)
 	if numHit == G.numTargets then
 		Win()
 	end
-
+	
+	--get the number of bullets in the scence
 	local numBullets = table.getn(G.allBullets)
 	
+	--for each bullet, update it's position and delete if necessary
 	if numBullets > 0 then
 		for i = 1, numBullets, 1 do
 			local currentBullet = G.allBullets[i]
 			if currentBullet ~= nil then 
+				--if the udate bullet function returns true, delete the bullet ***won't be true if bullet ricochets
 				if UpdateBullet(currentBullet) then
 					currentBullet.particle:Remove()
 					table.remove(G.allBullets, i)
 					i = i - 1
-					-- Debug:PrintLine("Bullet deleted. " ..table.getn(G.allBullets) .. "bullets still in scene")
 				end
 			end	
 		end
 	end
 end
 
-function OnBeforeSceneUnloaded(self)
-	--
-end
-
+--Inform the user if s/he has hit all targets
 function Win()
 	Debug:PrintLine("You Win!")
 end
 
+--for all targets that have been hit, show them again
 function ResetGame()
 	--reactivate the targets that were hit
 	local hitCount = table.getn(G.targetsHit)
 	for i = 1, hitCount, 1 do
 		G.targetsHit[i].Activate(G.targetsHit[i])
 	end
+	
+	--reset the targetsHit to nil
 	G.targetsHit = {}
-
-	--move the player back to the start pos
-	--[[
-	this section does not currently work, but I'm moving on due to time constraints
-	G.player:SetMotionDeltaWorldSpace(G.zeroVector)
-	G.player.characterController:SetWantJump(false)
-	G.player:SetPosition(G.playerStartPos)
-	G.player:SetOrientation(G.playerStartRot)
-	--]]
 end
 
+--Moves each bullet based on speed, if it hits anything along the path, return true
 function UpdateBullet(bullet)
 	--find the bullet's next position
 	local nextPos = (bullet.dir * bullet.speed) + bullet.pos 
 	
-	local dist = bullet.pos:getDistanceToSquared(nextPos)
+	--getn the distance to the next position
+	local dist = bullet.pos:getDistanceTo(nextPos)
 	
+	--draw a ray along the bullets current route
 	local color = Vision.V_RGBA_GREEN
 	Debug.Draw:Line(bullet.pos, nextPos, color)
 	
+	--check for collisions if the bullet has traveled a certain distance
 	if dist > .1 then
+		--start the ray at the bullet's current' pos
 		local rayStart = bullet.pos
 		
+		--get the collision info for the ray
 		local iCollisionFilterInfo = Physics.CalcFilterInfo(Physics.LAYER_ALL, 0,0,0)
 		local hit, result = Physics.PerformRaycast(rayStart, nextPos, iCollisionFilterInfo)
 		
+		--check for the ray hit
 		if hit == true then
 			if result ~= nil then
 				if result["HitType"] == "Entity" then
 					local hitObj = result["HitObject"]
 					if hitObj:GetKey() == "Target" then
-						-- Debug:PrintLine("Hit target")
+						--if a target was hit, deactivate it and add it to the global table
 						hitObj.Deactivate(hitObj)
 						table.insert(G.targetsHit, hitObj)
 					end
 				end
 				
-				local size = 2
-				local distance = size / 2
-				local lifetime = 5 --seconds
-				local rotation = 0
-				
-				local dir = -result["ImpactNormal"]
-				local pos = result["ImpactPoint"] - (dir * distance)
-				Debug.Draw:Wallmark(
-					pos,
-					dir,
-					"Textures/Decals/FPS_BulletWallMark_TEX.tga",
-					Vision.BLEND_ALPHA,
-					size, rotation, lifetime)
-					
-				--if the ricochet fails, destroy the bullet	
+				--if the ricochet fails, draw wallmark and destroy the bullet	
 				if not bullet.HitCallback(bullet, pos, result) then	
+					--set the values for the wallmark
+					local size = 2
+					local distance = size / 2
+					local lifetime = 5 --seconds
+					local rotation = 0
+					
+					--Project the wallmark at the hit location
+					local dir = -result["ImpactNormal"]
+					local pos = result["ImpactPoint"] - (dir * distance)
+					Debug.Draw:Wallmark(
+						pos,
+						dir,
+						"Textures/Decals/FPS_BulletWallMark_TEX.tga",
+						Vision.BLEND_ALPHA,
+						size, rotation, lifetime)
+						
 					return true
 				end
 			end
 		else
-			bullet.distance = bullet.startPos:getDistanceToSquared(nextPos)
-			--bullet.distance = bullet.distance + dist
-			local rangeSq = bullet.range * bullet.range 
-			if  bullet.distance >  rangeSq then
-				-- Debug:PrintLine("Destroyed")
+			--update the bullet's total distance traveled
+			bullet.distance = bullet.distance + (nextPos - bullet.pos):getLength()
+			
+			--move it tot he next position
+			bullet.pos = nextPos
+			bullet.particle:SetPosition(nextPos)
+			
+			--if the bullet's new position is past the range of the gun, return true and delete
+			if  bullet.distance >  bullet.range then
 				return true
 			end
 			
-			bullet.pos = nextPos
-			bullet.particle:SetPosition(nextPos)
 			return false
 		end
 	end
@@ -119,6 +125,7 @@ function UpdateBullet(bullet)
 end
 
 function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle, ricochetChance, bulletRange)
+	--set the new values for the bulet
 	local newBullet = {}
 	newBullet.speed = bulletSpeed
 	newBullet.startPos = bulletStartPos
@@ -129,10 +136,14 @@ function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle,
 	newBullet.pos = newBullet.startPos --set start position to current position for init
 	newBullet.distance = 0
 	
+	--this function will be called everyime a bullet hits something
 	newBullet.HitCallback = function(bullet, soundPosition, result)
+		--find out what was hit
 		local hitObj = result["HitObject"]
 		
+		--if the object was the player or gun return
 		if hitObj ~= nil then
+			--if the object was the player or gun return
 			if hitObj:GetKey() == "Player" and hitObj:GetKey() == "Gun" then
 				return
 			end
@@ -143,6 +154,7 @@ function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle,
 			hitSound:Play()
 		end
 		
+		--calculate the ricochet chance return true if the bullet ricochets
 		local ricochet = Util:GetRandInt(100)
 		if ricochet < ricochetChance then
 			-- Debug:PrintLine("Ricohet")
@@ -155,5 +167,6 @@ function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle,
 		return false
 	end
 	
+	--add the new bullet to the global array
 	table.insert(G.allBullets, newBullet)
 end

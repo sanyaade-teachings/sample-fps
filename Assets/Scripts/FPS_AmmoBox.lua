@@ -1,4 +1,5 @@
 function OnAfterSceneLoaded(self)
+	--these values can be moved to OnExpose for easy access in Vision
 	self.Activate = ActivateBox
 	self.ammoCount = 50
 	self.respawnTime = 10
@@ -6,12 +7,8 @@ function OnAfterSceneLoaded(self)
 	self.lastCollision = 0
 end
 
-function OnExpose(self)
-	--self.ammoCount = 25
-	-- self.respawnTime = 20
-end
-
 function OnThink(self)
+	--if the box was already hit, countdown to respawn
 	if self.timeToNextSpawn > 0 then
 		self.timeToNextSpawn = self.timeToNextSpawn - Timer:GetTimeDiff()
 		return
@@ -19,12 +16,14 @@ function OnThink(self)
 		self.timeToNextSpawn = 0
 	end
 	
+	--when the respawn time reaches 0, show the box
 	if self.timeToNextSpawn == 0 then
 		SetBoxState(self, true)
 	end
 end
 
 function OnObjectEnter(self, object)
+	--get the current time
 	local time = Timer:GetTime()
 	local otherObj = object.ColliderObject
 
@@ -36,17 +35,18 @@ function OnObjectEnter(self, object)
 	--remember the collision time
 	self.lastCollider = otherObj
 	self.lastCollision = time
-
+	
+	--if the other object was the player, add ammo to the player's gun
 	if object:GetKey() == "Player" then
 		if(object.gun.AddAmmo(object.gun, self.ammoCount) ) then
-			-- Debug:PrintLine("Ammo Added!")
 			SetBoxState(self, false)
 			StartCoolDown(self)
 		end
 	end
 end
 
-function SetBoxState(self, state) --state should be true when activating, false when deactivating
+--If state = true, enamble the trigger and show the box, else disable the trigger and hide box
+function SetBoxState(self, state) 
 	self:SetEnabled(state)
 	self:SetVisible(state)
 	
@@ -60,6 +60,7 @@ function SetBoxState(self, state) --state should be true when activating, false 
 	end
 end
 
+--begin the cool down to the next spawn 
 function StartCoolDown(self)
 	self.timeToNextSpawn = self.respawnTime
 end
