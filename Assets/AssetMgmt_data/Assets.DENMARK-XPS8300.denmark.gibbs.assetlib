@@ -548,36 +548,9 @@
                 ]
             },
             "File": {
-                "Hash": 1522581853,
-                "TimeStamp": 1393874382651834800,
-                "LastEditTime": 1393874383429912600
-            },
-            "Texture": {
-                "FileFormat": "DDS",
-                "Width": 2048,
-                "Height": 2048,
-                "HasAlpha": false,
-                "sRGB": false
-            },
-            "Transformations": {
-                "TemplateName": "Default"
-            }
-        },
-        "Scenes/sample_P02.dds": {
-            "AssetType": "Texture",
-            "Common": {
-                "Tags": "__NEW_ASSET__",
-                "Dependencies": [
-
-                ],
-                "Variants": [
-
-                ]
-            },
-            "File": {
-                "Hash": 791763568,
-                "TimeStamp": 1393874390524622000,
-                "LastEditTime": 1393874391333702900
+                "Hash": 21019636,
+                "TimeStamp": 1393878383418943700,
+                "LastEditTime": 1393878384221943700
             },
             "Texture": {
                 "FileFormat": "DDS",
@@ -1676,6 +1649,15 @@
             },
             "File": {
                 "LastEditTime": 1393356737828830000
+            }
+        },
+        "Scenes/sample_P02.dds": {
+            "AssetType": "__deleted__",
+            "Common": {
+                "DeleteTime": 1393878114634943700
+            },
+            "File": {
+                "LastEditTime": 1393878114634943700
             }
         },
         "shaders/Misc_00/MultAssigned.bmp": {
