@@ -36,7 +36,7 @@ end
 function OnExpose(self)
 	self.fireRate = .15
 	self.magazineSize = 30
-	self.gunRange = 800
+	self.gunRange = 900
 	
 	self.bulletRows = 3
 	self.bulletColumns = 10

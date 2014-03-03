@@ -96,7 +96,7 @@
             "File": {
                 "Hash": 537847423,
                 "TimeStamp": 1391631870498075200,
-                "LastEditTime": 1391631871528075200
+                "LastEditTime": 1393873842150790100
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -119,9 +119,9 @@
                 ]
             },
             "File": {
-                "Hash": 1490472994,
-                "TimeStamp": 1390937029831115700,
-                "LastEditTime": 1391027952917493300
+                "Hash": 1013934410,
+                "TimeStamp": 1393872399445362300,
+                "LastEditTime": 1393872400655483300
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -134,16 +134,16 @@
                 "Dependencies": [
                     "Shaders/BaseShaders.ShaderLib",
                     "Shaders/vMaterial.ShaderLib",
-                    "Textures/GridText_DIFFUSE.tga"
+                    "Textures/textureGrid_Blue.tga"
                 ],
                 "Variants": [
 
                 ]
             },
             "File": {
-                "Hash": 221473631,
-                "TimeStamp": 1390937029829115500,
-                "LastEditTime": 1391027952917493300
+                "Hash": 1850897339,
+                "TimeStamp": 1393872399443362100,
+                "LastEditTime": 1393873885054080000
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -166,9 +166,9 @@
                 ]
             },
             "File": {
-                "Hash": 97756570,
-                "TimeStamp": 1393275589563834400,
-                "LastEditTime": 1393275590657943800
+                "Hash": 1416070241,
+                "TimeStamp": 1393873883967971400,
+                "LastEditTime": 1393873885154090000
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -179,6 +179,7 @@
             "Common": {
                 "Tags": "__NEW_ASSET__",
                 "Dependencies": [
+                    "Meshes/fps_walls_mesh.vmesh_data/materials.xml",
                     "Shaders/BaseShaders.ShaderLib",
                     "Shaders/vMaterial.ShaderLib",
                     "Textures/textureGrid_Blue.tga"
@@ -188,9 +189,9 @@
                 ]
             },
             "File": {
-                "Hash": 1234720249,
-                "TimeStamp": 1393275589561834200,
-                "LastEditTime": 1393275590607938800
+                "Hash": 3016010302,
+                "TimeStamp": 1393873883961970800,
+                "LastEditTime": 1393873885117086300
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -236,7 +237,7 @@
             "File": {
                 "Hash": 1326349097,
                 "TimeStamp": 1391633433456924000,
-                "LastEditTime": 1391633433713949700
+                "LastEditTime": 1393873841766751700
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -303,7 +304,7 @@
             "File": {
                 "Hash": 3744718374,
                 "TimeStamp": 1390939481640489200,
-                "LastEditTime": 1391027952818493300
+                "LastEditTime": 1393873841834758500
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -370,7 +371,7 @@
             "File": {
                 "Hash": 2725809570,
                 "TimeStamp": 1392774256110889500,
-                "LastEditTime": 1393275590631941200
+                "LastEditTime": 1393873885081082700
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -437,7 +438,7 @@
             "File": {
                 "Hash": 1218201594,
                 "TimeStamp": 1391025003644501800,
-                "LastEditTime": 1391027952882493300
+                "LastEditTime": 1393873842591834200
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -504,7 +505,7 @@
             "File": {
                 "Hash": 365536910,
                 "TimeStamp": 1391032243445280000,
-                "LastEditTime": 1391032395132280000
+                "LastEditTime": 1393873842646839700
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -547,14 +548,68 @@
                 ]
             },
             "File": {
-                "Hash": 2658020266,
-                "TimeStamp": 1393445407396121500,
-                "LastEditTime": 1393445408108192700
+                "Hash": 1522581853,
+                "TimeStamp": 1393874382651834800,
+                "LastEditTime": 1393874383429912600
             },
             "Texture": {
                 "FileFormat": "DDS",
                 "Width": 2048,
                 "Height": 2048,
+                "HasAlpha": false,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Scenes/sample_P02.dds": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 791763568,
+                "TimeStamp": 1393874390524622000,
+                "LastEditTime": 1393874391333702900
+            },
+            "Texture": {
+                "FileFormat": "DDS",
+                "Width": 2048,
+                "Height": 2048,
+                "HasAlpha": false,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/acr-bushmaster.png": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 3015464216,
+                "TimeStamp": 1391018637040965300,
+                "LastEditTime": 1393873841713746400
+            },
+            "Texture": {
+                "FileFormat": "PNG",
+                "Width": 4314,
+                "Height": 1133,
                 "HasAlpha": false,
                 "sRGB": false
             },
@@ -576,7 +631,7 @@
             "File": {
                 "Hash": 2276619343,
                 "TimeStamp": 1388712522000000000,
-                "LastEditTime": 1391027949269493300
+                "LastEditTime": 1393873841818756900
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -1007,7 +1062,7 @@
             "File": {
                 "Hash": 1961177807,
                 "TimeStamp": 1391633173322913200,
-                "LastEditTime": 1391633433690947400
+                "LastEditTime": 1393873841748749900
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -1034,7 +1089,7 @@
             "File": {
                 "Hash": 2085709631,
                 "TimeStamp": 1391024784501501800,
-                "LastEditTime": 1391027950183493300
+                "LastEditTime": 1393873842575832600
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -1169,7 +1224,7 @@
             "File": {
                 "Hash": 813587432,
                 "TimeStamp": 1391555610238086200,
-                "LastEditTime": 1391631871519075200
+                "LastEditTime": 1393873842128787900
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -1223,7 +1278,7 @@
             "File": {
                 "Hash": 544691295,
                 "TimeStamp": 1391031467615019200,
-                "LastEditTime": 1391032394178280000
+                "LastEditTime": 1393873842636838700
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -1250,7 +1305,7 @@
             "File": {
                 "Hash": 415495962,
                 "TimeStamp": 1391557060072055100,
-                "LastEditTime": 1391631266274213300
+                "LastEditTime": 1393873842692844300
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -1304,7 +1359,7 @@
             "File": {
                 "Hash": 3272315430,
                 "TimeStamp": 1390934365014646600,
-                "LastEditTime": 1391027950597493300
+                "LastEditTime": 1393873842541829200
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -1439,7 +1494,7 @@
             "File": {
                 "Hash": 1888533058,
                 "TimeStamp": 1391550537909489900,
-                "LastEditTime": 1393275590584936500
+                "LastEditTime": 1393873885035078100
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -2295,6 +2350,11 @@
             "Hash": 0,
             "TimeStamp": 1391558674795159000,
             "LastEditTime": 1391557987921830800
+        },
+        "Meshes/fps_walls_mesh.vmesh_data/materials.xml": {
+            "Hash": 0,
+            "TimeStamp": 1393873883964971100,
+            "LastEditTime": 1393873881188693500
         }
     }
 }

@@ -3,45 +3,7 @@
   <header version="0" name="" description="" category="" convertible="True" autosavebinary="False" relativefilenames="False" />
   <thumbnail type="jpg" size="1651">/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAEAAQADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5/ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//2Q==</thumbnail>
   <shape class="DynLightShape">
-    <property name="LightAttenuationCurve" value="Smooth" />
-    <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
-    <property name="Multiplier" value="0.5" />
-    <property name="DistanceFadeEnd" value="0" />
-    <property name="DistanceFadeStart" value="0" />
-    <property name="UseSpecular" value="True" />
-    <property name="LightType" value="Directional" />
-    <property name="SpotAngle" value="45" />
-    <property name="ProjectedTexture" value="" />
-    <property name="Radius" value="1000" />
-    <property name="Triggered" value="True" />
     <property name="LightColor" value="255,255,255,255" />
-    <property name="CastStaticShadows" value="True" />
-    <property name="UsesLightMasks" value="False" />
-    <property name="AnimationCurve" value="" />
-    <property name="AnimationTiming" value="1" />
-    <property name="AnimationPhase" value="0" />
-    <property name="RemoveLightAfterAnimation" value="False" />
-    <property name="WorldInfluenceMask" value="255" />
-    <property name="ObjectInfluenceMask" value="255" />
-    <property name="VisibleBitmask" value="4294967295" />
-    <property name="IsStatic" value="True" />
-    <property name="ExportWhenNotRelevant" value="False" />
-    <property name="PreviewAsDynamicLight" value="True" />
-    <property name="TurnOffAfterLighting" value="True" />
-    <property name="ObjectKey" value="" />
-    <property name="Visible" value="True" />
-    <property name="Position" value="-18.51906,1.824362,546.0994" />
-    <property name="Orientation" value="43,62,39.55136" />
-    <property name="Scaling" value="1,1,1" />
-    <property name="TextLabel" value="" />
-    <property name="ShapeName" value="StaticDirectionalLight" />
-    <property name="UserDataString" value="" />
-    <property name="ExportShape" value="True" />
-    <property name="UniqueID" value="3204425436838756366" />
-    <linktarget class="LinkTargetTriggerComponent" name="ToggleOn" ID="ToggleOn" />
-    <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
-  </shape>
-  <shape class="DynLightShape">
     <property name="LightAttenuationCurve" value="Smooth" />
     <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
     <property name="Multiplier" value="0.5" />
@@ -53,7 +15,6 @@
     <property name="ProjectedTexture" value="" />
     <property name="Radius" value="245.9403" />
     <property name="Triggered" value="True" />
-    <property name="LightColor" value="255,255,255,255" />
     <property name="CastStaticShadows" value="True" />
     <property name="UsesLightMasks" value="False" />
     <property name="AnimationCurve" value="" />
@@ -81,6 +42,7 @@
     <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
   </shape>
   <shape class="DynLightShape">
+    <property name="LightColor" value="255,255,255,255" />
     <property name="LightAttenuationCurve" value="Smooth" />
     <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
     <property name="Multiplier" value="0.5" />
@@ -92,7 +54,6 @@
     <property name="ProjectedTexture" value="" />
     <property name="Radius" value="262.9982" />
     <property name="Triggered" value="True" />
-    <property name="LightColor" value="255,255,255,255" />
     <property name="CastStaticShadows" value="True" />
     <property name="UsesLightMasks" value="False" />
     <property name="AnimationCurve" value="" />
@@ -120,6 +81,7 @@
     <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
   </shape>
   <shape class="DynLightShape">
+    <property name="LightColor" value="255,255,255,255" />
     <property name="LightAttenuationCurve" value="Smooth" />
     <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
     <property name="Multiplier" value="0.35" />
@@ -131,7 +93,6 @@
     <property name="ProjectedTexture" value="" />
     <property name="Radius" value="187.067" />
     <property name="Triggered" value="True" />
-    <property name="LightColor" value="255,255,255,255" />
     <property name="CastStaticShadows" value="True" />
     <property name="UsesLightMasks" value="False" />
     <property name="AnimationCurve" value="" />
@@ -159,6 +120,7 @@
     <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
   </shape>
   <shape class="DynLightShape">
+    <property name="LightColor" value="255,255,255,255" />
     <property name="LightAttenuationCurve" value="Smooth" />
     <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
     <property name="Multiplier" value="0.5" />
@@ -168,9 +130,8 @@
     <property name="LightType" value="Point" />
     <property name="SpotAngle" value="45" />
     <property name="ProjectedTexture" value="" />
-    <property name="Radius" value="315.4518" />
+    <property name="Radius" value="164.4236" />
     <property name="Triggered" value="True" />
-    <property name="LightColor" value="255,255,255,255" />
     <property name="CastStaticShadows" value="True" />
     <property name="UsesLightMasks" value="False" />
     <property name="AnimationCurve" value="" />
@@ -186,7 +147,7 @@
     <property name="TurnOffAfterLighting" value="True" />
     <property name="ObjectKey" value="" />
     <property name="Visible" value="True" />
-    <property name="Position" value="915.6238,78.96711,246.4333" />
+    <property name="Position" value="644.0994,-15.83131,168.2793" />
     <property name="Orientation" value="0,0,0" />
     <property name="Scaling" value="1,1,1" />
     <property name="TextLabel" value="" />
@@ -198,6 +159,7 @@
     <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
   </shape>
   <shape class="DynLightShape">
+    <property name="LightColor" value="255,255,255,255" />
     <property name="LightAttenuationCurve" value="Smooth" />
     <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
     <property name="Multiplier" value="0.5" />
@@ -209,7 +171,6 @@
     <property name="ProjectedTexture" value="" />
     <property name="Radius" value="329.5225" />
     <property name="Triggered" value="True" />
-    <property name="LightColor" value="255,255,255,255" />
     <property name="CastStaticShadows" value="True" />
     <property name="UsesLightMasks" value="False" />
     <property name="AnimationCurve" value="" />
@@ -233,6 +194,45 @@
     <property name="UserDataString" value="" />
     <property name="ExportShape" value="True" />
     <property name="UniqueID" value="3204425436838756371" />
+    <linktarget class="LinkTargetTriggerComponent" name="ToggleOn" ID="ToggleOn" />
+    <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
+  </shape>
+  <shape class="DynLightShape">
+    <property name="LightColor" value="219,219,219,255" />
+    <property name="LightAttenuationCurve" value="Smooth" />
+    <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
+    <property name="Multiplier" value="0.75" />
+    <property name="DistanceFadeEnd" value="0" />
+    <property name="DistanceFadeStart" value="0" />
+    <property name="UseSpecular" value="True" />
+    <property name="LightType" value="Directional" />
+    <property name="SpotAngle" value="45" />
+    <property name="ProjectedTexture" value="" />
+    <property name="Radius" value="1000" />
+    <property name="Triggered" value="True" />
+    <property name="CastStaticShadows" value="True" />
+    <property name="UsesLightMasks" value="False" />
+    <property name="AnimationCurve" value="" />
+    <property name="AnimationTiming" value="1" />
+    <property name="AnimationPhase" value="0" />
+    <property name="RemoveLightAfterAnimation" value="False" />
+    <property name="WorldInfluenceMask" value="255" />
+    <property name="ObjectInfluenceMask" value="255" />
+    <property name="VisibleBitmask" value="4294967295" />
+    <property name="IsStatic" value="True" />
+    <property name="ExportWhenNotRelevant" value="False" />
+    <property name="PreviewAsDynamicLight" value="True" />
+    <property name="TurnOffAfterLighting" value="True" />
+    <property name="ObjectKey" value="" />
+    <property name="Visible" value="True" />
+    <property name="Position" value="842.3215,155.6704,385.6396" />
+    <property name="Orientation" value="135,73,136.3087" />
+    <property name="Scaling" value="1,1,1" />
+    <property name="TextLabel" value="" />
+    <property name="ShapeName" value="StaticDirectionalLight0" />
+    <property name="UserDataString" value="" />
+    <property name="ExportShape" value="True" />
+    <property name="UniqueID" value="3204425436838756373" />
     <linktarget class="LinkTargetTriggerComponent" name="ToggleOn" ID="ToggleOn" />
     <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
   </shape>
