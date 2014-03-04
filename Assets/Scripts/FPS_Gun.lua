@@ -6,8 +6,10 @@ end
 function OnAfterSceneLoaded(self)
 	--these variables can be moved to the OnExpose function for easier access
 	self.infiniteAmmo = false
-	self.bulletSpeed = 64
-	self.particlePath = "Particles\\FPS_Bullet_PAR.xml"
+	self.bulletSpeed = 50
+	--self.particlePath = "Particles\\FPS_Bullet_PAR.xml"
+	self.particlePath = "Particles\\FPS_BulletParticle_02.xml"
+	--self.particlePath = "Particles\\ballTrail.xml"
 	self.ricochetChance = 50
 	self.roundsCapacity = self.magazineSize * 3 
 	self.totalRounds = self.roundsCapacity
@@ -36,7 +38,7 @@ end
 function OnExpose(self)
 	self.fireRate = .15
 	self.magazineSize = 30
-	self.gunRange = 900
+	self.gunRange = 1800
 	
 	self.bulletRows = 3
 	self.bulletColumns = 10

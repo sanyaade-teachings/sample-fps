@@ -18,7 +18,7 @@ function OnAfterSceneLoaded(self)
 	self.singleFire = false --if true, the gun will only fire once per click
 	
 	--movement variables
-	self.jogSpeed = 5
+	self.jogSpeed = 7.5
 	self.runSpeed = 10
 	self.rotSpeed = 50
 	

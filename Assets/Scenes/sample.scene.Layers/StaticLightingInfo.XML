@@ -3,7 +3,6 @@
   <header version="0" name="" description="" category="" convertible="True" autosavebinary="False" relativefilenames="False" />
   <thumbnail type="jpg" size="1651">/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAEAAQADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5/ooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//2Q==</thumbnail>
   <shape class="DynLightShape">
-    <property name="LightColor" value="219,219,219,255" />
     <property name="LightAttenuationCurve" value="Smooth" />
     <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
     <property name="Multiplier" value="0.75" />
@@ -15,6 +14,7 @@
     <property name="ProjectedTexture" value="" />
     <property name="Radius" value="1000" />
     <property name="Triggered" value="True" />
+    <property name="LightColor" value="219,219,219,255" />
     <property name="CastStaticShadows" value="True" />
     <property name="UsesLightMasks" value="False" />
     <property name="AnimationCurve" value="" />
@@ -42,7 +42,6 @@
     <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
   </shape>
   <shape class="DynLightShape">
-    <property name="LightColor" value="255,255,255,255" />
     <property name="LightAttenuationCurve" value="Smooth" />
     <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
     <property name="Multiplier" value="0.5" />
@@ -54,6 +53,7 @@
     <property name="ProjectedTexture" value="" />
     <property name="Radius" value="245.9403" />
     <property name="Triggered" value="True" />
+    <property name="LightColor" value="255,255,255,255" />
     <property name="CastStaticShadows" value="True" />
     <property name="UsesLightMasks" value="False" />
     <property name="AnimationCurve" value="" />
@@ -81,7 +81,6 @@
     <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
   </shape>
   <shape class="DynLightShape">
-    <property name="LightColor" value="255,255,255,255" />
     <property name="LightAttenuationCurve" value="Smooth" />
     <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
     <property name="Multiplier" value="0.5" />
@@ -93,6 +92,7 @@
     <property name="ProjectedTexture" value="" />
     <property name="Radius" value="262.9982" />
     <property name="Triggered" value="True" />
+    <property name="LightColor" value="255,255,255,255" />
     <property name="CastStaticShadows" value="True" />
     <property name="UsesLightMasks" value="False" />
     <property name="AnimationCurve" value="" />
@@ -120,7 +120,6 @@
     <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
   </shape>
   <shape class="DynLightShape">
-    <property name="LightColor" value="255,255,255,255" />
     <property name="LightAttenuationCurve" value="Smooth" />
     <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
     <property name="Multiplier" value="0.5" />
@@ -132,6 +131,7 @@
     <property name="ProjectedTexture" value="" />
     <property name="Radius" value="164.4236" />
     <property name="Triggered" value="True" />
+    <property name="LightColor" value="255,255,255,255" />
     <property name="CastStaticShadows" value="True" />
     <property name="UsesLightMasks" value="False" />
     <property name="AnimationCurve" value="" />
@@ -159,7 +159,6 @@
     <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
   </shape>
   <shape class="DynLightShape">
-    <property name="LightColor" value="255,255,255,255" />
     <property name="LightAttenuationCurve" value="Smooth" />
     <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
     <property name="Multiplier" value="0.5" />
@@ -171,6 +170,7 @@
     <property name="ProjectedTexture" value="" />
     <property name="Radius" value="403.8953" />
     <property name="Triggered" value="True" />
+    <property name="LightColor" value="255,255,255,255" />
     <property name="CastStaticShadows" value="True" />
     <property name="UsesLightMasks" value="False" />
     <property name="AnimationCurve" value="" />

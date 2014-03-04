@@ -143,7 +143,7 @@
             "File": {
                 "Hash": 1850897339,
                 "TimeStamp": 1393872399443362100,
-                "LastEditTime": 1393873885054080000
+                "LastEditTime": 1393892515349955900
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -166,9 +166,9 @@
                 ]
             },
             "File": {
-                "Hash": 1416070241,
-                "TimeStamp": 1393873883967971400,
-                "LastEditTime": 1393873885154090000
+                "Hash": 1763260876,
+                "TimeStamp": 1393892514207727500,
+                "LastEditTime": 1393892515441974300
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -189,9 +189,9 @@
                 ]
             },
             "File": {
-                "Hash": 3016010302,
-                "TimeStamp": 1393873883961970800,
-                "LastEditTime": 1393873885117086300
+                "Hash": 4067654470,
+                "TimeStamp": 1393892514207727500,
+                "LastEditTime": 1393892515407967500
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -371,7 +371,7 @@
             "File": {
                 "Hash": 2725809570,
                 "TimeStamp": 1392774256110889500,
-                "LastEditTime": 1393873885081082700
+                "LastEditTime": 1393892515373960700
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -536,6 +536,60 @@
                 "TemplateName": "Default"
             }
         },
+        "Particles/Plume_2.dds": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 1889936403,
+                "TimeStamp": 1387325260000000000,
+                "LastEditTime": 1393888703099995600
+            },
+            "Texture": {
+                "FileFormat": "DDS",
+                "Width": 128,
+                "Height": 128,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Particles/TextureTrail.dds": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 142695525,
+                "TimeStamp": 1387325264000000000,
+                "LastEditTime": 1393881832883206500
+            },
+            "Texture": {
+                "FileFormat": "DDS",
+                "Width": 512,
+                "Height": 256,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
         "Scenes/sample_P01.dds": {
             "AssetType": "Texture",
             "Common": {
@@ -549,8 +603,8 @@
             },
             "File": {
                 "Hash": 21019636,
-                "TimeStamp": 1393878383418943700,
-                "LastEditTime": 1393878384221943700
+                "TimeStamp": 1393892591000082900,
+                "LastEditTime": 1393892591771237100
             },
             "Texture": {
                 "FileFormat": "DDS",
@@ -1372,6 +1426,33 @@
                 "TemplateName": "Default"
             }
         },
+        "Textures/Particles/FPS_BulletParticle_02.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 3135520307,
+                "TimeStamp": 1393881753240243000,
+                "LastEditTime": 1393881754250344000
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 32,
+                "Height": 32,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
         "Textures/Sky/SkyBox_Basic_Bottom.tga": {
             "AssetType": "Texture",
             "Common": {
@@ -1467,7 +1548,7 @@
             "File": {
                 "Hash": 1888533058,
                 "TimeStamp": 1391550537909489900,
-                "LastEditTime": 1393873885035078100
+                "LastEditTime": 1393892515332952500
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -1649,15 +1730,6 @@
             },
             "File": {
                 "LastEditTime": 1393356737828830000
-            }
-        },
-        "Scenes/sample_P02.dds": {
-            "AssetType": "__deleted__",
-            "Common": {
-                "DeleteTime": 1393878114634943700
-            },
-            "File": {
-                "LastEditTime": 1393878114634943700
             }
         },
         "shaders/Misc_00/MultAssigned.bmp": {

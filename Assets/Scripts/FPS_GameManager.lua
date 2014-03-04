@@ -88,7 +88,7 @@ function UpdateBullet(bullet)
 	
 	--draw a ray along the bullets current route
 	local color = Vision.V_RGBA_GREEN
-	Debug.Draw:Line(bullet.pos, nextPos, color)
+	--Debug.Draw:Line(bullet.pos, nextPos, color)
 	
 	--check for collisions if the bullet has traveled a certain distance
 	if dist > .1 then
