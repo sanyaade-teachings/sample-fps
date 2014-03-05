@@ -8,10 +8,14 @@ function OnAfterSceneLoaded(self)
 	G.CreateBullet = CreateNewBullet
 	
 	G.gameOver = false
+	
+	self.waitTime = 5;
+	self.timeBeforeReload = 0;
 end
 
 function OnThink(self)
 	if not G.gameOver then
+		
 		--check to see if all targets have been hit
 		local numHit = table.getn(G.targetsHit)
 		
@@ -20,7 +24,7 @@ function OnThink(self)
 		
 		--if numHit > numTargets, win!
 		if numHit == G.numTargets then
-			Win()
+			Win(self)
 		end
 		
 		--get the number of bullets in the scence
@@ -43,21 +47,36 @@ function OnThink(self)
 	else
 		local winText1 = "You Win!"
 		local winText2 = "Press Any Key To Continue"
+		local winText3 = "Play Again in: "
+	
 		Debug:PrintAt( (G.w / 2.0) - (winText1:len() * 8), G.h / 2.0, "" .. winText1, Vision.V_RGBA_WHITE, G.fontPath)
-		Debug:PrintAt( (G.w / 2.0) - (winText2:len() * 8), G.h / 2.0 + 32, "" .. winText2, Vision.V_RGBA_WHITE, G.fontPath)
-		if G.player.map:GetTrigger("ANY") > 0 then
-			ResetGame()
+	
+		if self.timeBeforeReload > 0 then
+			self.timeBeforeReload = self.timeBeforeReload - Timer:GetTimeDiff()
+			Debug:PrintAt( (G.w / 2.0) - ((winText3:len() + 1) * 8), G.h / 2.0 + 32, "" .. winText3 .. math.ceil(self.timeBeforeReload), Vision.V_RGBA_WHITE, G.fontPath)
+		elseif self.timeBeforeReload < 0 then
+			self.timeBeforeReload = 0
+		end
+		
+		if self.timeBeforeReload <= 0 then
+			Debug:PrintAt( (G.w / 2.0) - (winText2:len() * 8), G.h / 2.0 + 32, "" .. winText2, Vision.V_RGBA_WHITE, G.fontPath)
+			
+			if (G.player.map:GetTrigger("ANY") > 0) then
+				ResetGame()
+			end
 		end
 	end
 end
 
 --Inform the user if s/he has hit all targets
-function Win()
+function Win(self)
 	Debug:PrintLine("You Win!")
 	G.gameOver = true
 	G.winMask = Game:CreateScreenMask(0, 0, "Textures/FPS_WinScreenMask_DIFFUSE.tga")
 	G.winMask:SetTargetSize(G.w, G.h)
 	G.winMask:SetBlending(Vision.BLEND_MULTIPLY)
+	
+	StartWinTimer(self)
 end
 
 --for all targets that have been hit, show them again
@@ -76,6 +95,10 @@ function ResetGame()
 	
 	--clear the screen mask
 	G.winMask:SetTextureObject(nil)
+end
+
+function StartWinTimer(self)
+	self.timeBeforeReload = self.waitTime
 end
 
 --Moves each bullet based on speed, if it hits anything along the path, return true
