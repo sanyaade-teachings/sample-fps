@@ -9,8 +9,9 @@ function OnAfterSceneLoaded(self)
 	self.bulletSpeed = 50
 	--self.particlePath = "Particles\\FPS_Bullet_PAR.xml"
 	self.particlePath = "Particles\\FPS_BulletParticle_02.xml"
+	self.muzzleFlashPath = "Particles\\MuzzleFlash.xml"
 	--self.particlePath = "Particles\\ballTrail.xml"
-	self.ricochetChance = 50
+	self.ricochetChance = 75
 	self.roundsCapacity = self.magazineSize * 3 
 	self.totalRounds = self.roundsCapacity
 	self.timeToNextShot = 0
@@ -81,10 +82,11 @@ function Fire(gun)
 			--flash the light
 			gun.muzzleLight:SetVisible(true)
 			
-			-- gun.muzzleLight:SetIntensity (10)
 			--create the bullet particle and set it's direction to the direction of the gun
 			local bulletParticle = Game:CreateEffect(gun.bulletSpawn:GetPosition(), gun.particlePath)
 			bulletParticle:SetDirection(gun:GetObjDir() )
+			
+			local muzzleFlash = Game:CreateEffect(gun.bulletSpawn:GetPosition(), gun.muzzleFlashPath)
 			
 			--create the 'bullet' object and set's it values
 			G.CreateBullet(gun.bulletSpeed, gun.bulletSpawn:GetPosition(), gun.bulletSpawn:GetObjDir(), bulletParticle, gun.ricochetChance, gun.gunRange)
@@ -180,8 +182,8 @@ function UpdateLOS(self)
 	local hit, result = Physics.PerformRaycast(rayStart, rayEnd, iCollisionFilterInfo)
 	
 	--set the color of the line for debugging
-	local color = Vision.V_RGBA_RED
-	Debug.Draw:Line(rayStart, rayEnd, color)
+	--local color = Vision.V_RGBA_RED
+	--Debug.Draw:Line(rayStart, rayEnd, color)
 	
 	--this will be true if the player is aiming at a target
 	local hitTarget = false
@@ -268,6 +270,10 @@ function SetUpHUD(self)
 			index = (i * self.bulletColumns) + j
 			self.bullets[index] = Game:CreateScreenMask(G.w - ( (size_X * self.bulletColumns) - (size_X * j) ), (y / 2) + (size_Y / 2 * i), "Textures/FPS_GunHUD/FPS_Bullet_White_TEX.tga")
 			self.bullets[index]:SetBlending(Vision.BLEND_ALPHA)
+			
+			if not G.isWindows then
+				self.bullets[index]:SetTargetSize(size_X / 2, size_Y / 2)
+			end
 		end
 	end
 end

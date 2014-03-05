@@ -29,7 +29,7 @@ void MyComponent::onStartup( VisTypedEngineObject_cl *pOwner )
   //  do the component start up code here.......
   //  [...]
 
-  Vision::Message.Add(1,"myComponent - onStartup()");
+  //Vision::Message.Add(1,"myComponent - onStartup()");
   count = 0;
 }
 
@@ -38,7 +38,7 @@ void MyComponent::onRemove(  VisTypedEngineObject_cl *pOwner )
   //  do the component Removal code here.......
   //  [...]
   Vision::Message.reset();
-  Vision::Message.Add("myComponent - onRemove()");
+  //Vision::Message.Add("myComponent - onRemove()");
 }
 
 void MyComponent::onFrameUpdate()
@@ -50,7 +50,7 @@ void MyComponent::onFrameUpdate()
   //Example
   hkvVec3 vPos = ((VisObject3D_cl *)GetOwner())->GetPosition();
   Vision::Message.DrawMessage3D("< myComponent Text >",vPos);
-  Vision::Message.Print(1, 10, 100, "Counting : %i", count);
+  //Vision::Message.Print(1, 10, 100, "Counting : %i", count);
   count ++;
 }
 
@@ -65,13 +65,13 @@ void MyComponent::SetOwner( VisTypedEngineObject_cl *pOwner )
   if (pOwner!=NULL)
   {
     MyComponent_ComponentManager::GlobalManager().Instances().AddUnique(this);
-    Vision::Message.Add("myComponent - Component Instance created");
+    //Vision::Message.Add("myComponent - Component Instance created");
     onStartup( pOwner );
   }
   else
   {
     onRemove( pOwner );
-    Vision::Message.Add("myComponent - Removed Component Instance from component Manager");
+    //Vision::Message.Add("myComponent - Removed Component Instance from component Manager");
     MyComponent_ComponentManager::GlobalManager().Instances().SafeRemove(this);    
   }
 }

@@ -143,7 +143,7 @@
             "File": {
                 "Hash": 1850897339,
                 "TimeStamp": 1393872399443362100,
-                "LastEditTime": 1393893905752508800
+                "LastEditTime": 1394045056457775200
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -166,9 +166,9 @@
                 ]
             },
             "File": {
-                "Hash": 247820577,
-                "TimeStamp": 1393893904644508800,
-                "LastEditTime": 1393893905848508800
+                "Hash": 366461814,
+                "TimeStamp": 1394045055176775200,
+                "LastEditTime": 1394045056491775200
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -189,9 +189,9 @@
                 ]
             },
             "File": {
-                "Hash": 2146963844,
-                "TimeStamp": 1393893904644508800,
-                "LastEditTime": 1393893905812508800
+                "Hash": 4076819511,
+                "TimeStamp": 1394045055170775200,
+                "LastEditTime": 1394045056402775200
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -371,7 +371,7 @@
             "File": {
                 "Hash": 2725809570,
                 "TimeStamp": 1392774256110889500,
-                "LastEditTime": 1393893905777508800
+                "LastEditTime": 1394045056332775200
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -536,6 +536,60 @@
                 "TemplateName": "Default"
             }
         },
+        "Particles/Fog_Group.dds": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 4062373857,
+                "TimeStamp": 1387325262000000000,
+                "LastEditTime": 1393976686335571100
+            },
+            "Texture": {
+                "FileFormat": "DDS",
+                "Width": 512,
+                "Height": 512,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Particles/GrayLookupTable.dds": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 4076469953,
+                "TimeStamp": 1387325262000000000,
+                "LastEditTime": 1393976686356573200
+            },
+            "Texture": {
+                "FileFormat": "DDS",
+                "Width": 256,
+                "Height": 4,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
         "Particles/Plume_2.dds": {
             "AssetType": "Texture",
             "Common": {
@@ -556,6 +610,33 @@
                 "FileFormat": "DDS",
                 "Width": 128,
                 "Height": 128,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Particles/Smoke.dds": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 2546377660,
+                "TimeStamp": 1387325262000000000,
+                "LastEditTime": 1393976686380575600
+            },
+            "Texture": {
+                "FileFormat": "DDS",
+                "Width": 512,
+                "Height": 512,
                 "HasAlpha": true,
                 "sRGB": false
             },
@@ -602,9 +683,9 @@
                 ]
             },
             "File": {
-                "Hash": 21019636,
-                "TimeStamp": 1393893980692508800,
-                "LastEditTime": 1393893981476508800
+                "Hash": 3998740006,
+                "TimeStamp": 1394045088526775200,
+                "LastEditTime": 1394045089298775200
             },
             "Texture": {
                 "FileFormat": "DDS",
@@ -1210,6 +1291,296 @@
                 "TemplateName": "Default"
             }
         },
+        "Textures/FPS_MobileHud/FPS_Button_Down.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 1567621752,
+                "TimeStamp": 1393982537511755700,
+                "LastEditTime": 1393982577843820500
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 128,
+                "Height": 128,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/FPS_MobileHud/FPS_Button_Down_64.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 3121535060,
+                "TimeStamp": 1393982646999442400,
+                "LastEditTime": 1393983419610695800
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 64,
+                "Height": 64,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/FPS_MobileHud/FPS_Button_Left.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 1484715511,
+                "TimeStamp": 1393982523971048100,
+                "LastEditTime": 1393982577863824500
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 128,
+                "Height": 128,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/FPS_MobileHud/FPS_Button_Left_64.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 4033031610,
+                "TimeStamp": 1393982693968138800,
+                "LastEditTime": 1393983419619696700
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 64,
+                "Height": 64,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/FPS_MobileHud/FPS_Button_Right.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 2234863246,
+                "TimeStamp": 1393982490772409700,
+                "LastEditTime": 1393982577883828500
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 128,
+                "Height": 128,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/FPS_MobileHud/FPS_Button_Right_64.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 2225083492,
+                "TimeStamp": 1393982684711213200,
+                "LastEditTime": 1393983419637698500
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 64,
+                "Height": 64,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/FPS_MobileHud/FPS_Button_Up.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 2131590602,
+                "TimeStamp": 1393982474238103500,
+                "LastEditTime": 1393982577833818500
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 128,
+                "Height": 128,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/FPS_MobileHud/FPS_Button_Up_64.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 244739266,
+                "TimeStamp": 1393982712465988400,
+                "LastEditTime": 1393983419655700300
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 64,
+                "Height": 64,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
+        "Textures/FPS_MobileHud/FPS_Dpad_128.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 2068637033,
+                "TimeStamp": 1393980676739244900,
+                "LastEditTime": 1393980786922244900
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 128,
+                "Height": 128,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "pcdx9": {
+                    "None": {
+
+                    }
+                },
+                "ios": {
+                    "TextureTransformationRule": {
+                        "Compression": "Quality",
+                        "Usage": "Undefined",
+                        "RemoveAlphaChannel": false,
+                        "CreateMipMaps": true,
+                        "DownscaleLevel": 0,
+                        "MinimumSize": 0,
+                        "MaximumSize": 0
+                    }
+                },
+                "android": {
+                    "None": {
+
+                    }
+                }
+            }
+        },
+        "Textures/FPS_MobileHud/FPS_Dpad_64.tga": {
+            "AssetType": "Texture",
+            "Common": {
+                "Tags": "__NEW_ASSET__",
+                "Dependencies": [
+
+                ],
+                "Variants": [
+
+                ]
+            },
+            "File": {
+                "Hash": 2747393535,
+                "TimeStamp": 1393980695595244900,
+                "LastEditTime": 1393980787934244900
+            },
+            "Texture": {
+                "FileFormat": "TGA",
+                "Width": 64,
+                "Height": 64,
+                "HasAlpha": true,
+                "sRGB": false
+            },
+            "Transformations": {
+                "TemplateName": "Default"
+            }
+        },
         "Textures/FPS_MuzzleFlash_DIFFUSE.tga": {
             "AssetType": "Texture",
             "Common": {
@@ -1548,7 +1919,7 @@
             "File": {
                 "Hash": 1888533058,
                 "TimeStamp": 1391550537909489900,
-                "LastEditTime": 1393893905730508800
+                "LastEditTime": 1394045056317775200
             },
             "Texture": {
                 "FileFormat": "TGA",
@@ -1694,15 +2065,6 @@
             },
             "File": {
                 "LastEditTime": 1393356737827829900
-            }
-        },
-        "Particles/smoke.dds": {
-            "AssetType": "__deleted__",
-            "Common": {
-                "DeleteTime": 1393356737828830000
-            },
-            "File": {
-                "LastEditTime": 1393356737828830000
             }
         },
         "Particles/Sparkle.dds": {

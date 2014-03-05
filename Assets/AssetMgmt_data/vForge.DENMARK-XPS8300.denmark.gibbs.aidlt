@@ -1,3 +1,4 @@
+particles/smoke.dds	particles/smoke.dds	sRGB=false
 textures/decals/blubber.dds	textures/decals/blubber.dds	sRGB=false
 textures/decals/blubber_small.dds	textures/decals/blubber_small.dds	sRGB=false
 textures/decals/machinegun.dds	textures/decals/machinegun.dds	sRGB=false
@@ -33,6 +34,10 @@ models/fps_gun_mod.vcolmesh	models/fps_gun_mod.vcolmesh
 models/fps_target_mod.anim	models/fps_target_mod.anim	
 models/fps_target_mod.model	models/fps_target_mod.model	LODSwitchDistances=
 models/fps_target_mod.vcolmesh	models/fps_target_mod.vcolmesh	
+particles/fog_group.dds	particles/fog_group.dds	sRGB=false
+particles/graylookuptable.dds	particles/graylookuptable.dds	sRGB=false
+particles/plume_2.dds	particles/plume_2.dds	sRGB=false
+particles/texturetrail.dds	particles/texturetrail.dds	sRGB=false
 scenes/sample_p01.dds	scenes/sample_p01.dds	sRGB=false
 textures/acr-bushmaster.png	textures/acr-bushmaster.png	sRGB=false
 textures/blue_128.tga	textures/blue_128.tga	sRGB=false
@@ -43,6 +48,16 @@ textures/fps_gun_diffuse.tga	textures/fps_gun_diffuse.tga	sRGB=false
 textures/fps_gunhud/fps_ammodisplay_tex.tga	textures/fps_gunhud/fps_ammodisplay_tex.tga	sRGB=false
 textures/fps_gunhud/fps_bullet_gray_tex.tga	textures/fps_gunhud/fps_bullet_gray_tex.tga	sRGB=false
 textures/fps_gunhud/fps_bullet_white_tex.tga	textures/fps_gunhud/fps_bullet_white_tex.tga	sRGB=false
+textures/fps_mobilehud/fps_button_down.tga	textures/fps_mobilehud/fps_button_down.tga	sRGB=false
+textures/fps_mobilehud/fps_button_down_64.tga	textures/fps_mobilehud/fps_button_down_64.tga	sRGB=false
+textures/fps_mobilehud/fps_button_left.tga	textures/fps_mobilehud/fps_button_left.tga	sRGB=false
+textures/fps_mobilehud/fps_button_left_64.tga	textures/fps_mobilehud/fps_button_left_64.tga	sRGB=false
+textures/fps_mobilehud/fps_button_right.tga	textures/fps_mobilehud/fps_button_right.tga	sRGB=false
+textures/fps_mobilehud/fps_button_right_64.tga	textures/fps_mobilehud/fps_button_right_64.tga	sRGB=false
+textures/fps_mobilehud/fps_button_up.tga	textures/fps_mobilehud/fps_button_up.tga	sRGB=false
+textures/fps_mobilehud/fps_button_up_64.tga	textures/fps_mobilehud/fps_button_up_64.tga	sRGB=false
+textures/fps_mobilehud/fps_dpad_128.tga	textures/fps_mobilehud/fps_dpad_128.tga	sRGB=false
+textures/fps_mobilehud/fps_dpad_64.tga	textures/fps_mobilehud/fps_dpad_64.tga	sRGB=false
 textures/fps_muzzleflash_diffuse.tga	textures/fps_muzzleflash_diffuse.tga	sRGB=false
 textures/fps_panel_tex.tga	textures/fps_panel_tex.tga	sRGB=false
 textures/fps_reticule_diffuse.tga	textures/fps_reticule_diffuse.tga	sRGB=false
@@ -51,10 +66,8 @@ textures/fps_wallpanel_tex.tga	textures/fps_wallpanel_tex.tga	sRGB=false
 textures/fps_winscreenmask_diffuse.tga	textures/fps_winscreenmask_diffuse.tga	sRGB=false
 textures/gridtext_diffuse.tga	textures/gridtext_diffuse.tga	sRGB=false
 textures/particles/fps_bullet_diffuse.tga	textures/particles/fps_bullet_diffuse.tga	sRGB=false
+textures/particles/fps_bulletparticle_02.tga	textures/particles/fps_bulletparticle_02.tga	sRGB=false
 textures/sky/skybox_basic_bottom.tga	textures/sky/skybox_basic_bottom.tga	sRGB=false
 textures/sky/skybox_basic_sides.tga	textures/sky/skybox_basic_sides.tga	sRGB=false
 textures/sky/skybox_basic_top.tga	textures/sky/skybox_basic_top.tga	sRGB=false
 textures/texturegrid_blue.tga	textures/texturegrid_blue.tga	sRGB=false
-textures/particles/fps_bulletparticle_02.tga	textures/particles/fps_bulletparticle_02.tga	sRGB=false
-particles/texturetrail.dds	particles/texturetrail.dds	sRGB=false
-particles/plume_2.dds	particles/plume_2.dds	sRGB=false

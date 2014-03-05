@@ -33,42 +33,79 @@ function OnAfterSceneLoaded(self)
 	self.map = Input:CreateMap("PlayerInputMap")
 	--set the controls for windows
 	
-	--mouse control for aiming and rotation
-	self.map:MapTrigger("X", "MOUSE", "CT_MOUSE_NORM_DELTA_X")
-	self.map:MapTrigger("Y", "MOUSE", "CT_MOUSE_NORM_DELTA_Y")
-	
-	--WASD control for character movement
-	self.map:MapTrigger("LEFT", "KEYBOARD", "CT_KB_A")
-	self.map:MapTrigger("RIGHT", "KEYBOARD", "CT_KB_D")
-	self.map:MapTrigger("FORWARD", "KEYBOARD", "CT_KB_W")
-	self.map:MapTrigger("BACK", "KEYBOARD", "CT_KB_S")
-	
-	--the firing style
-	if self.singleFire then
-		self.map:MapTrigger("FIRE01", "MOUSE", "CT_MOUSE_LEFT_BUTTON", {onceperframe = true} )
+	if G.isWindows then
+		--tell the player how to access help
+		Debug:PrintLine("**************************************************", Vision.V_RGBA_YELLOW)
+		Debug:PrintLine("************** For Help, Hold \"H\" **************", Vision.V_RGBA_YELLOW)
+		Debug:PrintLine("**************************************************", Vision.V_RGBA_YELLOW)
+		
+		
+		--mouse control for aiming and rotation
+		self.map:MapTrigger("X", "MOUSE", "CT_MOUSE_NORM_DELTA_X")
+		self.map:MapTrigger("Y", "MOUSE", "CT_MOUSE_NORM_DELTA_Y")
+		
+		--WASD control for character movement
+		self.map:MapTrigger("LEFT", "KEYBOARD", "CT_KB_A")
+		self.map:MapTrigger("RIGHT", "KEYBOARD", "CT_KB_D")
+		self.map:MapTrigger("FORWARD", "KEYBOARD", "CT_KB_W")
+		self.map:MapTrigger("BACK", "KEYBOARD", "CT_KB_S")
+		
+		--the firing style
+		if self.singleFire then
+			self.map:MapTrigger("FIRE01", "MOUSE", "CT_MOUSE_LEFT_BUTTON", {onceperframe = true} )
+		else
+			self.map:MapTrigger("FIRE01", "MOUSE", "CT_MOUSE_LEFT_BUTTON")
+		end
+		
+		--additional controls
+		self.map:MapTrigger("JUMP", "KEYBOARD", "CT_KB_SPACE")
+		self.map:MapTrigger("RELOAD", "KEYBOARD", "CT_KB_R", {onceperframe = true} ) 
+		self.map:MapTrigger("RUN", "KEYBOARD", "CT_KB_LSHIFT")
+		self.map:MapTrigger("CROUCH", "KEYBOARD", "CT_KB_C")
+		
+		self.map:MapTrigger("INVERT", "KEYBOARD", "CT_KB_I", {onceperframe = true} ) --invert Y
+		--self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )	--reset targets
+		self.map:MapTrigger("DISPLAY", "KEYBOARD", "CT_KB_H") --will show the display whilst holding 
+		self.map:MapTrigger("ANY", "KEYBOARD", "CT_KB_ANYKEY") --will show the display whilst holding
 	else
-		self.map:MapTrigger("FIRE01", "MOUSE", "CT_MOUSE_LEFT_BUTTON")
+		--mouse control for aiming and rotation
+		self.map:MapTrigger("X", {0, 0, G.w, G.h}, "CT_TOUCH_NORM_DELTA_X")
+		self.map:MapTrigger("Y", {0, 0, G.w, G.h}, "CT_TOUCH_NORM_DELTA_Y")
+
+		--WASD control for character movement
+		self.map:MapTrigger("LEFT", G.dpad.left, "CT_TOUCH_ANY")
+		self.map:MapTrigger("RIGHT", G.dpad.right, "CT_TOUCH_ANY")
+		self.map:MapTrigger("FORWARD", G.dpad.up, "CT_TOUCH_ANY")
+		self.map:MapTrigger("BACK", G.dpad.down, "CT_TOUCH_ANY")
+		
+		--the firing style
+		if self.singleFire then
+			self.map:MapTrigger("FIRE01", G.left, "CT_TOUCH_ANY", {onceperframe = true} )
+		else
+			self.map:MapTrigger("FIRE01", G.left, "CT_TOUCH_ANY")
+		end
+		
+		--additional controls
+		self.map:MapTrigger("JUMP", G.down, "CT_TOUCH_ANY")
+		self.map:MapTrigger("RELOAD", G.up, "CT_TOUCH_ANY", {onceperframe = true} ) 
+		self.map:MapTrigger("RUN", G.right, "CT_TOUCH_ANY")
+		--self.map:MapTrigger("CROUCH", -input here-, "CT_TOUCH_ANY")
+		
+		self.map:MapTrigger("INVERT", {0, 0, G.h, G.w}, "CT_TOUCH_TRIPLE_TAP", {onceperframe = true} ) --invert Y
+		--self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )	--reset targets
+		self.map:MapTrigger("DISPLAY", {0, G.h * .9, G.w * .1, G.h}, "CT_TOUCH_ANY") --will show the display whilst holding 
+		self.map:MapTrigger("ANY", {0, 0, G.h, G.w}, "CT_TOUCH_ANY")
+		
+		-- create a virtual thumbstick then setup controls for it
+		--Input:CreateVirtualThumbStick()
+		--self.map:MapTrigger("LEFT", "VirtualThumbStick", "CT_PAD_LEFT_THUMB_STICK_LEFT", {deadzone = 0.1})
+		--self.map:MapTrigger("RIGHT", "VirtualThumbStick", "CT_PAD_LEFT_THUMB_STICK_RIGHT", {deadzone = 0.1})
+		--self.map:MapTrigger("FORWARD", "VirtualThumbStick", "CT_PAD_LEFT_THUMB_STICK_UP", {deadzone = 0.1})
+		--self.map:MapTrigger("BACK", "VirtualThumbStick", "CT_PAD_LEFT_THUMB_STICK_DOWN", {deadzone = 0.1})
 	end
-	
-	--additional controls
-	self.map:MapTrigger("JUMP", "KEYBOARD", "CT_KB_SPACE")
-	self.map:MapTrigger("RELOAD", "KEYBOARD", "CT_KB_R", {onceperframe = true} ) 
-	self.map:MapTrigger("RUN", "KEYBOARD", "CT_KB_LSHIFT")
-	self.map:MapTrigger("CROUCH", "KEYBOARD", "CT_KB_C")
-	
-	self.map:MapTrigger("INVERT", "KEYBOARD", "CT_KB_I", {onceperframe = true} ) --invert Y
-	self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )	--reset targets
-	self.map:MapTrigger("DISPLAY", "KEYBOARD", "CT_KB_H") --will show the display whilst holding 
-	self.map:MapTrigger("ANY", "KEYBOARD", "CT_KB_ANYKEY") --will show the display whilst holding
-	
 	
 	--get the gun object, it is a child of the camera
 	self.gun = GetWeapon(G.camera)
-
-	--tell the player how to access help
-	Debug:PrintLine("**************************************************", Vision.V_RGBA_YELLOW)
-	Debug:PrintLine("************** For Help, Hold \"H\" **************", Vision.V_RGBA_YELLOW)
-	Debug:PrintLine("**************************************************", Vision.V_RGBA_YELLOW)
 	
 	--enable Debug Mode
 	Debug:Enable(true)
@@ -89,10 +126,10 @@ function OnThink(self)
 		local reload = self.map:GetTrigger("RELOAD") > 0
 		local run = self.map:GetTrigger("RUN") > 0 
 		local fire01 = self.map:GetTrigger("FIRE01") > 0
-		local crouch = self.map:GetTrigger("CROUCH") > 0
+		-- local crouch = self.map:GetTrigger("CROUCH") > 0
 		
 		local invert = self.map:GetTrigger("INVERT") > 0
-		local reset = self.map:GetTrigger("RESET") > 0 
+		--local reset = self.map:GetTrigger("RESET") > 0 
 		local display = self.map:GetTrigger("DISPLAY") > 0
 		
 		--determine the forward vector and right vector based on orientation of the camera
@@ -116,23 +153,23 @@ function OnThink(self)
 			Fire(self)
 		end
 		
-		if crouch then
-			Crouch(self)
-		else
-			local top = self.characterController:GetCapsuleTop()
-			if top.z < self.walkHeight.z then
-				self.characterController:SetCapsuleTop( self.walkHeight )
-			end
-		end
+		-- if crouch then
+			-- Crouch(self)
+		-- else
+			-- local top = self.characterController:GetCapsuleTop()
+			-- if top.z < self.walkHeight.z then
+				-- self.characterController:SetCapsuleTop( self.walkHeight )
+			-- end
+		-- end
 		
-		--rotation control		
+		-- rotation control		
 		if math.abs(x) > 0 or math.abs(y) > 0 then
-			--set the amount to move by each frame
+			-- set the amount to move by each frame
 			local step = self.rotSpeed
 			local rotation = G.camera:GetOrientation()
 			rotation.x = rotation.x - x * step
 			
-			--get the up/down rotation, accounting for invert state
+			-- get the up/down rotation, accounting for invert state
 			if self.invertY then
 				rotation.y = rotation.y - y * step
 			else
@@ -140,7 +177,7 @@ function OnThink(self)
 			end
 			rotation.y = ClampValue(rotation.y, self.yMinRot, self.yMaxRot)
 			
-			--update the camera roation
+			-- update the camera roation
 			G.camera:SetOrientation(rotation)
 			local orienation = self:GetOrientation()
 			orienation.x = rotation.x
@@ -152,40 +189,40 @@ function OnThink(self)
 		
 		--locomotion control
 		if (left or right or forward or back or run) then
-			--reset the moveVector to avoid steadily increasing velocity
+			-- reset the moveVector to avoid steadily increasing velocity
 			self.moveVector = G.zeroVector
 			local moveSpeed = 0
 			
-			--set the proper speed
+			-- set the proper speed
 			if run then 
 				moveSpeed = self.runSpeed
 			else
 				moveSpeed = self.jogSpeed
 			end
 			
-			--move the character left/right
+			-- move the character left/right
 			if left then
 				self.moveVector = self.moveVector + rightVec
 			elseif right then
 				self.moveVector = self.moveVector - rightVec
 			end
 			
-			--move the character forward/back
+			-- move the character forward/back
 			if forward then
 				self.moveVector = self.moveVector + forwardVec
 			elseif back then
 				self.moveVector = self.moveVector - forwardVec
 			end
 			
-			--normalize the movement vector
+			-- normalize the movement vector
 			if self.moveVector:getLength() > 1 then
 				self.moveVector:normalize()
 			end
 			
-			--multiply the move vector by the moveSpeed
+			-- multiply the move vector by the moveSpeed
 			self.moveVector = self.moveVector * moveSpeed
 			
-			--move the character
+			-- move the character
 			self:SetMotionDeltaWorldSpace(self.moveVector)
 		end
 		
@@ -195,9 +232,9 @@ function OnThink(self)
 		end
 		
 		--reset the game
-		if reset then
-			G.Reset()
-		end
+		-- if reset then
+			-- G.Reset()
+		-- end
 		
 		--show 'Help'
 		if display then
