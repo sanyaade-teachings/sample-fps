@@ -1,3 +1,6 @@
+--Author: Denmark Gibbs
+--This script controls the logic for the door animations
+--Attach this script to the Trigger That controls the door in vForge
 
 function OnAfterSceneLoaded(self)
 	--find the animation target
@@ -61,5 +64,5 @@ function ToggleAnim(self)
 	self.doorRB:SetActive(not self.doorRB:GetActive() )
 	
 	--Set whether the animation has been played
-	self.played = not self.played;
+	self.played = not self.played
 end

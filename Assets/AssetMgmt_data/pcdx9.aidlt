@@ -21,9 +21,12 @@ models/fps_gun_mod.vcolmesh	Models/FPS_Gun_MOD.vcolmesh
 models/fps_target_mod.anim	Models/FPS_Target_MOD.anim	
 models/fps_target_mod.model	Models/FPS_Target_MOD.model	LODSwitchDistances=
 models/fps_target_mod.vcolmesh	Models/FPS_Target_MOD.vcolmesh	
+particles/fog_group.dds	AssetMgmt_data/transformed/fog_grouph48r7x4clgdtc.dds	sRGB=false
+particles/graylookuptable.dds	AssetMgmt_data/transformed/graylookuptableh5zhzs4clgdtc.dds	sRGB=false
 particles/plume_2.dds	AssetMgmt_data/transformed/plume_2719k42dclgdtc.dds	sRGB=false
+particles/smoke.dds	AssetMgmt_data/transformed/smoke9hkp3rjclgdtc.dds	sRGB=false
 particles/texturetrail.dds	AssetMgmt_data/transformed/texturetrail0k0bxdnclgdtc.dds	sRGB=false
-scenes/sample_p01.dds	AssetMgmt_data/transformed/sample_p0102j5wzjclgdtc.dds	sRGB=false
+scenes/sample_p01.dds	AssetMgmt_data/transformed/sample_p01gxp#g4sclgdtc.dds	sRGB=false
 textures/acr-bushmaster.png	AssetMgmt_data/transformed/acr-bushmasterc7h2p30clgdtc.dds	sRGB=false
 textures/blue_128.tga	AssetMgmt_data/transformed/blue_1288hdmn9xclgdtc.dds	sRGB=false
 textures/decals/blubber.dds	AssetMgmt_data/transformed/blubber9hb0dpdclgdtc.dds	sRGB=false
@@ -45,8 +48,16 @@ textures/fps_gun_diffuse.tga	AssetMgmt_data/transformed/fps_gun_diffuse7snc77xcl
 textures/fps_gunhud/fps_ammodisplay_tex.tga	AssetMgmt_data/transformed/fps_ammodisplay_texfmjt1msclgdtc.dds	sRGB=false
 textures/fps_gunhud/fps_bullet_gray_tex.tga	AssetMgmt_data/transformed/fps_bullet_gray_texcbg2970clgdtc.dds	sRGB=false
 textures/fps_gunhud/fps_bullet_white_tex.tga	AssetMgmt_data/transformed/fps_bullet_white_tex7fthv7dclgdtc.dds	sRGB=false
+textures/fps_mobilehud/fps_button_down.tga	AssetMgmt_data/transformed/fps_button_down5vx02h0clgdtc.dds	sRGB=false
+textures/fps_mobilehud/fps_button_down_64.tga	AssetMgmt_data/transformed/fps_button_down_64cn3qsbjclgdtc.dds	sRGB=false
+textures/fps_mobilehud/fps_button_left.tga	AssetMgmt_data/transformed/fps_button_left5j#rpzxclgdtc.dds	sRGB=false
+textures/fps_mobilehud/fps_button_left_64.tga	AssetMgmt_data/transformed/fps_button_left_64h0stfr8clgdtc.dds	sRGB=false
+textures/fps_mobilehud/fps_button_right.tga	AssetMgmt_data/transformed/fps_button_right8bfbgksclgdtc.dds	sRGB=false
+textures/fps_mobilehud/fps_button_right_64.tga	AssetMgmt_data/transformed/fps_button_right_648980ndjclgdtc.dds	sRGB=false
+textures/fps_mobilehud/fps_button_up.tga	AssetMgmt_data/transformed/fps_button_up7z3cyt8clgdtc.dds	sRGB=false
+textures/fps_mobilehud/fps_button_up_64.tga	AssetMgmt_data/transformed/fps_button_up_640y5mds8clgdtc.dds	sRGB=false
 textures/fps_mobilehud/fps_dpad_128.tga	Textures/FPS_MobileHud/FPS_Dpad_128.tga	sRGB=false
-textures/fps_mobilehud/fps_dpad_64.tga	AssetMgmt_data/transformed/fps_dpad_642s6snx0clgdtc.dds	sRGB=false
+textures/fps_mobilehud/fps_dpad_64.tga	AssetMgmt_data/transformed/fps_dpad_64b7jh5#xclgdtc.dds	sRGB=false
 textures/fps_muzzleflash_diffuse.tga	AssetMgmt_data/transformed/fps_muzzleflash_diffuse3b09zlsclgdtc.dds	sRGB=false
 textures/fps_panel_tex.tga	AssetMgmt_data/transformed/fps_panel_tex30#lwy0clgdtc.dds	sRGB=false
 textures/fps_reticule_diffuse.tga	AssetMgmt_data/transformed/fps_reticule_diffuse11c#1tjclgdtc.dds	sRGB=false

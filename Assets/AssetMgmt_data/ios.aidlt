@@ -1,56 +1,38 @@
-fonts/arial32_00.dds	Fonts/Arial32_00.dds	sRGB=false
-fonts/arial_18_00.dds	Fonts/Arial_18_00.dds	sRGB=false
-fonts/arial_22_00.dds	Fonts/Arial_22_00.dds	sRGB=false
-fonts/couriernew_18_00.dds	Fonts/CourierNew_18_00.dds	sRGB=false
-fonts/debugfont_00.dds	Fonts/DebugFont_00.dds	sRGB=false
-meshes/plane.vcolmesh	Meshes/Plane.vcolmesh	
-meshes/plane.vmesh	Meshes/Plane.VMESH	LODSwitchDistances=
-models/misc/charheight.model	Models/Misc/CharHeight.Model	LODSwitchDistances=
-models/misc/cube.model	Models/Misc/Cube.Model	LODSwitchDistances=
-models/misc/plane.model	Models/Misc/Plane.Model	LODSwitchDistances=
-models/misc/point.model	Models/Misc/Point.Model	LODSwitchDistances=
-models/misc/sphere.model	Models/Misc/Sphere.Model	LODSwitchDistances=
-models/misc/torus.model	Models/Misc/Torus.Model	LODSwitchDistances=
-particles/explosion_page.dds	AssetMgmt_data/transformed/explosion_page8ntjrzjclgdtc.pvr	sRGB=false
-particles/groundfog.dds	AssetMgmt_data/transformed/groundfog96btc8jclgdtc.pvr	sRGB=false
-particles/smoke.dds	AssetMgmt_data/transformed/smokef0bryq4clgdtc.pvr	sRGB=false
-particles/sparkle.dds	AssetMgmt_data/transformed/sparklebk1kmw0clgdtc.pvr	sRGB=false
-particles/star.dds	AssetMgmt_data/transformed/star1v8889sclgdtc.pvr	sRGB=false
-particles/steam.dds	AssetMgmt_data/transformed/steamgfc5ddjclgdtc.pvr	sRGB=false
-shaders/misc_00/multassigned.bmp	AssetMgmt_data/transformed/multassigned824c8cnclgdtc.pvr	sRGB=false
-textures/billboards/billboardatlas_diffuse.dds	AssetMgmt_data/transformed/billboardatlas_diffuse8y7vhynclgdtc.pvr	sRGB=false
-textures/billboards/billboardatlas_normal.dds	AssetMgmt_data/transformed/billboardatlas_normal7g4q8jxclgdtc.pvr	sRGB=false
-textures/billboards/fgrass01.dds	AssetMgmt_data/transformed/fgrass01g4ts1fdclgdtc.pvr	sRGB=false
-textures/billboards/grass_alpha_01.dds	AssetMgmt_data/transformed/grass_alpha_01cxqnb7xclgdtc.pvr	sRGB=false
-textures/colors/black.png	AssetMgmt_data/transformed/blackb13#2z8clgdtc.pvr	sRGB=false
-textures/colors/blue.png	AssetMgmt_data/transformed/blue1g7ph8sclgdtc.pvr	sRGB=false
-textures/colors/bluedark.png	AssetMgmt_data/transformed/bluedark45z3dkdclgdtc.pvr	sRGB=false
-textures/colors/bluelight.png	AssetMgmt_data/transformed/bluelightfmmd7gxclgdtc.pvr	sRGB=false
-textures/colors/color_orange.dds	AssetMgmt_data/transformed/color_orange0l5ndbxclgdtc.pvr	sRGB=false
-textures/colors/cyan.png	AssetMgmt_data/transformed/cyangldf3d8clgdtc.pvr	sRGB=false
-textures/colors/cyandark.png	AssetMgmt_data/transformed/cyandark1vdg044clgdtc.pvr	sRGB=false
-textures/colors/cyanlight.png	AssetMgmt_data/transformed/cyanlightbcdht60clgdtc.pvr	sRGB=false
-textures/colors/gray33.png	AssetMgmt_data/transformed/gray333c4tsj4clgdtc.pvr	sRGB=false
-textures/colors/gray50.png	AssetMgmt_data/transformed/gray50h154qhjclgdtc.pvr	sRGB=false
-textures/colors/gray66.png	AssetMgmt_data/transformed/gray66cf#0d#sclgdtc.pvr	sRGB=false
-textures/colors/green.png	AssetMgmt_data/transformed/greenhnqlwqjclgdtc.pvr	sRGB=false
-textures/colors/greendark.png	AssetMgmt_data/transformed/greendark23p7z7dclgdtc.pvr	sRGB=false
-textures/colors/greenlight.png	AssetMgmt_data/transformed/greenlightd11x504clgdtc.pvr	sRGB=false
-textures/colors/magenta.png	AssetMgmt_data/transformed/magenta2pn3930clgdtc.pvr	sRGB=false
-textures/colors/magentadark.png	AssetMgmt_data/transformed/magentadark20z5pjnclgdtc.pvr	sRGB=false
-textures/colors/magentalight.png	AssetMgmt_data/transformed/magentalight5fssyv8clgdtc.pvr	sRGB=false
-textures/colors/orange.png	AssetMgmt_data/transformed/orange3sjkj0nclgdtc.pvr	sRGB=false
-textures/colors/orangedark.png	AssetMgmt_data/transformed/orangedark5qtct1nclgdtc.pvr	sRGB=false
-textures/colors/orangelight.png	AssetMgmt_data/transformed/orangelighthvp#3n0clgdtc.pvr	sRGB=false
-textures/colors/red.png	AssetMgmt_data/transformed/red5#9b150clgdtc.pvr	sRGB=false
-textures/colors/reddark.png	AssetMgmt_data/transformed/reddarkfnmsftdclgdtc.pvr	sRGB=false
-textures/colors/redlight.png	AssetMgmt_data/transformed/redlight8ldss3nclgdtc.pvr	sRGB=false
-textures/colors/white.png	AssetMgmt_data/transformed/white5yglsn4clgdtc.pvr	sRGB=false
-textures/colors/yellow.png	AssetMgmt_data/transformed/yellow6#g4sb4clgdtc.pvr	sRGB=false
-textures/colors/yellowdark.png	AssetMgmt_data/transformed/yellowdark05v84ldclgdtc.pvr	sRGB=false
-textures/colors/yellowlight.png	AssetMgmt_data/transformed/yellowlightcrp600dclgdtc.pvr	sRGB=false
+fonts/finecollege_32_00.dds	AssetMgmt_data/transformed/finecollege_32_0045mhfl8clgdtc.pvr	sRGB=false
+fonts/stencil_00.dds	AssetMgmt_data/transformed/stencil_00531cfpdclgdtc.pvr	sRGB=false
+meshes/fps_floor_mesh.vcolmesh	Meshes/FPS_Floor_MESH.vcolmesh	
+meshes/fps_floor_mesh.vmesh	Meshes/FPS_Floor_MESH.vmesh	LODSwitchDistances=
+meshes/fps_groundgrid_mesh.vcolmesh	Meshes/FPS_GroundGrid_MESH.vcolmesh	
+meshes/fps_groundgrid_mesh.vmesh	Meshes/FPS_GroundGrid_MESH.vmesh	LODSwitchDistances=
+meshes/fps_walls_mesh.vcolmesh	Meshes/FPS_Walls_MESH.vcolmesh	
+meshes/fps_walls_mesh.vmesh	Meshes/FPS_Walls_MESH.vmesh	LODSwitchDistances=
+models/fps_ammobox_mod.anim	Models/FPS_AmmoBox_MOD.anim	
+models/fps_ammobox_mod.model	Models/FPS_AmmoBox_MOD.model	LODSwitchDistances=
+models/fps_ammobox_mod.vcolmesh	Models/FPS_AmmoBox_MOD.vcolmesh	
+models/fps_charstandin_mod.anim	Models/FPS_CharStandIn_MOD.anim	
+models/fps_charstandin_mod.model	Models/FPS_CharStandIn_MOD.model	LODSwitchDistances=
+models/fps_charstandin_mod.vcolmesh	Models/FPS_CharStandIn_MOD.vcolmesh	
+models/fps_door_mod.anim	Models/FPS_Door_MOD.anim	
+models/fps_door_mod.model	Models/FPS_Door_MOD.model	LODSwitchDistances=
+models/fps_door_mod.vcolmesh	Models/FPS_Door_MOD.vcolmesh	
+models/fps_gun_mod.anim	Models/FPS_Gun_MOD.anim	
+models/fps_gun_mod.model	Models/FPS_Gun_MOD.model	LODSwitchDistances=
+models/fps_gun_mod.vcolmesh	Models/FPS_Gun_MOD.vcolmesh	
+models/fps_target_mod.anim	Models/FPS_Target_MOD.anim	
+models/fps_target_mod.model	Models/FPS_Target_MOD.model	LODSwitchDistances=
+models/fps_target_mod.vcolmesh	Models/FPS_Target_MOD.vcolmesh	
+particles/fog_group.dds	AssetMgmt_data/transformed/fog_grouph48r7x4clgdtc.pvr	sRGB=false
+particles/graylookuptable.dds	AssetMgmt_data/transformed/graylookuptableh5zhzs4clgdtc.pvr	sRGB=false
+particles/plume_2.dds	AssetMgmt_data/transformed/plume_2719k42dclgdtc.pvr	sRGB=false
+particles/smoke.dds	AssetMgmt_data/transformed/smoke9hkp3rjclgdtc.pvr	sRGB=false
+particles/texturetrail.dds	AssetMgmt_data/transformed/texturetrail0k0bxdnclgdtc.pvr	sRGB=false
+scenes/sample_p01.dds	AssetMgmt_data/transformed/sample_p01gxp#g4sclgdtc.pvr	sRGB=false
+textures/acr-bushmaster.png	AssetMgmt_data/transformed/acr-bushmasterc7h2p30clgdtc.pvr	sRGB=false
+textures/blue_128.tga	AssetMgmt_data/transformed/blue_1288hdmn9xclgdtc.pvr	sRGB=false
 textures/decals/blubber.dds	AssetMgmt_data/transformed/blubber9hb0dpdclgdtc.pvr	sRGB=false
 textures/decals/blubber_small.dds	AssetMgmt_data/transformed/blubber_smallcygvf#0clgdtc.pvr	sRGB=false
+textures/decals/fps_bulletwallmark_tex.tga	AssetMgmt_data/transformed/fps_bulletwallmark_texb79fysnclgdtc.pvr	sRGB=false
+textures/decals/fps_reddot_tex.tga	AssetMgmt_data/transformed/fps_reddot_tex8llmzksclgdtc.pvr	sRGB=false
 textures/decals/machinegun.dds	AssetMgmt_data/transformed/machinegunhwfrh04clgdtc.pvr	sRGB=false
 textures/decals/mgun_hole.dds	AssetMgmt_data/transformed/mgun_holecb#8nc4clgdtc.pvr	sRGB=false
 textures/decals/wallmarksmoke.dds	AssetMgmt_data/transformed/wallmarksmokebg32yjnclgdtc.pvr	sRGB=false
@@ -61,45 +43,31 @@ textures/fps/machinegun.dds	AssetMgmt_data/transformed/machinegunhwfrh04clgdtc.p
 textures/fps/sniper_border.dds	AssetMgmt_data/transformed/sniper_border7z9fznnclgdtc.pvr	sRGB=false
 textures/fps/sniper_scope.dds	AssetMgmt_data/transformed/sniper_scope10htqm4clgdtc.pvr	sRGB=false
 textures/fps/standing.dds	AssetMgmt_data/transformed/standingb26v47nclgdtc.pvr	sRGB=false
-textures/grid01.jpg	AssetMgmt_data/transformed/grid016ppcvq4clgdtc.pvr	sRGB=false
-textures/ui/button.dds	AssetMgmt_data/transformed/button3kmwgwjclgdtc.pvr	sRGB=false
-textures/ui/buttonquit_mouseover.tga	AssetMgmt_data/transformed/buttonquit_mouseoverf1f9p6jclgdtc.pvr	sRGB=false
-textures/ui/buttonquit_normal.tga	AssetMgmt_data/transformed/buttonquit_normalhml1td0clgdtc.pvr	sRGB=false
-textures/ui/checkmark_off.tga	AssetMgmt_data/transformed/checkmark_off419b34nclgdtc.pvr	sRGB=false
-textures/ui/checkmark_on.tga	AssetMgmt_data/transformed/checkmark_on8qkwd84clgdtc.pvr	sRGB=false
-textures/ui/closebutton.bmp	AssetMgmt_data/transformed/closebutton2p883#0clgdtc.pvr	sRGB=false
-textures/ui/closebuttongray.bmp	AssetMgmt_data/transformed/closebuttongray3h3mvvnclgdtc.pvr	sRGB=false
-textures/ui/closebuttonhigh.bmp	AssetMgmt_data/transformed/closebuttonhighcxff28xclgdtc.pvr	sRGB=false
-textures/ui/closebuttonsel.bmp	AssetMgmt_data/transformed/closebuttonsel9nv71kxclgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousearrow_e.dds	AssetMgmt_data/transformed/mousearrow_ed6lfy3xclgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousearrow_n.dds	AssetMgmt_data/transformed/mousearrow_n809hpw8clgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousearrow_ne.dds	AssetMgmt_data/transformed/mousearrow_ne8pyz1sxclgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousearrow_nw.dds	AssetMgmt_data/transformed/mousearrow_nw9c2gs64clgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousearrow_s.dds	AssetMgmt_data/transformed/mousearrow_s8x88zhjclgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousearrow_se.dds	AssetMgmt_data/transformed/mousearrow_se1t33d5sclgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousearrow_sw.dds	AssetMgmt_data/transformed/mousearrow_sw34kzf7nclgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousearrow_w.dds	AssetMgmt_data/transformed/mousearrow_wfpkw7k4clgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousecross.dds	AssetMgmt_data/transformed/mousecrossb3phfrsclgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousecrossadd.dds	AssetMgmt_data/transformed/mousecrossadd0pxqb3nclgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousemove.dds	AssetMgmt_data/transformed/mousemove2jd6v1nclgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousepointer-off.dds	AssetMgmt_data/transformed/mousepointer-offghm#3ysclgdtc.pvr	sRGB=false
-textures/ui/cursor2d/mousepointer-on.dds	AssetMgmt_data/transformed/mousepointer-on2gmsrf8clgdtc.pvr	sRGB=false
-textures/ui/dialogframe_blue.tga	AssetMgmt_data/transformed/dialogframe_blue07vwq80clgdtc.pvr	sRGB=false
-textures/ui/edit.dds	AssetMgmt_data/transformed/edit51ks6fxclgdtc.pvr	sRGB=false
-textures/ui/frame.dds	AssetMgmt_data/transformed/frame8gmgp5dclgdtc.pvr	sRGB=false
-textures/ui/media_stop.tga	AssetMgmt_data/transformed/media_stop1f69bb4clgdtc.pvr	sRGB=false
-textures/ui/mouse.dds	AssetMgmt_data/transformed/mouseh#zg9djclgdtc.pvr	sRGB=false
-textures/ui/mousehigh.dds	AssetMgmt_data/transformed/mousehigh92qm#84clgdtc.pvr	sRGB=false
-textures/ui/mousehigh.png	AssetMgmt_data/transformed/mousehighfbrftcsclgdtc.pvr	sRGB=false
-textures/ui/mousehigh.tga	AssetMgmt_data/transformed/mousehigh3pppv28clgdtc.pvr	sRGB=false
-textures/ui/mousenorm.dds	AssetMgmt_data/transformed/mousenormh#zg9djclgdtc.pvr	sRGB=false
-textures/ui/mousenorm.png	AssetMgmt_data/transformed/mousenorm3543rwsclgdtc.pvr	sRGB=false
-textures/ui/mousenorm.tga	AssetMgmt_data/transformed/mousenorm93htxh8clgdtc.pvr	sRGB=false
-textures/ui/sliderframe.dds	AssetMgmt_data/transformed/sliderframe2jhyx1jclgdtc.pvr	sRGB=false
-textures/ui/sliderframe.png	AssetMgmt_data/transformed/sliderframeg36x1wjclgdtc.pvr	sRGB=false
-textures/ui/sliderhigh.dds	AssetMgmt_data/transformed/sliderhigh4chyth8clgdtc.pvr	sRGB=false
-textures/ui/sliderhigh.png	AssetMgmt_data/transformed/sliderhighdbblb#nclgdtc.pvr	sRGB=false
-textures/ui/slidernorm.dds	AssetMgmt_data/transformed/slidernormftvn634clgdtc.pvr	sRGB=false
-textures/ui/slidernorm.png	AssetMgmt_data/transformed/slidernormd1qp#qxclgdtc.pvr	sRGB=false
-textures/ui/white.dds	AssetMgmt_data/transformed/white9sc4kv0clgdtc.pvr	sRGB=false
-textures/water/water_n_01.dds	AssetMgmt_data/transformed/water_n_0157jcnvm2lfq11.pvr	sRGB=false
+textures/fps_ammobox_tex.tga	AssetMgmt_data/transformed/fps_ammobox_tex79t9ltxclgdtc.pvr	sRGB=false
+textures/fps_gun_diffuse.tga	AssetMgmt_data/transformed/fps_gun_diffuse7snc77xclgdtc.pvr	sRGB=false
+textures/fps_gunhud/fps_ammodisplay_tex.tga	AssetMgmt_data/transformed/fps_ammodisplay_texfmjt1msclgdtc.pvr	sRGB=false
+textures/fps_gunhud/fps_bullet_gray_tex.tga	AssetMgmt_data/transformed/fps_bullet_gray_texcbg2970clgdtc.pvr	sRGB=false
+textures/fps_gunhud/fps_bullet_white_tex.tga	AssetMgmt_data/transformed/fps_bullet_white_tex7fthv7dclgdtc.pvr	sRGB=false
+textures/fps_mobilehud/fps_button_down.tga	AssetMgmt_data/transformed/fps_button_down5vx02h0clgdtc.pvr	sRGB=false
+textures/fps_mobilehud/fps_button_down_64.tga	AssetMgmt_data/transformed/fps_button_down_64cn3qsbjclgdtc.pvr	sRGB=false
+textures/fps_mobilehud/fps_button_left.tga	AssetMgmt_data/transformed/fps_button_left5j#rpzxclgdtc.pvr	sRGB=false
+textures/fps_mobilehud/fps_button_left_64.tga	AssetMgmt_data/transformed/fps_button_left_64h0stfr8clgdtc.pvr	sRGB=false
+textures/fps_mobilehud/fps_button_right.tga	AssetMgmt_data/transformed/fps_button_right8bfbgksclgdtc.pvr	sRGB=false
+textures/fps_mobilehud/fps_button_right_64.tga	AssetMgmt_data/transformed/fps_button_right_648980ndjclgdtc.pvr	sRGB=false
+textures/fps_mobilehud/fps_button_up.tga	AssetMgmt_data/transformed/fps_button_up7z3cyt8clgdtc.pvr	sRGB=false
+textures/fps_mobilehud/fps_button_up_64.tga	AssetMgmt_data/transformed/fps_button_up_640y5mds8clgdtc.pvr	sRGB=false
+textures/fps_mobilehud/fps_dpad_128.tga	AssetMgmt_data/transformed/fps_dpad_1287qm75f4clgdtc.pvr	sRGB=false
+textures/fps_mobilehud/fps_dpad_64.tga	AssetMgmt_data/transformed/fps_dpad_64b7jh5#xclgdtc.pvr	sRGB=false
+textures/fps_muzzleflash_diffuse.tga	AssetMgmt_data/transformed/fps_muzzleflash_diffuse3b09zlsclgdtc.pvr	sRGB=false
+textures/fps_panel_tex.tga	AssetMgmt_data/transformed/fps_panel_tex30#lwy0clgdtc.pvr	sRGB=false
+textures/fps_reticule_diffuse.tga	AssetMgmt_data/transformed/fps_reticule_diffuse11c#1tjclgdtc.pvr	sRGB=false
+textures/fps_target_diffuse.tga	AssetMgmt_data/transformed/fps_target_diffuse20yvncxclgdtc.pvr	sRGB=false
+textures/fps_wallpanel_tex.tga	AssetMgmt_data/transformed/fps_wallpanel_tex1kj#r38clgdtc.pvr	sRGB=false
+textures/fps_winscreenmask_diffuse.tga	AssetMgmt_data/transformed/fps_winscreenmask_diffugzhm8lnclgdtc.pvr	sRGB=false
+textures/gridtext_diffuse.tga	AssetMgmt_data/transformed/gridtext_diffused62xl4sclgdtc.pvr	sRGB=false
+textures/particles/fps_bullet_diffuse.tga	AssetMgmt_data/transformed/fps_bullet_diffuse4k#vf#xclgdtc.pvr	sRGB=false
+textures/particles/fps_bulletparticle_02.tga	AssetMgmt_data/transformed/fps_bulletparticle_02cpt1z6dclgdtc.pvr	sRGB=false
+textures/sky/skybox_basic_bottom.tga	AssetMgmt_data/transformed/skybox_basic_bottom25d7qmxclgdtc.pvr	sRGB=false
+textures/sky/skybox_basic_sides.tga	AssetMgmt_data/transformed/skybox_basic_sides1xvmgd8clgdtc.pvr	sRGB=false
+textures/sky/skybox_basic_top.tga	AssetMgmt_data/transformed/skybox_basic_top6cntqgsclgdtc.pvr	sRGB=false
+textures/texturegrid_blue.tga	AssetMgmt_data/transformed/texturegrid_blue7145v88clgdtc.pvr	sRGB=false

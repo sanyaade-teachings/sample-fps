@@ -1,0 +1,255 @@
+<root>
+  <info createdby="vForge version 2013.2.5.1" />
+  <header version="0" name="" description="" category="" convertible="True" autosavebinary="True" relativefilenames="False" />
+  <thumbnail type="jpg" size="1651">/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAEAAQADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5UooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//2Q==</thumbnail>
+  <shape class="EntityShape">
+    <property name="ModelFile" value="" />
+    <property name="CustomMaterialSet" value="&lt;None&gt;" />
+    <property name="EntityClass" value="VisBaseEntity_cl" />
+    <property name="ClassDefinitionTemplate" value="" />
+    <property name="EntityPropertyString" value="" />
+    <property name="ScaleX" value="1" />
+    <property name="ScaleY" value="1" />
+    <property name="ScaleZ" value="1" />
+    <property name="UniformScaling" value="1" />
+    <property name="NavMeshUsage" value="IncludeInNavMesh" />
+    <property name="VisibleBitmask" value="4294967295" />
+    <property name="NearClipDistance" value="0" />
+    <property name="FarClipDistance" value="0" />
+    <property name="RenderOrderPriority" value="0" />
+    <property name="CastDynamicShadows" value="False" />
+    <property name="CastStaticShadows" value="False" />
+    <property name="LightInfluenceBitmask" value="1" />
+    <property name="AmbientColor" value="0,0,0,255" />
+    <property name="ShowLightgridWidget" value="False" />
+    <property name="SampleOfsX" value="0" />
+    <property name="SampleOfsY" value="0" />
+    <property name="SampleOfsZ" value="0" />
+    <property name="ObjectKey" value="TargetParent" />
+    <property name="Visible" value="True" />
+    <property name="Position" value="0,0,0" />
+    <property name="Orientation" value="0,0,0" />
+    <property name="Scaling" value="1,1,1" />
+    <property name="TextLabel" value="" />
+    <property name="ShapeName" value="TargetParent" />
+    <property name="UserDataString" value="" />
+    <property name="ExportShape" value="True" />
+    <property name="UniqueID" value="18376293570534440969" />
+    <shape class="EntityShape">
+      <property name="ModelFile" value="Models/FPS_Target_MOD.model" />
+      <property name="CustomMaterialSet" value="&lt;None&gt;" />
+      <property name="EntityClass" value="VisBaseEntity_cl" />
+      <property name="ClassDefinitionTemplate" value="" />
+      <property name="EntityPropertyString" value="" />
+      <property name="ScaleX" value="1" />
+      <property name="ScaleY" value="1" />
+      <property name="ScaleZ" value="1" />
+      <property name="UniformScaling" value="1" />
+      <property name="NavMeshUsage" value="IncludeInNavMesh" />
+      <property name="VisibleBitmask" value="4294967295" />
+      <property name="NearClipDistance" value="0" />
+      <property name="FarClipDistance" value="0" />
+      <property name="RenderOrderPriority" value="0" />
+      <property name="CastDynamicShadows" value="True" />
+      <property name="CastStaticShadows" value="False" />
+      <property name="LightInfluenceBitmask" value="1" />
+      <property name="AmbientColor" value="0,0,0,255" />
+      <property name="ShowLightgridWidget" value="False" />
+      <property name="SampleOfsX" value="-46.95674" />
+      <property name="SampleOfsY" value="0" />
+      <property name="SampleOfsZ" value="0" />
+      <property name="ObjectKey" value="Target" />
+      <property name="Visible" value="True" />
+      <property name="Position" value="460.9646,-0.1896057,132.177" />
+      <property name="Orientation" value="0,90,0" />
+      <property name="Scaling" value="1,1,1" />
+      <property name="TextLabel" value="" />
+      <property name="ShapeName" value="Target" />
+      <property name="UserDataString" value="" />
+      <property name="ExportShape" value="True" />
+      <property name="UniqueID" value="18376293570534440962" />
+      <component class="vHavokRigidBody" paramstring="ComponentID=;Shape_Type=Convex Hull;Shape_Radius=0;Shape_BoxSize=0,0,0;Shape_Height=0;Shape_PivotOffset=0,0,0;Shape_CenterOfMass=0,0,0;Havok_NoDeactivate=False;Havok_Mass=10;Havok_InertiaTensorComputeMode=Volume;Havok_SurfaceThickness=0.1;Havok_InertiaTensorAxisScaling=1,1,1;Havok_InertiaTensorScaling=1;Havok_Friction=0.5;Havok_Restitution=0.4;Havok_LinearDamping=0;Havok_AngularDamping=0.05;Havok_FileResourceName=;Debug_Render=False;Debug_Color=50,255,50,255;Havok_TakeRbDataFromFile=False;Havok_MotionType=Fixed;Shape_PivotOffsetAutoAlign=True;Havok_CollisionLayer=1;Havok_CollisionGroup=0;Havok_SubSystemId=0;Havok_SubSystemDontCollideWith=0;Havok_QualityType=Auto;Havok_MaxKinematicVelocity=600;Havok_AlwaysInitAsDynamic=False;Havok_Active=True;Havok_WeldingType=None;Havok_TightFit=False;" visible="True" serializable="True" editable="True" removable="True" />
+      <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_TargetScript.lua;" visible="True" serializable="True" editable="True" removable="True" />
+    </shape>
+    <shape class="EntityShape">
+      <property name="ModelFile" value="Models/FPS_Target_MOD.model" />
+      <property name="CustomMaterialSet" value="&lt;None&gt;" />
+      <property name="EntityClass" value="VisBaseEntity_cl" />
+      <property name="ClassDefinitionTemplate" value="" />
+      <property name="EntityPropertyString" value="" />
+      <property name="ScaleX" value="1" />
+      <property name="ScaleY" value="1" />
+      <property name="ScaleZ" value="1" />
+      <property name="UniformScaling" value="1" />
+      <property name="NavMeshUsage" value="IncludeInNavMesh" />
+      <property name="VisibleBitmask" value="4294967295" />
+      <property name="NearClipDistance" value="0" />
+      <property name="FarClipDistance" value="0" />
+      <property name="RenderOrderPriority" value="0" />
+      <property name="CastDynamicShadows" value="True" />
+      <property name="CastStaticShadows" value="False" />
+      <property name="LightInfluenceBitmask" value="1" />
+      <property name="AmbientColor" value="0,0,0,255" />
+      <property name="ShowLightgridWidget" value="False" />
+      <property name="SampleOfsX" value="76.31873" />
+      <property name="SampleOfsY" value="-3.37988" />
+      <property name="SampleOfsZ" value="0" />
+      <property name="ObjectKey" value="Target" />
+      <property name="Visible" value="True" />
+      <property name="Position" value="121.0509,-0.1896057,238.85" />
+      <property name="Orientation" value="0,90,0" />
+      <property name="Scaling" value="1,1,1" />
+      <property name="TextLabel" value="" />
+      <property name="ShapeName" value="Target0" />
+      <property name="UserDataString" value="" />
+      <property name="ExportShape" value="True" />
+      <property name="UniqueID" value="18376293570534440963" />
+      <component class="vHavokRigidBody" paramstring="ComponentID=;Shape_Type=Convex Hull;Shape_Radius=0;Shape_BoxSize=0,0,0;Shape_Height=0;Shape_PivotOffset=0,0,0;Shape_CenterOfMass=0,0,0;Havok_NoDeactivate=False;Havok_Mass=10;Havok_InertiaTensorComputeMode=Volume;Havok_SurfaceThickness=0.1;Havok_InertiaTensorAxisScaling=1,1,1;Havok_InertiaTensorScaling=1;Havok_Friction=0.5;Havok_Restitution=0.4;Havok_LinearDamping=0;Havok_AngularDamping=0.05;Havok_FileResourceName=;Debug_Render=False;Debug_Color=50,255,50,255;Havok_TakeRbDataFromFile=False;Havok_MotionType=Fixed;Shape_PivotOffsetAutoAlign=True;Havok_CollisionLayer=1;Havok_CollisionGroup=0;Havok_SubSystemId=0;Havok_SubSystemDontCollideWith=0;Havok_QualityType=Auto;Havok_MaxKinematicVelocity=600;Havok_AlwaysInitAsDynamic=False;Havok_Active=True;Havok_WeldingType=None;Havok_TightFit=False;" visible="True" serializable="True" editable="True" removable="True" />
+      <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_TargetScript.lua;" visible="True" serializable="True" editable="True" removable="True" />
+    </shape>
+    <shape class="EntityShape">
+      <property name="ModelFile" value="Models/FPS_Target_MOD.model" />
+      <property name="CustomMaterialSet" value="&lt;None&gt;" />
+      <property name="EntityClass" value="VisBaseEntity_cl" />
+      <property name="ClassDefinitionTemplate" value="" />
+      <property name="EntityPropertyString" value="" />
+      <property name="ScaleX" value="1" />
+      <property name="ScaleY" value="1" />
+      <property name="ScaleZ" value="1" />
+      <property name="UniformScaling" value="1" />
+      <property name="NavMeshUsage" value="IncludeInNavMesh" />
+      <property name="VisibleBitmask" value="4294967295" />
+      <property name="NearClipDistance" value="0" />
+      <property name="FarClipDistance" value="0" />
+      <property name="RenderOrderPriority" value="0" />
+      <property name="CastDynamicShadows" value="True" />
+      <property name="CastStaticShadows" value="False" />
+      <property name="LightInfluenceBitmask" value="1" />
+      <property name="AmbientColor" value="0,0,0,255" />
+      <property name="ShowLightgridWidget" value="False" />
+      <property name="SampleOfsX" value="76.31873" />
+      <property name="SampleOfsY" value="-3.37988" />
+      <property name="SampleOfsZ" value="0" />
+      <property name="ObjectKey" value="Target" />
+      <property name="Visible" value="True" />
+      <property name="Position" value="1475.878,373.9617,214.2724" />
+      <property name="Orientation" value="0,90,0" />
+      <property name="Scaling" value="1,1,1" />
+      <property name="TextLabel" value="" />
+      <property name="ShapeName" value="Target2" />
+      <property name="UserDataString" value="" />
+      <property name="ExportShape" value="True" />
+      <property name="UniqueID" value="18376293570534440971" />
+      <component class="vHavokRigidBody" paramstring="ComponentID=;Shape_Type=Convex Hull;Shape_Radius=0;Shape_BoxSize=0,0,0;Shape_Height=0;Shape_PivotOffset=0,0,0;Shape_CenterOfMass=0,0,0;Havok_NoDeactivate=False;Havok_Mass=10;Havok_InertiaTensorComputeMode=Volume;Havok_SurfaceThickness=0.1;Havok_InertiaTensorAxisScaling=1,1,1;Havok_InertiaTensorScaling=1;Havok_Friction=0.5;Havok_Restitution=0.4;Havok_LinearDamping=0;Havok_AngularDamping=0.05;Havok_FileResourceName=;Debug_Render=False;Debug_Color=50,255,50,255;Havok_TakeRbDataFromFile=False;Havok_MotionType=Fixed;Shape_PivotOffsetAutoAlign=True;Havok_CollisionLayer=1;Havok_CollisionGroup=0;Havok_SubSystemId=0;Havok_SubSystemDontCollideWith=0;Havok_QualityType=Auto;Havok_MaxKinematicVelocity=600;Havok_AlwaysInitAsDynamic=False;Havok_Active=True;Havok_WeldingType=None;Havok_TightFit=False;" visible="True" serializable="True" editable="True" removable="True" />
+      <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_TargetScript.lua;" visible="True" serializable="True" editable="True" removable="True" />
+    </shape>
+    <shape class="EntityShape">
+      <property name="ModelFile" value="Models/FPS_Target_MOD.model" />
+      <property name="CustomMaterialSet" value="&lt;None&gt;" />
+      <property name="EntityClass" value="VisBaseEntity_cl" />
+      <property name="ClassDefinitionTemplate" value="" />
+      <property name="EntityPropertyString" value="" />
+      <property name="ScaleX" value="1" />
+      <property name="ScaleY" value="1" />
+      <property name="ScaleZ" value="1" />
+      <property name="UniformScaling" value="1" />
+      <property name="NavMeshUsage" value="IncludeInNavMesh" />
+      <property name="VisibleBitmask" value="4294967295" />
+      <property name="NearClipDistance" value="0" />
+      <property name="FarClipDistance" value="0" />
+      <property name="RenderOrderPriority" value="0" />
+      <property name="CastDynamicShadows" value="True" />
+      <property name="CastStaticShadows" value="False" />
+      <property name="LightInfluenceBitmask" value="1" />
+      <property name="AmbientColor" value="0,0,0,255" />
+      <property name="ShowLightgridWidget" value="False" />
+      <property name="SampleOfsX" value="-46.95674" />
+      <property name="SampleOfsY" value="0" />
+      <property name="SampleOfsZ" value="0" />
+      <property name="ObjectKey" value="Target" />
+      <property name="Visible" value="True" />
+      <property name="Position" value="113.6069,-0.1896057,111.5601" />
+      <property name="Orientation" value="0,90,0" />
+      <property name="Scaling" value="1,1,1" />
+      <property name="TextLabel" value="" />
+      <property name="ShapeName" value="Target3" />
+      <property name="UserDataString" value="" />
+      <property name="ExportShape" value="True" />
+      <property name="UniqueID" value="18376293570534440972" />
+      <component class="vHavokRigidBody" paramstring="ComponentID=;Shape_Type=Convex Hull;Shape_Radius=0;Shape_BoxSize=0,0,0;Shape_Height=0;Shape_PivotOffset=0,0,0;Shape_CenterOfMass=0,0,0;Havok_NoDeactivate=False;Havok_Mass=10;Havok_InertiaTensorComputeMode=Volume;Havok_SurfaceThickness=0.1;Havok_InertiaTensorAxisScaling=1,1,1;Havok_InertiaTensorScaling=1;Havok_Friction=0.5;Havok_Restitution=0.4;Havok_LinearDamping=0;Havok_AngularDamping=0.05;Havok_FileResourceName=;Debug_Render=False;Debug_Color=50,255,50,255;Havok_TakeRbDataFromFile=False;Havok_MotionType=Fixed;Shape_PivotOffsetAutoAlign=True;Havok_CollisionLayer=1;Havok_CollisionGroup=0;Havok_SubSystemId=0;Havok_SubSystemDontCollideWith=0;Havok_QualityType=Auto;Havok_MaxKinematicVelocity=600;Havok_AlwaysInitAsDynamic=False;Havok_Active=True;Havok_WeldingType=None;Havok_TightFit=False;" visible="True" serializable="True" editable="True" removable="True" />
+      <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_TargetScript.lua;" visible="True" serializable="True" editable="True" removable="True" />
+    </shape>
+    <shape class="EntityShape">
+      <property name="ModelFile" value="Models/FPS_Target_MOD.model" />
+      <property name="CustomMaterialSet" value="&lt;None&gt;" />
+      <property name="EntityClass" value="VisBaseEntity_cl" />
+      <property name="ClassDefinitionTemplate" value="" />
+      <property name="EntityPropertyString" value="" />
+      <property name="ScaleX" value="1" />
+      <property name="ScaleY" value="1" />
+      <property name="ScaleZ" value="1" />
+      <property name="UniformScaling" value="1" />
+      <property name="NavMeshUsage" value="IncludeInNavMesh" />
+      <property name="VisibleBitmask" value="4294967295" />
+      <property name="NearClipDistance" value="0" />
+      <property name="FarClipDistance" value="0" />
+      <property name="RenderOrderPriority" value="0" />
+      <property name="CastDynamicShadows" value="True" />
+      <property name="CastStaticShadows" value="False" />
+      <property name="LightInfluenceBitmask" value="1" />
+      <property name="AmbientColor" value="0,0,0,255" />
+      <property name="ShowLightgridWidget" value="False" />
+      <property name="SampleOfsX" value="76.31873" />
+      <property name="SampleOfsY" value="-3.37988" />
+      <property name="SampleOfsZ" value="0" />
+      <property name="ObjectKey" value="Target" />
+      <property name="Visible" value="True" />
+      <property name="Position" value="1984.067,31.81734,238.85" />
+      <property name="Orientation" value="0,90,0" />
+      <property name="Scaling" value="1,1,1" />
+      <property name="TextLabel" value="" />
+      <property name="ShapeName" value="Target4" />
+      <property name="UserDataString" value="" />
+      <property name="ExportShape" value="True" />
+      <property name="UniqueID" value="18376293570534440973" />
+      <component class="vHavokRigidBody" paramstring="ComponentID=;Shape_Type=Convex Hull;Shape_Radius=0;Shape_BoxSize=0,0,0;Shape_Height=0;Shape_PivotOffset=0,0,0;Shape_CenterOfMass=0,0,0;Havok_NoDeactivate=False;Havok_Mass=10;Havok_InertiaTensorComputeMode=Volume;Havok_SurfaceThickness=0.1;Havok_InertiaTensorAxisScaling=1,1,1;Havok_InertiaTensorScaling=1;Havok_Friction=0.5;Havok_Restitution=0.4;Havok_LinearDamping=0;Havok_AngularDamping=0.05;Havok_FileResourceName=;Debug_Render=False;Debug_Color=50,255,50,255;Havok_TakeRbDataFromFile=False;Havok_MotionType=Fixed;Shape_PivotOffsetAutoAlign=True;Havok_CollisionLayer=1;Havok_CollisionGroup=0;Havok_SubSystemId=0;Havok_SubSystemDontCollideWith=0;Havok_QualityType=Auto;Havok_MaxKinematicVelocity=600;Havok_AlwaysInitAsDynamic=False;Havok_Active=True;Havok_WeldingType=None;Havok_TightFit=False;" visible="True" serializable="True" editable="True" removable="True" />
+      <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_TargetScript.lua;" visible="True" serializable="True" editable="True" removable="True" />
+    </shape>
+    <shape class="EntityShape">
+      <property name="ModelFile" value="Models/FPS_Target_MOD.model" />
+      <property name="CustomMaterialSet" value="&lt;None&gt;" />
+      <property name="EntityClass" value="VisBaseEntity_cl" />
+      <property name="ClassDefinitionTemplate" value="" />
+      <property name="EntityPropertyString" value="" />
+      <property name="ScaleX" value="1" />
+      <property name="ScaleY" value="1" />
+      <property name="ScaleZ" value="1" />
+      <property name="UniformScaling" value="1" />
+      <property name="NavMeshUsage" value="IncludeInNavMesh" />
+      <property name="VisibleBitmask" value="4294967295" />
+      <property name="NearClipDistance" value="0" />
+      <property name="FarClipDistance" value="0" />
+      <property name="RenderOrderPriority" value="0" />
+      <property name="CastDynamicShadows" value="True" />
+      <property name="CastStaticShadows" value="False" />
+      <property name="LightInfluenceBitmask" value="1" />
+      <property name="AmbientColor" value="0,0,0,255" />
+      <property name="ShowLightgridWidget" value="False" />
+      <property name="SampleOfsX" value="76.31873" />
+      <property name="SampleOfsY" value="-3.37988" />
+      <property name="SampleOfsZ" value="0" />
+      <property name="ObjectKey" value="Target" />
+      <property name="Visible" value="True" />
+      <property name="Position" value="708.897,579.1411,267.8365" />
+      <property name="Orientation" value="0,90,90" />
+      <property name="Scaling" value="1,1,1" />
+      <property name="TextLabel" value="" />
+      <property name="ShapeName" value="Target5" />
+      <property name="UserDataString" value="" />
+      <property name="ExportShape" value="True" />
+      <property name="UniqueID" value="18376293570534440974" />
+      <component class="vHavokRigidBody" paramstring="ComponentID=;Shape_Type=Convex Hull;Shape_Radius=0;Shape_BoxSize=0,0,0;Shape_Height=0;Shape_PivotOffset=0,0,0;Shape_CenterOfMass=0,0,0;Havok_NoDeactivate=False;Havok_Mass=10;Havok_InertiaTensorComputeMode=Volume;Havok_SurfaceThickness=0.1;Havok_InertiaTensorAxisScaling=1,1,1;Havok_InertiaTensorScaling=1;Havok_Friction=0.5;Havok_Restitution=0.4;Havok_LinearDamping=0;Havok_AngularDamping=0.05;Havok_FileResourceName=;Debug_Render=False;Debug_Color=50,255,50,255;Havok_TakeRbDataFromFile=False;Havok_MotionType=Fixed;Shape_PivotOffsetAutoAlign=True;Havok_CollisionLayer=1;Havok_CollisionGroup=0;Havok_SubSystemId=0;Havok_SubSystemDontCollideWith=0;Havok_QualityType=Auto;Havok_MaxKinematicVelocity=600;Havok_AlwaysInitAsDynamic=False;Havok_Active=True;Havok_WeldingType=None;Havok_TightFit=False;" visible="True" serializable="True" editable="True" removable="True" />
+      <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_TargetScript.lua;" visible="True" serializable="True" editable="True" removable="True" />
+    </shape>
+  </shape>
+</root>

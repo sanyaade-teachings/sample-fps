@@ -1,10 +1,14 @@
+--Author: Denmark Gibbs
+--This script controls the behavior of the Trigger Box that adds ammo to the player's weapon
+--Attach this script to the Trigger Box that adds ammo.
+--Note: the model should be a child of the trigger in the scene for this to work properly
+
 function OnAfterSceneLoaded(self)
 	--these values can be moved to OnExpose for easy access in Vision
 	self.Activate = ActivateBox
 	self.ammoCount = 50
 	self.respawnTime = 10
 	self.timeToNextSpawn = 0
-	self.lastCollision = 0
 end
 
 function OnThink(self)
@@ -23,19 +27,6 @@ function OnThink(self)
 end
 
 function OnObjectEnter(self, object)
-	--get the current time
-	local time = Timer:GetTime()
-	local otherObj = object.ColliderObject
-
-	--check for the double hit
-	if self.lastCollider == otherObj and time - self.lastCollision < 0.1 then
-		return
-	end
-	
-	--remember the collision time
-	self.lastCollider = otherObj
-	self.lastCollision = time
-	
 	--if the other object was the player, add ammo to the player's gun
 	if object:GetKey() == "Player" then
 		if(object.gun.AddAmmo(object.gun, self.ammoCount) ) then

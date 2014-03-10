@@ -78,7 +78,7 @@ void FPS_Sample_SolutionApplicationClass::Init()
 {
   // Set filename and paths to our stand alone version.
   // Note: "/Data/Vision/Base" is always added by the sample framework
-  VisAppLoadSettings settings("Scenes/sample.android.vscene");
+  VisAppLoadSettings settings("Scenes/sample.vscene");
   //VisAppLoadSettings settings("Scenes/sample.pcdx9.vscene");
   settings.m_customSearchPaths.Append(":template_root/Assets");
   LoadScene(settings);

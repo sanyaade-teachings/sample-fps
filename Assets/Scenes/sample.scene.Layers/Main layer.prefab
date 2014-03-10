@@ -1,0 +1,376 @@
+<root>
+  <info createdby="vForge version 2013.2.5.1" />
+  <header version="0" name="" description="" category="" convertible="True" autosavebinary="True" relativefilenames="False" />
+  <thumbnail type="jpg" size="1651">/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAEAAQADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5UooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//2Q==</thumbnail>
+  <shape class="TriggerBoxShape">
+    <property name="Enabled" value="True" />
+    <property name="ObserverFlags" value="AllEntities" />
+    <property name="DestroyOnTrigger" value="False" />
+    <property name="TriggerShape" value="Box" />
+    <property name="BoxSizeX" value="52.96017" />
+    <property name="BoxSizeY" value="69.61221" />
+    <property name="BoxSizeZ" value="42.9807" />
+    <property name="Preview3D" value="True" />
+    <property name="Preview2D" value="True" />
+    <property name="PreviewColor" value="160,190,255,255" />
+    <property name="ObjectKey" value="TriggerBox" />
+    <property name="Visible" value="True" />
+    <property name="Position" value="1148.845,143.0338,155.2682" />
+    <property name="Orientation" value="0,0,0" />
+    <property name="Scaling" value="1,1,1" />
+    <property name="TextLabel" value="" />
+    <property name="ShapeName" value="TriggerBox" />
+    <property name="UserDataString" value="" />
+    <property name="ExportShape" value="True" />
+    <property name="UniqueID" value="16127477955961028652" />
+    <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_AmmoBox.lua;" visible="True" serializable="True" editable="True" removable="True" />
+    <linksource class="LinkSourceTriggerComponent" name="OnCameraEnter" ID="OnCameraEnter" />
+    <linksource class="LinkSourceTriggerComponent" name="OnCameraLeave" ID="OnCameraLeave" />
+    <linksource class="LinkSourceTriggerComponent" name="OnObjectEnter" ID="OnObjectEnter" />
+    <linksource class="LinkSourceTriggerComponent" name="OnObjectLeave" ID="OnObjectLeave" />
+    <shape class="EntityShape">
+      <property name="ModelFile" value="Models/FPS_AmmoBox_MOD.model" />
+      <property name="CustomMaterialSet" value="&lt;None&gt;" />
+      <property name="EntityClass" value="VisBaseEntity_cl" />
+      <property name="ClassDefinitionTemplate" value="" />
+      <property name="EntityPropertyString" value="" />
+      <property name="ScaleX" value="1.893491" />
+      <property name="ScaleY" value="1.893491" />
+      <property name="ScaleZ" value="1.893491" />
+      <property name="UniformScaling" value="1.893491" />
+      <property name="NavMeshUsage" value="IncludeInNavMesh" />
+      <property name="VisibleBitmask" value="4294967295" />
+      <property name="NearClipDistance" value="0" />
+      <property name="FarClipDistance" value="0" />
+      <property name="RenderOrderPriority" value="0" />
+      <property name="CastDynamicShadows" value="False" />
+      <property name="CastStaticShadows" value="False" />
+      <property name="LightInfluenceBitmask" value="1" />
+      <property name="AmbientColor" value="0,0,0,255" />
+      <property name="ShowLightgridWidget" value="False" />
+      <property name="SampleOfsX" value="0" />
+      <property name="SampleOfsY" value="0" />
+      <property name="SampleOfsZ" value="0" />
+      <property name="ObjectKey" value="" />
+      <property name="Visible" value="True" />
+      <property name="Position" value="1148.845,143.299,135.4912" />
+      <property name="Orientation" value="0,0,0" />
+      <property name="Scaling" value="1.893491,1.893491,1.893491" />
+      <property name="TextLabel" value="" />
+      <property name="ShapeName" value="FPS_AmmoBox_MOD.model" />
+      <property name="UserDataString" value="" />
+      <property name="ExportShape" value="True" />
+      <property name="UniqueID" value="16127477955961028653" />
+    </shape>
+  </shape>
+  <shape class="EntityShape">
+    <property name="ModelFile" value="" />
+    <property name="CustomMaterialSet" value="&lt;None&gt;" />
+    <property name="EntityClass" value="VisBaseEntity_cl" />
+    <property name="ClassDefinitionTemplate" value="" />
+    <property name="EntityPropertyString" value="" />
+    <property name="ScaleX" value="1" />
+    <property name="ScaleY" value="1" />
+    <property name="ScaleZ" value="1" />
+    <property name="UniformScaling" value="1" />
+    <property name="NavMeshUsage" value="IncludeInNavMesh" />
+    <property name="VisibleBitmask" value="4294967295" />
+    <property name="NearClipDistance" value="0" />
+    <property name="FarClipDistance" value="0" />
+    <property name="RenderOrderPriority" value="0" />
+    <property name="CastDynamicShadows" value="False" />
+    <property name="CastStaticShadows" value="False" />
+    <property name="LightInfluenceBitmask" value="1" />
+    <property name="AmbientColor" value="0,0,0,255" />
+    <property name="ShowLightgridWidget" value="False" />
+    <property name="SampleOfsX" value="0" />
+    <property name="SampleOfsY" value="0" />
+    <property name="SampleOfsZ" value="0" />
+    <property name="ObjectKey" value="GameManager" />
+    <property name="Visible" value="True" />
+    <property name="Position" value="0,0,0" />
+    <property name="Orientation" value="0,0,0" />
+    <property name="Scaling" value="1,1,1" />
+    <property name="TextLabel" value="" />
+    <property name="ShapeName" value="GameManager" />
+    <property name="UserDataString" value="" />
+    <property name="ExportShape" value="True" />
+    <property name="UniqueID" value="16127477955961028654" />
+    <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_GameManager.lua;waitTime=5;" visible="True" serializable="True" editable="True" removable="True" />
+  </shape>
+  <shape class="EntityShape">
+    <property name="ModelFile" value="Models/Sphere.model" />
+    <property name="CustomMaterialSet" value="&lt;None&gt;" />
+    <property name="EntityClass" value="VisBaseEntity_cl" />
+    <property name="ClassDefinitionTemplate" value="" />
+    <property name="EntityPropertyString" value="" />
+    <property name="ScaleX" value="0.2789755" />
+    <property name="ScaleY" value="0.2789755" />
+    <property name="ScaleZ" value="0.2789755" />
+    <property name="UniformScaling" value="0.2789755" />
+    <property name="NavMeshUsage" value="IncludeInNavMesh" />
+    <property name="VisibleBitmask" value="4294967295" />
+    <property name="NearClipDistance" value="0" />
+    <property name="FarClipDistance" value="0" />
+    <property name="RenderOrderPriority" value="0" />
+    <property name="CastDynamicShadows" value="False" />
+    <property name="CastStaticShadows" value="False" />
+    <property name="LightInfluenceBitmask" value="1" />
+    <property name="AmbientColor" value="0,0,0,255" />
+    <property name="ShowLightgridWidget" value="False" />
+    <property name="SampleOfsX" value="0" />
+    <property name="SampleOfsY" value="0" />
+    <property name="SampleOfsZ" value="0" />
+    <property name="ObjectKey" value="PlayerSpawn" />
+    <property name="Visible" value="False" />
+    <property name="Position" value="-250,0,0" />
+    <property name="Orientation" value="0,0,0" />
+    <property name="Scaling" value="0.2789755,0.2789755,0.2789755" />
+    <property name="TextLabel" value="" />
+    <property name="ShapeName" value="PlayerSpawn" />
+    <property name="UserDataString" value="" />
+    <property name="ExportShape" value="True" />
+    <property name="UniqueID" value="16127477955961028655" />
+  </shape>
+  <shape class="EntityShape">
+    <property name="ModelFile" value="Models/FPS_CharStandIn_MOD.model" />
+    <property name="CustomMaterialSet" value="&lt;None&gt;" />
+    <property name="EntityClass" value="VisBaseEntity_cl" />
+    <property name="ClassDefinitionTemplate" value="" />
+    <property name="EntityPropertyString" value="" />
+    <property name="ScaleX" value="1" />
+    <property name="ScaleY" value="1" />
+    <property name="ScaleZ" value="1" />
+    <property name="UniformScaling" value="1" />
+    <property name="NavMeshUsage" value="IncludeInNavMesh" />
+    <property name="VisibleBitmask" value="4294967294" />
+    <property name="NearClipDistance" value="0" />
+    <property name="FarClipDistance" value="0" />
+    <property name="RenderOrderPriority" value="0" />
+    <property name="CastDynamicShadows" value="False" />
+    <property name="CastStaticShadows" value="False" />
+    <property name="LightInfluenceBitmask" value="1" />
+    <property name="AmbientColor" value="0,0,0,255" />
+    <property name="ShowLightgridWidget" value="False" />
+    <property name="SampleOfsX" value="0" />
+    <property name="SampleOfsY" value="0" />
+    <property name="SampleOfsZ" value="0" />
+    <property name="ObjectKey" value="Player" />
+    <property name="Visible" value="True" />
+    <property name="Position" value="0,0,0" />
+    <property name="Orientation" value="0,0,0" />
+    <property name="Scaling" value="1,1,1" />
+    <property name="TextLabel" value="" />
+    <property name="ShapeName" value="PlayerCapsule" />
+    <property name="UserDataString" value="" />
+    <property name="ExportShape" value="True" />
+    <property name="UniqueID" value="16127477955961028623" />
+    <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_MovePlayer.lua;" visible="True" serializable="True" editable="True" removable="True" />
+    <component class="vHavokCharacterController" paramstring="ComponentID=;m_bEnabled=True;Character_Top=0,0,45;Character_Bottom=0,0,35;Capsule_Radius=33;Debug=False;DebugColor=255,50,50,255;Static_Friction=0;Dynamic_Friction=0.8;Max_Slope=75;Character_Mass=100;Character_Strength=5000;Fly_State=False;Gravity_Scale=1;Jump_Height=0.75;Step_Height=30;Step_Threshold=60;Max_Velocity=1500;Max_Acceleration=4000;PenetrationRecoverySpeed=0.5;" visible="True" serializable="True" editable="True" removable="True" />
+    <shape class="EntityShape">
+      <property name="ModelFile" value="" />
+      <property name="CustomMaterialSet" value="&lt;None&gt;" />
+      <property name="EntityClass" value="VisBaseEntity_cl" />
+      <property name="ClassDefinitionTemplate" value="" />
+      <property name="EntityPropertyString" value="" />
+      <property name="ScaleX" value="1" />
+      <property name="ScaleY" value="1" />
+      <property name="ScaleZ" value="1" />
+      <property name="UniformScaling" value="1" />
+      <property name="NavMeshUsage" value="IncludeInNavMesh" />
+      <property name="VisibleBitmask" value="4294967295" />
+      <property name="NearClipDistance" value="0" />
+      <property name="FarClipDistance" value="0" />
+      <property name="RenderOrderPriority" value="0" />
+      <property name="CastDynamicShadows" value="False" />
+      <property name="CastStaticShadows" value="False" />
+      <property name="LightInfluenceBitmask" value="1" />
+      <property name="AmbientColor" value="0,0,0,255" />
+      <property name="ShowLightgridWidget" value="False" />
+      <property name="SampleOfsX" value="0" />
+      <property name="SampleOfsY" value="0" />
+      <property name="SampleOfsZ" value="0" />
+      <property name="ObjectKey" value="Camera" />
+      <property name="Visible" value="True" />
+      <property name="Position" value="0,0,64.41129" />
+      <property name="Orientation" value="0,0,0" />
+      <property name="Scaling" value="1,1,1" />
+      <property name="TextLabel" value="" />
+      <property name="ShapeName" value="Camera" />
+      <property name="UserDataString" value="" />
+      <property name="ExportShape" value="True" />
+      <property name="UniqueID" value="16127477955961028632" />
+      <component class="VOrbitCamera" paramstring="ComponentID=;Enabled=True;Collides=True;Follow=True;FollowFixed=True;Zoom=False;DepthOfField=False;InitialYaw=0;InitialPitch=0;MinimumPitch=-89;MaximumPitch=89;CameraDistance=0;MinimalDistance=0;MaximalDistance=0;RelativeLookAtHeight=0.5;CameraSensitivity=200;MoveSmoothness=0;" visible="True" serializable="True" editable="True" removable="True" />
+      <shape class="EntityShape">
+        <property name="ModelFile" value="Models/FPS_Gun_MOD.model" />
+        <property name="CustomMaterialSet" value="&lt;None&gt;" />
+        <property name="EntityClass" value="VisBaseEntity_cl" />
+        <property name="ClassDefinitionTemplate" value="" />
+        <property name="EntityPropertyString" value="" />
+        <property name="ScaleX" value="0.6" />
+        <property name="ScaleY" value="0.6" />
+        <property name="ScaleZ" value="0.6" />
+        <property name="UniformScaling" value="0.6" />
+        <property name="NavMeshUsage" value="IncludeInNavMesh" />
+        <property name="VisibleBitmask" value="4294967295" />
+        <property name="NearClipDistance" value="0" />
+        <property name="FarClipDistance" value="0" />
+        <property name="RenderOrderPriority" value="0" />
+        <property name="CastDynamicShadows" value="False" />
+        <property name="CastStaticShadows" value="False" />
+        <property name="LightInfluenceBitmask" value="1" />
+        <property name="AmbientColor" value="0,0,0,255" />
+        <property name="ShowLightgridWidget" value="False" />
+        <property name="SampleOfsX" value="0" />
+        <property name="SampleOfsY" value="0" />
+        <property name="SampleOfsZ" value="0" />
+        <property name="ObjectKey" value="Gun" />
+        <property name="Visible" value="True" />
+        <property name="Position" value="2.742912,-13.81654,53.51669" />
+        <property name="Orientation" value="0,0,0" />
+        <property name="Scaling" value="0.6,0.6,0.6" />
+        <property name="TextLabel" value="" />
+        <property name="ShapeName" value="Bushmaster" />
+        <property name="UserDataString" value="" />
+        <property name="ExportShape" value="True" />
+        <property name="UniqueID" value="16127477955961028625" />
+        <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_Gun.lua;timeToNextShot=0;totalRounds=90;roundsCapacity=90;bulletSpeed=50;bulletColumns=10;gunRange=1800;magazineSize=30;bulletRows=3;ricochetChance=75;infiniteAmmo=false;fireRate=0.15;UpdateSight=;SetUp=;FireWeapon=;bullets=;jogSpeed=7.5;particlePath=&quot;Particles\092FPS_BulletParticle_02.xml&quot;;lightTime=0.1;runSpeed=10;UpdateTransform=;rotSpeed=50;invertY=true;ReloadWeapon=;timeTimeToLightOff=0;muzzleFlashPath=&quot;Particles\092MuzzleFlash.xml&quot;;AddAmmo=;singleFire=false;roundsLoaded=2;yMinRot=-75;crouchHeight=22.5;yMaxRot=40;walkHeight=Vision.hkvVec3(0,0,45);" visible="True" serializable="True" editable="True" removable="True" />
+        <shape class="EntityShape">
+          <property name="ModelFile" value="" />
+          <property name="CustomMaterialSet" value="&lt;None&gt;" />
+          <property name="EntityClass" value="VisBaseEntity_cl" />
+          <property name="ClassDefinitionTemplate" value="" />
+          <property name="EntityPropertyString" value="" />
+          <property name="ScaleX" value="0.6" />
+          <property name="ScaleY" value="0.6" />
+          <property name="ScaleZ" value="0.6" />
+          <property name="UniformScaling" value="0.6" />
+          <property name="NavMeshUsage" value="IncludeInNavMesh" />
+          <property name="VisibleBitmask" value="4294967295" />
+          <property name="NearClipDistance" value="0" />
+          <property name="FarClipDistance" value="0" />
+          <property name="RenderOrderPriority" value="0" />
+          <property name="CastDynamicShadows" value="False" />
+          <property name="CastStaticShadows" value="False" />
+          <property name="LightInfluenceBitmask" value="1" />
+          <property name="AmbientColor" value="0,0,0,255" />
+          <property name="ShowLightgridWidget" value="False" />
+          <property name="SampleOfsX" value="0" />
+          <property name="SampleOfsY" value="0" />
+          <property name="SampleOfsZ" value="0" />
+          <property name="ObjectKey" value="BulletSpawn" />
+          <property name="Visible" value="True" />
+          <property name="Position" value="33.97752,-14.10909,52.93839" />
+          <property name="Orientation" value="0,0,0" />
+          <property name="Scaling" value="0.6,0.6,0.6" />
+          <property name="TextLabel" value="" />
+          <property name="ShapeName" value="BulletSpawn" />
+          <property name="UserDataString" value="" />
+          <property name="ExportShape" value="True" />
+          <property name="UniqueID" value="16127477955961028628" />
+        </shape>
+        <shape class="DynLightShape">
+          <property name="LightAttenuationCurve" value="Smooth" />
+          <property name="CustomAttenuationCurveTexture" value="\Atten\smooth.dds" />
+          <property name="Multiplier" value="2" />
+          <property name="DistanceFadeEnd" value="0" />
+          <property name="DistanceFadeStart" value="0" />
+          <property name="UseSpecular" value="True" />
+          <property name="LightType" value="Point" />
+          <property name="SpotAngle" value="45" />
+          <property name="ProjectedTexture" value="" />
+          <property name="Radius" value="112.241" />
+          <property name="Triggered" value="True" />
+          <property name="LightColor" value="255,255,255,255" />
+          <property name="CastStaticShadows" value="True" />
+          <property name="UsesLightMasks" value="False" />
+          <property name="AnimationCurve" value="" />
+          <property name="AnimationTiming" value="1" />
+          <property name="AnimationPhase" value="0" />
+          <property name="RemoveLightAfterAnimation" value="False" />
+          <property name="WorldInfluenceMask" value="255" />
+          <property name="ObjectInfluenceMask" value="255" />
+          <property name="VisibleBitmask" value="4294967295" />
+          <property name="IsStatic" value="False" />
+          <property name="ExportWhenNotRelevant" value="False" />
+          <property name="PreviewAsDynamicLight" value="True" />
+          <property name="TurnOffAfterLighting" value="True" />
+          <property name="ObjectKey" value="MuzzleLight" />
+          <property name="Visible" value="True" />
+          <property name="Position" value="33.97752,-14.10909,52.93839" />
+          <property name="Orientation" value="0,0,0" />
+          <property name="Scaling" value="1,1,1" />
+          <property name="TextLabel" value="" />
+          <property name="ShapeName" value="MuzzleLight" />
+          <property name="UserDataString" value="" />
+          <property name="ExportShape" value="True" />
+          <property name="UniqueID" value="16127477955961028664" />
+          <linktarget class="LinkTargetTriggerComponent" name="ToggleOn" ID="ToggleOn" />
+          <linktarget class="LinkTargetTriggerComponent" name="ToggleOff" ID="ToggleOff" />
+        </shape>
+      </shape>
+    </shape>
+  </shape>
+  <shape class="TriggerBoxShape">
+    <property name="Enabled" value="True" />
+    <property name="ObserverFlags" value="AllEntities" />
+    <property name="DestroyOnTrigger" value="False" />
+    <property name="TriggerShape" value="Box" />
+    <property name="BoxSizeX" value="127.7319" />
+    <property name="BoxSizeY" value="129.7524" />
+    <property name="BoxSizeZ" value="61.82301" />
+    <property name="Preview3D" value="True" />
+    <property name="Preview2D" value="True" />
+    <property name="PreviewColor" value="160,190,255,255" />
+    <property name="ObjectKey" value="" />
+    <property name="Visible" value="True" />
+    <property name="Position" value="682.4172,-2.387239,168.9085" />
+    <property name="Orientation" value="0,0,0" />
+    <property name="Scaling" value="1,1,1" />
+    <property name="TextLabel" value="" />
+    <property name="ShapeName" value="DoorTrigger" />
+    <property name="UserDataString" value="" />
+    <property name="ExportShape" value="True" />
+    <property name="UniqueID" value="16127477955961028660" />
+    <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_DoorTrigger.lua;targetName=&quot;Door&quot;;timeToNextSpawn=0;ammoCount=50;respawnTime=10;" visible="True" serializable="True" editable="True" removable="True" />
+    <linksource class="LinkSourceTriggerComponent" name="OnCameraEnter" ID="OnCameraEnter" />
+    <linksource class="LinkSourceTriggerComponent" name="OnCameraLeave" ID="OnCameraLeave" />
+    <linksource class="LinkSourceTriggerComponent" name="OnObjectEnter" ID="OnObjectEnter" />
+    <linksource class="LinkSourceTriggerComponent" name="OnObjectLeave" ID="OnObjectLeave" />
+  </shape>
+  <shape class="EntityShape">
+    <property name="ModelFile" value="Models/FPS_Door_MOD.model" />
+    <property name="CustomMaterialSet" value="&lt;None&gt;" />
+    <property name="EntityClass" value="VisBaseEntity_cl" />
+    <property name="ClassDefinitionTemplate" value="" />
+    <property name="EntityPropertyString" value="" />
+    <property name="ScaleX" value="1" />
+    <property name="ScaleY" value="1" />
+    <property name="ScaleZ" value="1" />
+    <property name="UniformScaling" value="1" />
+    <property name="NavMeshUsage" value="IncludeInNavMesh" />
+    <property name="VisibleBitmask" value="4294967295" />
+    <property name="NearClipDistance" value="0" />
+    <property name="FarClipDistance" value="0" />
+    <property name="RenderOrderPriority" value="0" />
+    <property name="CastDynamicShadows" value="False" />
+    <property name="CastStaticShadows" value="False" />
+    <property name="LightInfluenceBitmask" value="1" />
+    <property name="AmbientColor" value="0,0,0,255" />
+    <property name="ShowLightgridWidget" value="False" />
+    <property name="SampleOfsX" value="0" />
+    <property name="SampleOfsY" value="0" />
+    <property name="SampleOfsZ" value="0" />
+    <property name="ObjectKey" value="Door" />
+    <property name="Visible" value="True" />
+    <property name="Position" value="708,450,196" />
+    <property name="Orientation" value="0,-90,-90" />
+    <property name="Scaling" value="1,1,1" />
+    <property name="TextLabel" value="" />
+    <property name="ShapeName" value="Door" />
+    <property name="UserDataString" value="" />
+    <property name="ExportShape" value="True" />
+    <property name="UniqueID" value="16127477955961028662" />
+    <component class="vHavokRigidBody" paramstring="ComponentID=;Shape_Type=Convex Hull;Shape_Radius=0;Shape_BoxSize=0,0,0;Shape_Height=0;Shape_PivotOffset=0,0,0;Shape_CenterOfMass=0,0,0;Havok_NoDeactivate=False;Havok_Mass=10;Havok_InertiaTensorComputeMode=Volume;Havok_SurfaceThickness=0.1;Havok_InertiaTensorAxisScaling=1,1,1;Havok_InertiaTensorScaling=1;Havok_Friction=0.5;Havok_Restitution=0.4;Havok_LinearDamping=0;Havok_AngularDamping=0.05;Havok_FileResourceName=;Debug_Render=False;Debug_Color=50,255,50,255;Havok_TakeRbDataFromFile=False;Havok_MotionType=Keyframed;Shape_PivotOffsetAutoAlign=True;Havok_CollisionLayer=1;Havok_CollisionGroup=0;Havok_SubSystemId=0;Havok_SubSystemDontCollideWith=0;Havok_QualityType=Auto;Havok_MaxKinematicVelocity=600;Havok_AlwaysInitAsDynamic=False;Havok_Active=True;Havok_WeldingType=None;Havok_TightFit=False;" visible="True" serializable="True" editable="True" removable="True" />
+  </shape>
+</root>

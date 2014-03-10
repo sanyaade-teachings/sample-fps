@@ -1,4 +1,7 @@
-﻿--the global variables and scene logic go here
+﻿--Author: Denmark Gibbs
+--The global variables and scene logic go here
+--Attach this script to the Main Layer in vForge
+
 function OnBeforeSceneLoaded(self)
 	--check the platform
 	G.isWindows = (Application:GetPlatformName() == "WIN32DX9" or Application:GetPlatformName() == "WIN32DX11")
@@ -11,13 +14,15 @@ function OnBeforeSceneLoaded(self)
 	G.screenMask:SetTargetSize(width, width)
 	G.screenMask:SetBlending(Vision.BLEND_ADDITIVE)
 	
+	G.ToggleRemote = ToggleRemoteInput
+	G.remoteEnabled = true;
+	
 	-- RemoteInput:StartServer('RemoteGui')
 	-- RemoteInput:InitEmulatedDevices()
 	-- RemoteInput:DebugDrawTouchPoints(Vision.VColorRef(255, 0, 0) )
 	
-	
-	if not G.isWindows then
-		
+	-- mobile path
+	if not G.isWindows then		
 		--get the size of the texture
 		local dpad = Game:CreateTexture("Textures/FPS_MobileHud/FPS_Dpad_128.tga")
 		local x = dpad:GetWidth()
@@ -27,42 +32,43 @@ function OnBeforeSceneLoaded(self)
 		local yPercent = .75
 		
 		--establish the positions of the dpad texture and store them
-		local top = (G.h * yPercent) - (x / 2.0)
-		local bottom = (G.h * yPercent) + (x * 1.5)
-		local left = (G.w * xPercent) - (x * 1.5)
-		local right = G.w * xPercent + (x * 1.5)
+		local top = (G.h * yPercent) - (x * .5)
+		local bottom = (G.h * yPercent) + (x * .5)
+		local left = (G.w * xPercent) - (x * .5)
+		local right = G.w * xPercent + (x * .5)
 		
 		G.dpadDisplay = Game:CreateScreenMask(left, top, "Textures/FPS_MobileHud/FPS_Dpad_128.tga")
 		G.dpadDisplay:SetBlending(Vision.BLEND_ALPHA)
 		
 		--			{startx, starty, end x, endy}
 		G.dpad = {}
-		G.dpad.up = {right + (x / 2.0), top, left - (x / 2.0), top + (x / 3.0) }
-		G.dpad.down = {right + (x / 2.0), bottom - (x / 3.0), left - (x / 2.0), bottom }
-		G.dpad.left = {left, top + (x / 2.0), left - (x / 3.0), bottom - (x / 2.0) }
-		G.dpad.right = {right - (x / 3.0), top + (x / 2.0), right, bottom - (x / 2.0) }
+		G.dpad.up = {left + (x / 3), top, right - (x / 3), top + (x / 3), -10, "new"}
+		G.dpad.down = {left + (x / 3), bottom - (x / 3), right - (x / 3), bottom, -10, "new"}
+		G.dpad.left = {left, top + (x / 3), left + (x / 3), bottom - (x / 3), -10, "new"}
+		G.dpad.right = {right - (x / 3), top + (x / 3), right, bottom - (x / 3), -10, "new"}
 		
+		local xPercent_R = 0.8 --percentage of the screen to align objects to the right
 		x = 64 --the texture size
 		
-		top = (G.h * .75) - (x * 1.5)
-		bottom = (G.h * .75) +(x * 1.5)
-		left = (G.w * .8) - (x * 1.5)
-		right = (G.w * .8) + (x * 1.5)
-		--	   {startx, starty, end x, endy}
+		top = (G.h * yPercent) - (x * 1.5)
+		bottom = (G.h * yPercent) + (x * 1.5)
+		left = (G.w * xPercent_R) - (x * 1.5)
+		right = (G.w * xPercent_R) + (x * 1.5)
+		
+		--{startx, starty, end x, endy}
 		G.upButton = Game:CreateScreenMask(left + x, top, "Textures/FPS_MobileHud/FPS_Button_Up_64.tga")
 		G.upButton:SetBlending(Vision.BLEND_ALPHA)
 		G.up = {left + x, top, right - x, top + x}
 		
-		G.downButton = Game:CreateScreenMask(left + x, top + (x * 2), "Textures/FPS_MobileHud/FPS_Button_Down_64.tga")
+		G.downButton = Game:CreateScreenMask(left + x, bottom - x, "Textures/FPS_MobileHud/FPS_Button_Down_64.tga")
 		G.downButton:SetBlending(Vision.BLEND_ALPHA)
 		G.down = {left + x, bottom - x, right - x, bottom}
 		
 		G.leftButton = Game:CreateScreenMask(left, top + x, "Textures/FPS_MobileHud/FPS_Button_Left_64.tga")
 		G.leftButton:SetBlending(Vision.BLEND_ALPHA)
-		--G.left = {left, top + x, left + x, bottom - x}
-		G.left = {left, top + x, left + 64, (top + x) + 64}
+		G.left = {left, top + x, left + x, bottom - x}
 		
-		G.rightButton = Game:CreateScreenMask(left + (x * 2), top + x, "Textures/FPS_MobileHud/FPS_Button_Right_64.tga")
+		G.rightButton = Game:CreateScreenMask(right - x, top + x, "Textures/FPS_MobileHud/FPS_Button_Right_64.tga")
 		G.rightButton:SetBlending(Vision.BLEND_ALPHA)
 		G.right = {right - x, top + x, right, bottom - x}
 	end
@@ -105,6 +111,16 @@ function OnBeforeSceneUnloaded(self)
 	Game:DeleteAllUnrefScreenMasks()
 end
 
-
-
-
+function ToggleRemoteInput()
+	if not G.remoteEnabled then
+		RemoteInput:StartServer('RemoteGui')
+		RemoteInput:InitEmulatedDevices()
+		RemoteInput:DebugDrawTouchPoints(Vision.VColorRef(255, 0, 0) )
+		G.remoteEnabled = true;
+	else
+		RemoteInput:StartServer('RemoteGui')
+		RemoteInput:InitEmulatedDevices()
+		RemoteInput:DebugDrawTouchPoints(Vision.VColorRef(255, 0, 0) )
+		G.remoteEnabled = false;
+	end
+end

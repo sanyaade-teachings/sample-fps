@@ -1,21 +1,17 @@
-﻿function OnCreate(self)
-	--set's up the SetUp method upon creation of the object
+﻿--Author: Denmark Gibbs
+--This script controls all logic for the gun.
+--This shculd be attached to the gun object in the scene, and requires that
+-- the gun have a light and a Location to spawn bullets as children.
+--The gun itself should be a child of the Camera.
+--Creation and movement of bullets is handled by the GameManager script
+
+function OnCreate(self)
+	--makes the SeUp Method avaible upon creation of the gun, 
+	--since it  is used in another script's OnAfterSceneLoaded function
 	self.SetUp = SetUpHUD
 end
 
 function OnAfterSceneLoaded(self)
-	--these variables can be moved to the OnExpose function for easier access
-	self.infiniteAmmo = false
-	self.bulletSpeed = 50
-	--self.particlePath = "Particles\\FPS_Bullet_PAR.xml"
-	self.particlePath = "Particles\\FPS_BulletParticle_02.xml"
-	self.muzzleFlashPath = "Particles\\MuzzleFlash.xml"
-	--self.particlePath = "Particles\\ballTrail.xml"
-	self.ricochetChance = 75
-	self.roundsCapacity = self.magazineSize * 3 
-	self.totalRounds = self.roundsCapacity
-	self.timeToNextShot = 0
-	
 	--assigning functions to variables for external use
 	self.FireWeapon = Fire
 	self.ReloadWeapon = Reload
@@ -34,15 +30,28 @@ function OnAfterSceneLoaded(self)
 	self.muzzleLight:SetVisible(false)
 	self.timeTimeToLightOff = 0
 	self.lightTime = 0.1
+	
+	--set the paths for the particle effects
+	self.particlePath = "Particles\\FPS_BulletParticle_02.xml"
+	self.muzzleFlashPath = "Particles\\MuzzleFlash.xml"
 end
 
 function OnExpose(self)
-	self.fireRate = .15
-	self.magazineSize = 30
-	self.gunRange = 1800
+	self.fireRate = .15 --how much time between shots (in seconds)
+	self.magazineSize = 30 --how many shots before a reload is needed
+	self.gunRange = 1800 --how far the gun can shoot
 	
+	--for displaying the gun Hud
 	self.bulletRows = 3
-	self.bulletColumns = 10
+	self.bulletColumns = 10 
+	
+	self.infiniteAmmo = false
+	self.bulletSpeed = 50 --how fast the bullets should travel
+	self.ricochetChance = 75
+	self.roundsCapacity = self.magazineSize * 3 
+	self.totalRounds = self.roundsCapacity
+	self.timeToNextShot = 0
+	self.hitSound = Fmod:CreateSound(soundPosition, "Sounds/Hit_Sound.wav", false)
 end
 
 function OnThink(self)
@@ -89,7 +98,7 @@ function Fire(gun)
 			local muzzleFlash = Game:CreateEffect(gun.bulletSpawn:GetPosition(), gun.muzzleFlashPath)
 			
 			--create the 'bullet' object and set's it values
-			G.CreateBullet(gun.bulletSpeed, gun.bulletSpawn:GetPosition(), gun.bulletSpawn:GetObjDir(), bulletParticle, gun.ricochetChance, gun.gunRange)
+			G.CreateBullet(gun.bulletSpeed, gun.bulletSpawn:GetPosition(), gun.bulletSpawn:GetObjDir(), bulletParticle, gun.ricochetChance, gun.gunRange, gun.hitSound)
 			
 			--if the player does not have infinite ammo (debugging purposes) subtract from the loaded rounds
 			if not gun.infiniteAmmo then

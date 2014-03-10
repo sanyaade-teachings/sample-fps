@@ -1,4 +1,9 @@
-﻿-- new script file
+﻿--Author: Denmark Gibbs
+--This script controls the updating of all bullet's position during gameplay, 
+-- as well as keeping track of 'winning' and reloading the scene
+--Attach this script to an empty Entity in the scene 
+--(one that is not a child of anything, and cannot be changed during gameplay)
+
 function OnAfterSceneLoaded(self)
 	--a table of bullets (each bullet is also a table)
 	G.allBullets = {}
@@ -9,8 +14,12 @@ function OnAfterSceneLoaded(self)
 	
 	G.gameOver = false
 	
-	self.waitTime = 5;
+	--how much time before the player can play again
 	self.timeBeforeReload = 0;
+end
+
+function OnExpose(self)
+	self.waitTime = 5; --how long to wait before letting the player play again
 end
 
 function OnThink(self)
@@ -39,12 +48,14 @@ function OnThink(self)
 					if UpdateBullet(currentBullet) then
 						currentBullet.particle:Remove()
 						table.remove(G.allBullets, i)
+						--decrement i since the size of the table has decreased by 1
 						i = i - 1
 					end
 				end	
 			end
 		end
 	else
+		--Show the Win Screen and tell the player when s/he can play again
 		local winText1 = "You Win!"
 		local winText2 = "Press Any Key To Continue"
 		local winText3 = "Play Again in: "
@@ -70,7 +81,6 @@ end
 
 --Inform the user if s/he has hit all targets
 function Win(self)
-	Debug:PrintLine("You Win!")
 	G.gameOver = true
 	G.winMask = Game:CreateScreenMask(0, 0, "Textures/FPS_WinScreenMask_DIFFUSE.tga")
 	G.winMask:SetTargetSize(G.w, G.h)
@@ -113,6 +123,8 @@ function UpdateBullet(bullet)
 	local color = Vision.V_RGBA_GREEN
 	--Debug.Draw:Line(bullet.pos, nextPos, color)
 	
+	local hitObject = false
+
 	--check for collisions if the bullet has traveled a certain distance
 	if dist > .1 then
 		--start the ray at the bullet's current' pos
@@ -152,29 +164,26 @@ function UpdateBullet(bullet)
 						Vision.BLEND_ALPHA,
 						size, rotation, lifetime)
 						
-					return true
+					hitObject = true
 				end
 			end
 		else
 			--update the bullet's total distance traveled
 			bullet.distance = bullet.distance + (nextPos - bullet.pos):getLength()
 			
-			--move it tot he next position
+			--move it to the next position
 			bullet.pos = nextPos
 			bullet.particle:SetPosition(nextPos)
 			
 			--if the bullet's new position is past the range of the gun, return true and delete
-			if  bullet.distance >  bullet.range then
-				return true
-			end
-			
-			return false
+			hitObject =  (bullet.distance >  bullet.range)
 		end
 	end
-	return false
+
+	return hitObject
 end
 
-function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle, ricochetChance, bulletRange)
+function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle, ricochetChance, bulletRange, bulletHitSound)
 	--set the new values for the bulet
 	local newBullet = {}
 	newBullet.speed = bulletSpeed
@@ -185,6 +194,7 @@ function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle,
 	newBullet.range = bulletRange
 	newBullet.pos = newBullet.startPos --set start position to current position for init
 	newBullet.distance = 0
+	newBullet.hitSound = bulletHitSound
 	
 	--this function will be called everyime a bullet hits something
 	newBullet.HitCallback = function(bullet, soundPosition, result)
@@ -199,9 +209,8 @@ function CreateNewBullet(bulletSpeed, bulletStartPos, bulletDir, bulletParticle,
 			end
 			
 			--Play the impact sound
-			local hitSound = Fmod:CreateSound(soundPosition, "Sounds/Hit_Sound.wav", false)
-			hitSound:SetVolume(0.5)
-			hitSound:Play()
+			bullet.hitSound:SetVolume(0.5)
+			bullet.hitSound:Play()
 		end
 		
 		--calculate the ricochet chance return true if the bullet ricochets
