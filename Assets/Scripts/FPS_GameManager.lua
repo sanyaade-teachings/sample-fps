@@ -29,7 +29,7 @@ function OnThink(self)
 		local numHit = table.getn(G.targetsHit)
 		
 		--show the number of targets remaining
-		Debug:PrintAt(G.w * 0.1, G.h - G.h * 0.1, "Targets Remaining: " .. (G.numTargets - numHit) , Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(G.w * 0.05, G.h - G.h * 0.1, "Targets Remaining: " .. (G.numTargets - numHit) , Vision.V_RGBA_WHITE, G.fontPath)
 		
 		--if numHit > numTargets, win!
 		if numHit == G.numTargets then
@@ -57,7 +57,14 @@ function OnThink(self)
 	else
 		--Show the Win Screen and tell the player when s/he can play again
 		local winText1 = "You Win!"
-		local winText2 = "Press Any Key To Continue"
+		local winText2 = ""
+		
+		if G.isWindows then
+			winText2 = "Press \'Fire\' To Continue"
+		else
+			winText2 = "Touch Screen To Continue "
+		end
+		
 		local winText3 = "Play Again in: "
 	
 		Debug:PrintAt( (G.w / 2.0) - (winText1:len() * 8), G.h / 2.0, "" .. winText1, Vision.V_RGBA_WHITE, G.fontPath)
@@ -72,7 +79,7 @@ function OnThink(self)
 		if self.timeBeforeReload <= 0 then
 			Debug:PrintAt( (G.w / 2.0) - (winText2:len() * 8), G.h / 2.0 + 32, "" .. winText2, Vision.V_RGBA_WHITE, G.fontPath)
 			
-			if (G.player.map:GetTrigger("ANY") > 0) then
+			if (G.player.map:GetTrigger("FIRE01") > 0 or G.player.map:GetTrigger("X") ~= 0) then
 				ResetGame()
 			end
 		end

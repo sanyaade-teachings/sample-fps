@@ -14,6 +14,7 @@
 // Use the following line to initialize a plugin that is statically linked.
 // Note that only Windows platform links plugins dynamically (on Windows you can comment out this line).
 VIMPORT IVisPlugin_cl* GetEnginePlugin_FPS_Sample_SolutionPlugin();
+VIMPORT IVisPlugin_cl* GetEnginePlugin_vHavok();
 
 class FPS_Sample_SolutionApplicationClass : public VAppImpl
 {
@@ -69,6 +70,7 @@ void FPS_Sample_SolutionApplicationClass::PreloadPlugins()
   // you still need to statically link your plugin library (e.g. on mobile platforms) through project
   // Properties, Linker, Additional Dependencies.
   VISION_PLUGIN_ENSURE_LOADED(FPS_Sample_SolutionPlugin);
+  VISION_PLUGIN_ENSURE_LOADED(vHavok);
 }
 
 //---------------------------------------------------------------------------------------------------------
@@ -107,7 +109,8 @@ void FPS_Sample_SolutionApplicationClass::AfterSceneLoaded(bool bLoadingSuccessf
 //---------------------------------------------------------------------------------------------------------
 bool FPS_Sample_SolutionApplicationClass::Run()
 {
-  return true;
+	//VVirtualThubStick* pThumbstick = new VVirtualThubStick(VRectanglef(), 900, 600)
+	return true;
 }
 
 void FPS_Sample_SolutionApplicationClass::DeInit()

@@ -34,7 +34,7 @@ function ActivateTarget(target)
 	end
 	
 	--the the RigidBody to active
-	targetRB:SetActive(false)
+	targetRB:SetActive(true)
 	
 	--unhide the target
 	target:SetVisible(true)

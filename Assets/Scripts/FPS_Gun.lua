@@ -34,6 +34,7 @@ function OnAfterSceneLoaded(self)
 	--set the paths for the particle effects
 	self.particlePath = "Particles\\FPS_BulletParticle_02.xml"
 	self.muzzleFlashPath = "Particles\\MuzzleFlash.xml"
+	SetUpHUD(self)
 end
 
 function OnExpose(self)

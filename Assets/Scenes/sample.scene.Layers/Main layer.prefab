@@ -123,7 +123,7 @@
     <property name="SampleOfsZ" value="0" />
     <property name="ObjectKey" value="PlayerSpawn" />
     <property name="Visible" value="False" />
-    <property name="Position" value="-250,0,0" />
+    <property name="Position" value="-250,0,23.92161" />
     <property name="Orientation" value="0,0,0" />
     <property name="Scaling" value="0.2789755,0.2789755,0.2789755" />
     <property name="TextLabel" value="" />
@@ -157,7 +157,7 @@
     <property name="SampleOfsZ" value="0" />
     <property name="ObjectKey" value="Player" />
     <property name="Visible" value="True" />
-    <property name="Position" value="0,0,0" />
+    <property name="Position" value="0,0,11.95311" />
     <property name="Orientation" value="0,0,0" />
     <property name="Scaling" value="1,1,1" />
     <property name="TextLabel" value="" />
@@ -192,7 +192,7 @@
       <property name="SampleOfsZ" value="0" />
       <property name="ObjectKey" value="Camera" />
       <property name="Visible" value="True" />
-      <property name="Position" value="0,0,64.41129" />
+      <property name="Position" value="0,0,76.3644" />
       <property name="Orientation" value="0,0,0" />
       <property name="Scaling" value="1,1,1" />
       <property name="TextLabel" value="" />
@@ -226,7 +226,7 @@
         <property name="SampleOfsZ" value="0" />
         <property name="ObjectKey" value="Gun" />
         <property name="Visible" value="True" />
-        <property name="Position" value="2.742912,-13.81654,53.51669" />
+        <property name="Position" value="2.742912,-13.81654,65.4698" />
         <property name="Orientation" value="0,0,0" />
         <property name="Scaling" value="0.6,0.6,0.6" />
         <property name="TextLabel" value="" />
@@ -234,7 +234,7 @@
         <property name="UserDataString" value="" />
         <property name="ExportShape" value="True" />
         <property name="UniqueID" value="16127477955961028625" />
-        <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_Gun.lua;timeToNextShot=0;totalRounds=90;roundsCapacity=90;bulletSpeed=50;bulletColumns=10;gunRange=1800;magazineSize=30;bulletRows=3;ricochetChance=75;infiniteAmmo=false;fireRate=0.15;UpdateSight=;SetUp=;FireWeapon=;bullets=;jogSpeed=7.5;particlePath=&quot;Particles\092FPS_BulletParticle_02.xml&quot;;lightTime=0.1;runSpeed=10;UpdateTransform=;rotSpeed=50;invertY=true;ReloadWeapon=;timeTimeToLightOff=0;muzzleFlashPath=&quot;Particles\092MuzzleFlash.xml&quot;;AddAmmo=;singleFire=false;roundsLoaded=2;yMinRot=-75;crouchHeight=22.5;yMaxRot=40;walkHeight=Vision.hkvVec3(0,0,45);" visible="True" serializable="True" editable="True" removable="True" />
+        <component class="VScriptComponent" paramstring="ComponentID=;ScriptFile=Scripts\092FPS_Gun.lua;fireRate=0.15;gunRange=1800;magazineSize=30;bulletColumns=10;timeToNextShot=0;totalRounds=90;roundsCapacity=90;bulletSpeed=50;infiniteAmmo=false;ricochetChance=75;bulletRows=3;Deactivate=;Activate=;" visible="True" serializable="True" editable="True" removable="True" />
         <shape class="EntityShape">
           <property name="ModelFile" value="" />
           <property name="CustomMaterialSet" value="&lt;None&gt;" />
@@ -260,7 +260,7 @@
           <property name="SampleOfsZ" value="0" />
           <property name="ObjectKey" value="BulletSpawn" />
           <property name="Visible" value="True" />
-          <property name="Position" value="33.97752,-14.10909,52.93839" />
+          <property name="Position" value="33.97752,-14.10909,64.89149" />
           <property name="Orientation" value="0,0,0" />
           <property name="Scaling" value="0.6,0.6,0.6" />
           <property name="TextLabel" value="" />
@@ -297,7 +297,7 @@
           <property name="TurnOffAfterLighting" value="True" />
           <property name="ObjectKey" value="MuzzleLight" />
           <property name="Visible" value="True" />
-          <property name="Position" value="33.97752,-14.10909,52.93839" />
+          <property name="Position" value="33.97752,-14.10909,64.89149" />
           <property name="Orientation" value="0,0,0" />
           <property name="Scaling" value="1,1,1" />
           <property name="TextLabel" value="" />

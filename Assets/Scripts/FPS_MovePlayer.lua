@@ -1,6 +1,7 @@
 ﻿--Author: Denmark Gibbs
 --This script controls all logic for the player.
 --This includes player movement, and all input
+--Attach this script to the Player capsule, and expects that Charcter Controller is also attached
 
 function OnAfterSceneLoaded(self)	
 	--enable Debug Mode
@@ -24,9 +25,15 @@ function OnAfterSceneLoaded(self)
 	self.singleFire = false --if true, the gun will only fire once per click
 	
 	--movement variables
-	self.jogSpeed = 7.5
-	self.runSpeed = 10
-	self.rotSpeed = 50
+	if G.isWindows then
+		self.rotSpeed = 50
+		self.jogSpeed = 7.5
+		self.runSpeed = 10
+	else
+		self.rotSpeed = 100
+		self.jogSpeed = 10
+		self.runSpeed = 15
+	end
 	
 	--Invert Y
 	self.invertY = true
@@ -40,20 +47,13 @@ function OnAfterSceneLoaded(self)
 	--set the controls for windows
 	
 	if G.isWindows then
-		--tell the player how to access help
-		Debug:PrintLine("*==========================", Vision.V_RGBA_YELLOW)
-		Debug:PrintLine("*== For Help, Hold \"H\"", Vision.V_RGBA_YELLOW)
-		Debug:PrintLine("*==========================", Vision.V_RGBA_YELLOW)
-				
 		--mouse control for aiming and rotation
 		self.map:MapTrigger("X", "MOUSE", "CT_MOUSE_NORM_DELTA_X")
 		self.map:MapTrigger("Y", "MOUSE", "CT_MOUSE_NORM_DELTA_Y")
 		
 		--WASD control for character movement
-		self.map:MapTrigger("LEFT", "KEYBOARD", "CT_KB_A")
-		self.map:MapTrigger("RIGHT", "KEYBOARD", "CT_KB_D")
-		self.map:MapTrigger("FORWARD", "KEYBOARD", "CT_KB_W")
-		self.map:MapTrigger("BACK", "KEYBOARD", "CT_KB_S")
+		self.map:MapTriggerAxis("HORIZONTAL", "KEYBOARD", "CT_KB_A", "CT_KB_D")
+		self.map:MapTriggerAxis("VERTICAL", "KEYBOARD", "CT_KB_S", "CT_KB_W")
 		
 		--the firing style
 		if self.singleFire then
@@ -66,18 +66,23 @@ function OnAfterSceneLoaded(self)
 		self.map:MapTrigger("JUMP", "KEYBOARD", "CT_KB_SPACE")
 		self.map:MapTrigger("RELOAD", "KEYBOARD", "CT_KB_R", {onceperframe = true} ) 
 		self.map:MapTrigger("RUN", "KEYBOARD", "CT_KB_LSHIFT")
-		self.map:MapTrigger("CROUCH", "KEYBOARD", "CT_KB_C")
+		-- self.map:MapTrigger("CROUCH", "KEYBOARD", "CT_KB_C")
 		
 		self.map:MapTrigger("INVERT", "KEYBOARD", "CT_KB_I", {onceperframe = true} ) --invert Y
-		--self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )	--reset targets
 		self.map:MapTrigger("DISPLAY", "KEYBOARD", "CT_KB_H") --will show the display whilst holding 
-		self.map:MapTrigger("ANY", "KEYBOARD", "CT_KB_ANYKEY") --will show the display whilst holding
+		--self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )	--reset targets
 	else
 		--mouse control for aiming and rotation
 		self.map:MapTrigger("X", {0, 0, G.w, G.h, "new"}, "CT_TOUCH_NORM_DELTA_X")
 		self.map:MapTrigger("Y", {0, 0, G.w, G.h}, "CT_TOUCH_NORM_DELTA_Y")
-
-		--WASD control for character movement
+		
+		-- Input:CreateVirtualThumbStick()
+		-- self.map:MapTriggerAxis("HORIZONTAL", "VirtualThumbStick", "CT_PAD_LEFT_THUMB_STICK_LEFT", "CT_PAD_LEFT_THUMB_STICK_RIGHT", {timescaled = true} )
+		-- self.map:MapTriggerAxis("VERTICAL", "VirtualThumbStick", "CT_PAD_LEFT_THUMB_STICK_DOWN", "CT_PAD_LEFT_THUMB_STICK_UP", {timescaled = true} )
+		
+		self.map:MapTriggerAxis("VERTICAL", "VirtualThumbStick", "CT_PAD_LEFT_THUMB_STICK_DOWN", "CT_PAD_LEFT_THUMB_STICK_UP", {timescaled = true} )
+		
+		--use dpad controls
 		self.map:MapTrigger("LEFT", G.dpad.left, "CT_TOUCH_ANY")
 		self.map:MapTrigger("RIGHT", G.dpad.right, "CT_TOUCH_ANY")
 		self.map:MapTrigger("FORWARD", G.dpad.up, "CT_TOUCH_ANY")
@@ -85,20 +90,19 @@ function OnAfterSceneLoaded(self)
 		
 		--the firing style
 		if self.singleFire then
-			self.map:MapTrigger("FIRE01", G.left, "CT_TOUCH_ANY", {once = true} )
+			self.map:MapTrigger("FIRE01", G.yellowTable, "CT_TOUCH_ANY", {once = true} )
 		else
-			self.map:MapTrigger("FIRE01", G.left, "CT_TOUCH_ANY")
+			self.map:MapTrigger("FIRE01", G.yellowTable, "CT_TOUCH_ANY")
 		end
 		
 		--additional controls
-		self.map:MapTrigger("JUMP", G.down, "CT_TOUCH_ANY")
-		self.map:MapTrigger("RELOAD", G.up, "CT_TOUCH_ANY", {once = true} ) 
-		self.map:MapTrigger("RUN", G.right, "CT_TOUCH_ANY")
+		self.map:MapTrigger("JUMP", G.greenTable, "CT_TOUCH_ANY")
+		self.map:MapTrigger("RELOAD", G.blueTable, "CT_TOUCH_ANY", {once = true} ) 
+		self.map:MapTrigger("RUN", G.redTable, "CT_TOUCH_ANY")
 		--self.map:MapTrigger("CROUCH", -input here-, "CT_TOUCH_ANY")
 		
-		self.map:MapTrigger("INVERT", {0, 0, G.h, G.w}, "CT_TOUCH_TRIPLE_TAP", {once = true} ) --invert Y
-		self.map:MapTrigger("DISPLAY", {0, G.h * .9, G.w * .1, G.h}, "CT_TOUCH_ANY") --will show the display whilst holding 
-		self.map:MapTrigger("ANY", {0, 0, G.h, G.w}, "CT_TOUCH_ANY")
+		self.map:MapTrigger("INVERT", {0, 0, G.h, G.w}, "CT_TOUCH_DOUBLE_TAP") --invert Y
+		self.map:MapTrigger("DISPLAY", G.helpTable, "CT_TOUCH_ANY") --will show the help menu whilst holding 
 		--self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )	--reset targets
 	end
 	
@@ -112,10 +116,25 @@ function OnThink(self)
 		local x = self.map:GetTrigger("X")
 		local y = self.map:GetTrigger("Y")
 		
-		local left = self.map:GetTrigger("LEFT") ~= 0 
-		local right = self.map:GetTrigger("RIGHT") ~= 0 
-		local forward = self.map:GetTrigger("FORWARD") ~= 0	
-		local back = self.map:GetTrigger("BACK") ~= 0
+		local horz = 0
+		local vert = 0
+		
+		if not G.isWindows then
+			if self.map:GetTrigger("LEFT") ~= 0 then
+				horz = -1
+			elseif self.map:GetTrigger("RIGHT") ~= 0 then
+				horz = 1
+			end
+			
+			if self.map:GetTrigger("BACK") ~= 0 then
+				vert = -1
+			elseif self.map:GetTrigger("FORWARD") ~= 0 then
+				vert = 1
+			end
+		else
+			horz = self.map:GetTrigger("HORIZONTAL")
+			vert = self.map:GetTrigger("VERTICAL")
+		end
 		
 		local fire01 = self.map:GetTrigger("FIRE01") > 0
 		local jump = self.map:GetTrigger("JUMP") > 0
@@ -164,20 +183,22 @@ function OnThink(self)
 			UpdateRotation(self, x, y)
 		end
 		
-		self.gun.UpdateSight(self.gun)
-		self.gun.UpdateTransform(self.gun)
-		
-		--locomotion control
-		if (left or right or forward or back or run) then
-			UpdatePosition(self, left, right, forward, back, run, forwardVec, rightVec)
+		if self.gun ~= nil then
+			self.gun.UpdateSight(self.gun)
+			self.gun.UpdateTransform(self.gun)
 		end
 		
-		--inversion control
+		--locomotion control
+		if math.abs(horz) > 0 or math.abs(vert) > 0 then
+			UpdatePosition(self, horz, vert, run, forwardVec, rightVec)
+		end
+
+		-- inversion control
 		if invert then
 			ToggleInvert(self)
 		end
 		
-		--show 'Help'
+		-- show 'Help'
 		if display then
 			ShowControls(self)
 		end
@@ -187,11 +208,11 @@ end
 function OnBeforeSceneUnloaded(self)
 	Input:DestroyMap(self.map)
 	self.map = nil
-
+	Input:DestroyVirtualThumbStick()
 	Game:DeleteAllUnrefScreenMasks()
 end
 
-function UpdatePosition(self, left, right, forward, back, run, forwardVec, rightVec)
+function UpdatePosition(self, horz, vert, run, forwardVec, rightVec)
 	-- reset the moveVector to avoid steadily increasing velocity
 	self.moveVector = G.zeroVector
 	local moveSpeed = 0
@@ -204,16 +225,16 @@ function UpdatePosition(self, left, right, forward, back, run, forwardVec, right
 	end
 	
 	-- move the character left/right
-	if left then
-		self.moveVector = self.moveVector + rightVec
-	elseif right then
+	if horz > 0 then
 		self.moveVector = self.moveVector - rightVec
+	elseif horz < 0 then
+		self.moveVector = self.moveVector + rightVec
 	end
 	
 	-- move the character forward/back
-	if forward then
+	if vert > 0 then
 		self.moveVector = self.moveVector + forwardVec
-	elseif back then
+	elseif vert < 0 then
 		self.moveVector = self.moveVector - forwardVec
 	end
 	
@@ -259,7 +280,9 @@ end
 
 --calls the reload function on the attached gun
 function Reload(self)
-	self.gun.ReloadWeapon(self.gun)
+	if self.gun ~= nil then
+		self.gun.ReloadWeapon(self.gun)
+	end
 end
 
 --A basic function to make the character jump if already on the ground
@@ -284,7 +307,7 @@ function ToggleInvert(self)
 end
 
 --finds the weapon as a child of the camera. 
-function GetWeapon(camea)
+function GetWeapon(camera)
 	local numChildren = camera:GetNumChildren()
 	
 	for i = 0, numChildren - 1, 1 do
@@ -293,7 +316,7 @@ function GetWeapon(camea)
 		if entity ~= nil then
 			if entity:GetKey() == "Gun" then 
 				entity:SetAlwaysInForeGround(true)
-				entity.SetUp(entity)
+				--entity.SetUp(entity)
 				return entity
 			end
 		end
@@ -312,14 +335,25 @@ end
 
 --This will show all the controls available to the user
 function ShowControls(self)
-	Debug:PrintAt(10, 32, "Move: WASD", Vision.V_RGBA_WHITE, G.fontPath)
-	Debug:PrintAt(10, 64, "Look: MOUSE", Vision.V_RGBA_WHITE, G.fontPath)
-	Debug:PrintAt(10, 96, "Run: LEFT SHIFT", Vision.V_RGBA_WHITE, G.fontPath)
-	Debug:PrintAt(10, 128, "Fire: LEFT MOUSE BUTTON", Vision.V_RGBA_WHITE, G.fontPath)
-	Debug:PrintAt(10, 160, "Reload: R", Vision.V_RGBA_WHITE, G.fontPath)
-	Debug:PrintAt(10, 192, "Jump: SPACEBAR", Vision.V_RGBA_WHITE, G.fontPath)
-	Debug:PrintAt(10, 224, "Invert Y: I", Vision.V_RGBA_WHITE, G.fontPath)
-	local inverted = self.invertY and "yes" or "No"
-	Debug:PrintAt(10, 256, "Invered?: " .. inverted , Vision.V_RGBA_WHITE, G.fontPath)
-	
+	if G.isWindows then
+		Debug:PrintAt(10, 32, "Move: WASD", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 64, "Look: MOUSE", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 96, "Run: LEFT SHIFT", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 128, "Fire: LEFT MOUSE BUTTON", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 160, "Reload: R", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 192, "Jump: SPACEBAR", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 224, "Invert Y: I", Vision.V_RGBA_WHITE, G.fontPath)
+		local inverted = self.invertY and "yes" or "No"
+		Debug:PrintAt(10, 256, "Invered?: " .. inverted , Vision.V_RGBA_WHITE, G.fontPath)
+	else
+		Debug:PrintAt(10, 32, "Move: D Pad", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 64, "Look: Touch + Drag", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 96, "Run: Red", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 128, "Fire: Yellow", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 160, "Reload: Blue", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 192, "Jump: Green", Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 224, "Invert Y: I", Vision.V_RGBA_WHITE, G.fontPath)
+		local inverted = self.invertY and "yes" or "No"
+		Debug:PrintAt(10, 256, "Invered?: " .. inverted , Vision.V_RGBA_WHITE, G.fontPath)
+	end
 end

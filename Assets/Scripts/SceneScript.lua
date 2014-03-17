@@ -9,10 +9,24 @@ function OnBeforeSceneLoaded(self)
 		-- set up the reticle
 	G.w, G.h = Screen:GetViewportSize()
 	
+	--draw the target reticle in the center of the screen
 	local width = G.w * 0.1
 	G.screenMask = Game:CreateScreenMask(G.w / 2 - width / 2.0, G.h / 2 - width / 2.0, "Textures/FPS_Reticule_DIFFUSE.tga")
 	G.screenMask:SetTargetSize(width, width)
 	G.screenMask:SetBlending(Vision.BLEND_ADDITIVE)
+	
+	-- create the help button
+	if G.isWindows then
+		G.helpButton = Game:CreateScreenMask(0, 0, "Textures/FPS_HelpButton_PC.tga")
+	else
+		G.helpButton = Game:CreateScreenMask(0, 0, "Textures/FPS_HelpButton_Touch.tga")
+	end
+	
+	--get the size of the help button, then move to the bottom left corner
+	local helpX, helpY = G.helpButton:GetTextureSize()
+	G.helpButton:SetPos( (G.w / 2) - helpX / 2, G.h - helpY) 
+	G.helpButton:SetBlending(Vision.BLEND_ALPHA)
+	G.helpTable = { (G.w / 2) - helpX / 2, G.h - helpY, (G.w / 2) + helpX / 2, G.h, -900, "new"}
 	
 	G.ToggleRemote = ToggleRemoteInput
 	G.remoteEnabled = true;
@@ -40,12 +54,14 @@ function OnBeforeSceneLoaded(self)
 		G.dpadDisplay = Game:CreateScreenMask(left, top, "Textures/FPS_MobileHud/FPS_Dpad_128.tga")
 		G.dpadDisplay:SetBlending(Vision.BLEND_ALPHA)
 		
-		--			{startx, starty, end x, endy}
+		local divisions = 6 --how much empty space on each corner/the amount of overlap 
+		
+		-- --{startx, starty, end x, endy}
 		G.dpad = {}
-		G.dpad.up = {left + (x / 3), top, right - (x / 3), top + (x / 3), -10, "new"}
-		G.dpad.down = {left + (x / 3), bottom - (x / 3), right - (x / 3), bottom, -10, "new"}
-		G.dpad.left = {left, top + (x / 3), left + (x / 3), bottom - (x / 3), -10, "new"}
-		G.dpad.right = {right - (x / 3), top + (x / 3), right, bottom - (x / 3), -10, "new"}
+		G.dpad.up = {left + (x / divisions), top, right - (x / divisions), top + (x / 3), 200, "new"}
+		G.dpad.down = {left + (x / divisions), bottom - (x / 3), right - (x / divisions), bottom, 200, "new"}
+		G.dpad.left = {left, top + (x / divisions), left + (x / 3), bottom - (x / divisions), 200, "new"}
+		G.dpad.right = {right - (x / 3), top + (x / divisions), right, bottom - (x / divisions), 200, "new"}
 		
 		local xPercent_R = 0.8 --percentage of the screen to align objects to the right
 		x = 64 --the texture size
@@ -56,21 +72,21 @@ function OnBeforeSceneLoaded(self)
 		right = (G.w * xPercent_R) + (x * 1.5)
 		
 		--{startx, starty, end x, endy}
-		G.upButton = Game:CreateScreenMask(left + x, top, "Textures/FPS_MobileHud/FPS_Button_Up_64.tga")
-		G.upButton:SetBlending(Vision.BLEND_ALPHA)
-		G.up = {left + x, top, right - x, top + x}
+		G.blueButton = Game:CreateScreenMask(left + x, top, "Textures/FPS_MobileHud/FPS_Button_Blue_64.tga")
+		G.blueButton:SetBlending(Vision.BLEND_ALPHA)
+		G.blueTable = {left + x, top, right - x, top + x, 150}
 		
-		G.downButton = Game:CreateScreenMask(left + x, bottom - x, "Textures/FPS_MobileHud/FPS_Button_Down_64.tga")
-		G.downButton:SetBlending(Vision.BLEND_ALPHA)
-		G.down = {left + x, bottom - x, right - x, bottom}
+		G.greenButton = Game:CreateScreenMask(left + x, bottom - x, "Textures/FPS_MobileHud/FPS_Button_Green_64.tga")
+		G.greenButton:SetBlending(Vision.BLEND_ALPHA)
+		G.greenTable = {left + x, bottom - x, right - x, bottom, 150}
 		
-		G.leftButton = Game:CreateScreenMask(left, top + x, "Textures/FPS_MobileHud/FPS_Button_Left_64.tga")
-		G.leftButton:SetBlending(Vision.BLEND_ALPHA)
-		G.left = {left, top + x, left + x, bottom - x}
+		G.yellowButton = Game:CreateScreenMask(left, top + x, "Textures/FPS_MobileHud/FPS_Button_Yellow_64.tga")
+		G.yellowButton:SetBlending(Vision.BLEND_ALPHA)
+		G.yellowTable = {left, top + x, left + x, bottom - x, 150}
 		
-		G.rightButton = Game:CreateScreenMask(right - x, top + x, "Textures/FPS_MobileHud/FPS_Button_Right_64.tga")
-		G.rightButton:SetBlending(Vision.BLEND_ALPHA)
-		G.right = {right - x, top + x, right, bottom - x}
+		G.redButton = Game:CreateScreenMask(right - x, top + x, "Textures/FPS_MobileHud/FPS_Button_Red_64.tga")
+		G.redButton:SetBlending(Vision.BLEND_ALPHA)
+		G.redTable = {right - x, top + x, right, bottom - x, 150}
 	end
 end
 
