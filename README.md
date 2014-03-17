@@ -3,19 +3,34 @@ Project Anarchy: Sample FPS
 
 ![alt text](http://www.projectanarchy.com/sites/default/files/Project%20Anarchy%20Logo.png "Project Anarchy")
 
-First [Ludum Dare][1] that Ryan Monday and I have ever participated in and we used [Project Anarchy][2]. The theme for this one was **One Shot**. So we made a simple top-down 3D shooter where you only have one missile to destroy all the asteroids in the arena. The catch is the missile has a shell life based off bounces, so you have to aim your shot carefully. If you complete the mission then you will move on to the next round. See how many rounds you can complete! We also made a [blog post][3] about it, so go check that out for more information on our process.
+This is an example of how to create a first person shooter using Lua in [Project Anarachy][1].  This scene shows all the basics of how to create a first person shooter on both PC and Android. 
+The sample shows examples of player movement, shooting, reloading, jumping, creating ScreenMasks for Heads Up Displays, playing/stopping/reversing/ simple animations through code, as well as a few other features that you will need to get your game going. 
 
-### Controls
+### PC Controls
 
-- ENTER - Start the Game
-- W,A,D - Move the player
-- R - Reset the game
-- SPACE - Shoot your one missile
+- W,A,S,D - Move the player
+- Mouse - Look around
+- Left Click - Fire
+- R - Reload
+- Left Shift - Run
+- Space - Jump
+- I - Invert Y Axis
+- H - Show Controls
+
+### Android Controls
+
+- Directional Pad - Move the player
+- Touch and Drag - Look around
+- Yellow Button - Fire
+- Blue Button - Reload
+- Red Button - Run
+- Green Button - Jump
+- Double Tap - Invert Y Axis
+- Help Button - Show Controls
 
 ### Scene
 
-To play the game in vForge, you don't need to compile any custom code. The source code is just there for when we packaged up an executable build for distribution. Open up `project\Scenes\main.scene` in vForge to play the game!
+To play the game in vForge, you don't need to compile any custom code. The source code is just there for when we packaged up an executable build for distribution. Open up `Assets\Scenes\sample.scene` in vForge to play the game!
 
-[1]: http://www.ludumdare.com/
-[2]: http://www.projectanarchy.com/
-[3]: http://www.ludumdare.com/compo/2013/12/18/sorry-for-the-tardiness/
+
+[1]: http://www.projectanarchy.com/download
