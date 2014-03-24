@@ -73,20 +73,13 @@ function OnAfterSceneLoaded(self)
 		--self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )	--reset targets
 	else
 		--mouse control for aiming and rotation
-		self.map:MapTrigger("X", {0, 0, G.w, G.h, "new"}, "CT_TOUCH_NORM_DELTA_X")
-		self.map:MapTrigger("Y", {0, 0, G.w, G.h}, "CT_TOUCH_NORM_DELTA_Y")
+		self.map:MapTrigger("X", {G.w / 2.0, 0, G.w, G.h, "new"}, "CT_TOUCH_NORM_DELTA_X")
+		self.map:MapTrigger("Y", {G.w / 2.0, 0, G.w, G.h}, "CT_TOUCH_NORM_DELTA_Y")
 		
-		-- Input:CreateVirtualThumbStick()
-		-- self.map:MapTriggerAxis("HORIZONTAL", "VirtualThumbStick", "CT_PAD_LEFT_THUMB_STICK_LEFT", "CT_PAD_LEFT_THUMB_STICK_RIGHT", {timescaled = true} )
-		-- self.map:MapTriggerAxis("VERTICAL", "VirtualThumbStick", "CT_PAD_LEFT_THUMB_STICK_DOWN", "CT_PAD_LEFT_THUMB_STICK_UP", {timescaled = true} )
 		
+		Input:CreateVirtualThumbStick()
+		self.map:MapTriggerAxis("HORIZONTAL", "VirtualThumbStick", "CT_PAD_LEFT_THUMB_STICK_LEFT", "CT_PAD_LEFT_THUMB_STICK_RIGHT", {timescaled = true} )
 		self.map:MapTriggerAxis("VERTICAL", "VirtualThumbStick", "CT_PAD_LEFT_THUMB_STICK_DOWN", "CT_PAD_LEFT_THUMB_STICK_UP", {timescaled = true} )
-		
-		--use dpad controls
-		self.map:MapTrigger("LEFT", G.dpad.left, "CT_TOUCH_ANY")
-		self.map:MapTrigger("RIGHT", G.dpad.right, "CT_TOUCH_ANY")
-		self.map:MapTrigger("FORWARD", G.dpad.up, "CT_TOUCH_ANY")
-		self.map:MapTrigger("BACK", G.dpad.down, "CT_TOUCH_ANY")
 		
 		--the firing style
 		if self.singleFire then
@@ -101,7 +94,7 @@ function OnAfterSceneLoaded(self)
 		self.map:MapTrigger("RUN", G.redTable, "CT_TOUCH_ANY")
 		--self.map:MapTrigger("CROUCH", -input here-, "CT_TOUCH_ANY")
 		
-		self.map:MapTrigger("INVERT", {0, 0, G.h, G.w}, "CT_TOUCH_DOUBLE_TAP") --invert Y
+		self.map:MapTrigger("INVERT", {G.w / 2.0, G.h / 2.0, G.h, G.w}, "CT_TOUCH_DOUBLE_TAP") --invert Y
 		self.map:MapTrigger("DISPLAY", G.helpTable, "CT_TOUCH_ANY") --will show the help menu whilst holding 
 		--self.map:MapTrigger("RESET", "KEYBOARD", "CT_KB_1", {onceperframe = true} )	--reset targets
 	end
@@ -119,22 +112,8 @@ function OnThink(self)
 		local horz = 0
 		local vert = 0
 		
-		if not G.isWindows then
-			if self.map:GetTrigger("LEFT") ~= 0 then
-				horz = -1
-			elseif self.map:GetTrigger("RIGHT") ~= 0 then
-				horz = 1
-			end
-			
-			if self.map:GetTrigger("BACK") ~= 0 then
-				vert = -1
-			elseif self.map:GetTrigger("FORWARD") ~= 0 then
-				vert = 1
-			end
-		else
-			horz = self.map:GetTrigger("HORIZONTAL")
-			vert = self.map:GetTrigger("VERTICAL")
-		end
+		horz = self.map:GetTrigger("HORIZONTAL")
+		vert = self.map:GetTrigger("VERTICAL")
 		
 		local fire01 = self.map:GetTrigger("FIRE01") > 0
 		local jump = self.map:GetTrigger("JUMP") > 0
@@ -344,7 +323,7 @@ function ShowControls(self)
 		Debug:PrintAt(10, 192, "Jump: SPACEBAR", Vision.V_RGBA_WHITE, G.fontPath)
 		Debug:PrintAt(10, 224, "Invert Y: I", Vision.V_RGBA_WHITE, G.fontPath)
 		local inverted = self.invertY and "yes" or "No"
-		Debug:PrintAt(10, 256, "Invered?: " .. inverted , Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 256, "Inverted?: " .. inverted , Vision.V_RGBA_WHITE, G.fontPath)
 	else
 		Debug:PrintAt(10, 32, "Move: D Pad", Vision.V_RGBA_WHITE, G.fontPath)
 		Debug:PrintAt(10, 64, "Look: Touch + Drag", Vision.V_RGBA_WHITE, G.fontPath)
@@ -354,6 +333,6 @@ function ShowControls(self)
 		Debug:PrintAt(10, 192, "Jump: Green", Vision.V_RGBA_WHITE, G.fontPath)
 		Debug:PrintAt(10, 224, "Invert Y: I", Vision.V_RGBA_WHITE, G.fontPath)
 		local inverted = self.invertY and "yes" or "No"
-		Debug:PrintAt(10, 256, "Invered?: " .. inverted , Vision.V_RGBA_WHITE, G.fontPath)
+		Debug:PrintAt(10, 256, "Inverted?: " .. inverted , Vision.V_RGBA_WHITE, G.fontPath)
 	end
 end

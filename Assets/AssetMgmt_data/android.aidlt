@@ -32,8 +32,8 @@ particles/smoke.dds#android-default	AssetMgmt_data/transformed/smoke9hkp3rjclgdt
 particles/smoke.dds#android-pvr	AssetMgmt_data/transformed/smoke9hkp3rjclgdtc.pvr	sRGB=false
 particles/texturetrail.dds#android-default	AssetMgmt_data/transformed/texturetrail0k0bxdnclgdtc.rgba	sRGB=false
 particles/texturetrail.dds#android-pvr	AssetMgmt_data/transformed/texturetrail0k0bxdnclgdtc.pvr	sRGB=false
-scenes/sample_p01.dds#android-default	AssetMgmt_data/transformed/sample_p01gxp#g4sclgdtc.etc	sRGB=false
-scenes/sample_p01.dds#android-pvr	AssetMgmt_data/transformed/sample_p01gxp#g4sclgdtc.pvr	sRGB=false
+scenes/sample_p01.dds#android-default	AssetMgmt_data/transformed/sample_p017s5nvkxclgdtc.etc	sRGB=false
+scenes/sample_p01.dds#android-pvr	AssetMgmt_data/transformed/sample_p017s5nvkxclgdtc.pvr	sRGB=false
 textures/acr-bushmaster.png#android-default	AssetMgmt_data/transformed/acr-bushmasterc7h2p30clgdtc.etc	sRGB=false
 textures/acr-bushmaster.png#android-pvr	AssetMgmt_data/transformed/acr-bushmasterc7h2p30clgdtc.pvr	sRGB=false
 textures/blue_128.tga#android-default	AssetMgmt_data/transformed/blue_1288hdmn9xclgdtc.etc	sRGB=false

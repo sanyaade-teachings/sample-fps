@@ -169,7 +169,7 @@
             "File": {
                 "Hash": 1850897339,
                 "TimeStamp": 1393872399443362100,
-                "LastEditTime": 1394652729972318800
+                "LastEditTime": 1395694048923469400
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -192,9 +192,9 @@
                 ]
             },
             "File": {
-                "Hash": 1429310650,
-                "TimeStamp": 1394652728880209600,
-                "LastEditTime": 1394652730044326000
+                "Hash": 1938738855,
+                "TimeStamp": 1395694047770469400,
+                "LastEditTime": 1395694048994469400
             },
             "Transformations": {
                 "TemplateName": "Default"
@@ -215,9 +215,9 @@
                 ]
             },
             "File": {
-                "Hash": 1083235925,
-                "TimeStamp": 1394652728874209000,
-                "LastEditTime": 1394652730008322400
+                "Hash": 3299072220,
+                "TimeStamp": 1395694047765469400,
+                "LastEditTime": 1395694048959469400
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -397,7 +397,7 @@
             "File": {
                 "Hash": 2725809570,
                 "TimeStamp": 1392774256110889500,
-                "LastEditTime": 1394652729936315200
+                "LastEditTime": 1395694048886469400
             },
             "Model": {
                 "LODSwitchDistances": [
@@ -709,9 +709,9 @@
                 ]
             },
             "File": {
-                "Hash": 3998740006,
-                "TimeStamp": 1394652764214742700,
-                "LastEditTime": 1394652764986819900
+                "Hash": 2081856143,
+                "TimeStamp": 1395694092617240000,
+                "LastEditTime": 1395694093393317600
             },
             "Texture": {
                 "FileFormat": "DDS",
@@ -2095,7 +2095,7 @@
             "File": {
                 "Hash": 1888533058,
                 "TimeStamp": 1391550537909489900,
-                "LastEditTime": 1394652729927314300
+                "LastEditTime": 1395694048878469400
             },
             "Texture": {
                 "FileFormat": "TGA",

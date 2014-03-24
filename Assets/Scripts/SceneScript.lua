@@ -44,25 +44,7 @@ function OnBeforeSceneLoaded(self)
 		--set the values for the texture's position on screen (as a percentage)
 		local xPercent = .2
 		local yPercent = .75
-		
-		--establish the positions of the dpad texture and store them
-		local top = (G.h * yPercent) - (x * .5)
-		local bottom = (G.h * yPercent) + (x * .5)
-		local left = (G.w * xPercent) - (x * .5)
-		local right = G.w * xPercent + (x * .5)
-		
-		G.dpadDisplay = Game:CreateScreenMask(left, top, "Textures/FPS_MobileHud/FPS_Dpad_128.tga")
-		G.dpadDisplay:SetBlending(Vision.BLEND_ALPHA)
-		
-		local divisions = 6 --how much empty space on each corner/the amount of overlap 
-		
-		-- --{startx, starty, end x, endy}
-		G.dpad = {}
-		G.dpad.up = {left + (x / divisions), top, right - (x / divisions), top + (x / 3), 200, "new"}
-		G.dpad.down = {left + (x / divisions), bottom - (x / 3), right - (x / divisions), bottom, 200, "new"}
-		G.dpad.left = {left, top + (x / divisions), left + (x / 3), bottom - (x / divisions), 200, "new"}
-		G.dpad.right = {right - (x / 3), top + (x / divisions), right, bottom - (x / divisions), 200, "new"}
-		
+
 		local xPercent_R = 0.8 --percentage of the screen to align objects to the right
 		x = 64 --the texture size
 		
