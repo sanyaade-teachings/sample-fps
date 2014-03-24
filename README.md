@@ -43,13 +43,13 @@ To play the game in vForge, you don't need to compile any custom code. The sourc
 
 #### Android
 
-- Directional Pad - Move the player
+- Thumbstick - Move the player
 - Touch and Drag - Look around
 - Yellow Button - Fire
 - Blue Button - Reload
 - Red Button - Run
 - Green Button - Jump
-- Double Tap - Invert Y Axis
+- Double Tap (right side) - Invert Y Axis
 - Help Button - Show Controls
 
 ### The Possible Future!

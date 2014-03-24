@@ -31,6 +31,7 @@ function OnBeforeSceneLoaded(self)
 	G.ToggleRemote = ToggleRemoteInput
 	G.remoteEnabled = true;
 	
+	
 	-- RemoteInput:StartServer('RemoteGui')
 	-- RemoteInput:InitEmulatedDevices()
 	-- RemoteInput:DebugDrawTouchPoints(Vision.VColorRef(255, 0, 0) )
@@ -46,7 +47,7 @@ function OnBeforeSceneLoaded(self)
 		local yPercent = .75
 
 		local xPercent_R = 0.8 --percentage of the screen to align objects to the right
-		x = 64 --the texture size
+		x = 128 --the texture size
 		
 		top = (G.h * yPercent) - (x * 1.5)
 		bottom = (G.h * yPercent) + (x * 1.5)
@@ -54,19 +55,19 @@ function OnBeforeSceneLoaded(self)
 		right = (G.w * xPercent_R) + (x * 1.5)
 		
 		--{startx, starty, end x, endy}
-		G.blueButton = Game:CreateScreenMask(left + x, top, "Textures/FPS_MobileHud/FPS_Button_Blue_64.tga")
+		G.blueButton = Game:CreateScreenMask(left + x, top, "Textures/FPS_MobileHud/FPS_Button_Blue.tga")
 		G.blueButton:SetBlending(Vision.BLEND_ALPHA)
 		G.blueTable = {left + x, top, right - x, top + x, 150}
 		
-		G.greenButton = Game:CreateScreenMask(left + x, bottom - x, "Textures/FPS_MobileHud/FPS_Button_Green_64.tga")
+		G.greenButton = Game:CreateScreenMask(left + x, bottom - x, "Textures/FPS_MobileHud/FPS_Button_Green.tga")
 		G.greenButton:SetBlending(Vision.BLEND_ALPHA)
 		G.greenTable = {left + x, bottom - x, right - x, bottom, 150}
 		
-		G.yellowButton = Game:CreateScreenMask(left, top + x, "Textures/FPS_MobileHud/FPS_Button_Yellow_64.tga")
+		G.yellowButton = Game:CreateScreenMask(left, top + x, "Textures/FPS_MobileHud/FPS_Button_Yellow.tga")
 		G.yellowButton:SetBlending(Vision.BLEND_ALPHA)
 		G.yellowTable = {left, top + x, left + x, bottom - x, 150}
 		
-		G.redButton = Game:CreateScreenMask(right - x, top + x, "Textures/FPS_MobileHud/FPS_Button_Red_64.tga")
+		G.redButton = Game:CreateScreenMask(right - x, top + x, "Textures/FPS_MobileHud/FPS_Button_Red.tga")
 		G.redButton:SetBlending(Vision.BLEND_ALPHA)
 		G.redTable = {right - x, top + x, right, bottom - x, 150}
 	end
