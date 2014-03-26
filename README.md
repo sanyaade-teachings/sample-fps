@@ -44,7 +44,7 @@ To play the game in vForge, you don't need to compile any custom code. The sourc
 #### Android
 
 - Thumbstick - Move the player
-- Touch and Drag - Look around
+- Touch and Drag (Right Side)- Look around
 - Yellow Button - Fire
 - Blue Button - Reload
 - Red Button - Run
