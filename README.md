@@ -24,6 +24,7 @@ The sample shows examples of player movement, shooting, reloading, jumping, crea
 ### Getting Started
 
 To play the game in vForge, you don't need to compile any custom code. The source code is just there for when we packaged up an executable build for distribution. Open up `Assets\Scenes\sample.scene` in vForge to play the game!
+To play the game on an Android device, be sure to run the RUN_ONCE.bat file to make sure the source compiles correctly in Visual Studio.  
 
 [1]: http://www.projectanarchy.com/download
 
